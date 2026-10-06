@@ -1,0 +1,23 @@
+PASS FakeAuthService injected and sign-in started; auth configuration and credentials are excluded.
+PASS Fake sign-in completed and TryVerifyAge authorized multiplayer before Room.Host/Join.
+PASS Session 6 host bound a real UDP socket; fixtures will set spatial positions and meal/fuel prerequisites only.
+Fixture: scheduler supplied UBA826; client stands at gate, host meal cart parked north of its pavement crossing. Prerequisites remain incomplete.
+PASS Client gate intent arrived over UDP and was refused with meal/fuel attribution. Fixture now completes those two tasks; boarding remains untouched.
+Probe: host mounted cart now drives south toward a released passenger crossing the service spine.
+Evidence/m3-boarding-blocked-host.png  1920x1080
+PASS Host Move refused vehicle movement at a released passenger; same-state snapshot frozen at (-4.80, 0.00, 2.30).
+PASS Client UDP close stopped new release with 5 waiting and 3 walkers already underway.
+Evidence/m3-boarding-closed-host.png  1920x1080
+PASS All launched passengers reached the aircraft while closed; partial progress=0.375, same waiting IDs retained.
+PASS Client UDP reopen resumed the remaining queue from preserved progress.
+Runtime errors: 0
+Final: FAIL
+Details: System.Reflection.TargetParameterCountException: Number of parameters specified does not match the expected number.
+  at System.Reflection.RuntimeMethodInfo.ConvertValues (System.Reflection.Binder binder, System.Object[] args, System.Reflection.ParameterInfo[] pinfo, System.Globalization.CultureInfo culture, System.Reflection.BindingFlags invokeAttr) [0x00016] in <3f7729e529224de59f8ee18b4833e8e5>:0 
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00040] in <3f7729e529224de59f8ee18b4833e8e5>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <3f7729e529224de59f8ee18b4833e8e5>:0 
+  at NetPlaytest.RequireCompletedBoardingBotChoosesBaggage () [0x0007a] in /private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.ijPF86/host/Assets/Editor/NetPlaytest.Boarding.cs:326 
+  at NetPlaytest.AdvanceHostBoarding (System.Double now, System.Single dt) [0x0098d] in /private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.ijPF86/host/Assets/Editor/NetPlaytest.Boarding.cs:179 
+  at NetPlaytest.AdvanceScenario (System.Double now, System.Single dt) [0x00124] in /private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.ijPF86/host/Assets/Editor/NetPlaytest.cs:331 
+  at NetPlaytest.Poll () [0x00483] in /private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.ijPF86/host/Assets/Editor/NetPlaytest.cs:219 
+Diagnostics: scenario=host-boarding,stage=11,scene=PalmBay,room=Playing,snapshots=444,game=started=True,sandbox=True,remote=False,actors=p0=(-4.80, 0.00, 2.30),p1=(-7.64, 0.00, 1.74),cart0=0,signals=/private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.ijPF86/control,boardingFlight=UBA826,gate=False,waiting=0,walking=0,boardingProgress=1.000,blocked=False

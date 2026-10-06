@@ -1,0 +1,2 @@
+PASS: APK identity com.palmbay.islandairport version 1.0.7/code 7; API 24/35; arm64-v8a; no RECORD_AUDIO permission; replay provider non-exported and URI grants enabled.
+Metadata/manifests extracted from actual M7 APK. This does not establish installation, OAuth or MediaCodec runtime acceptance.

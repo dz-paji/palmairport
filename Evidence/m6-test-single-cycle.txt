@@ -1,0 +1,11 @@
+PASS  starts with one arriving flight
+PASS  arrival waits and then assigns stand zero
+PASS  service requires all four tasks and arrival bags
+PASS  incomplete service cannot depart
+PASS  completion animates and creates a fresh flight
+PASS  second flight resets task state
+PASS  servicing does not time out
+PASS  large ticks stop at human servicing
+PASS  invalid ticks are ignored
+PASS  reset returns to the first flight
+SingleFlightCycle tests: 10 passed, 0 failed, 127 assertions.

@@ -1,0 +1,52 @@
+M3.3r full regression — 2026-10-06
+Editor: /Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MacOS/Tuanjie (ULF license accepted)
+Project: /Users/qinziqian/Documents/overcooked-like/game
+All editor commands used -batchmode -projectPath <Project> -executeMethod <Method> -logFile <Log>, without -nographics.
+Only DemoBuilder.ValidateScenes additionally used -quit; other harnesses exit themselves.
+Pre-run root artifacts archived to Evidence/pre-m3.3r-full/ (m4-netplay copied to Evidence/pre-m3.3r-full/m4-netplay/).
+
+PASS console — five required suites 99 groups / 4370 assertions, 0 failed; check-unity-compile PASS.
+Report: Evidence/m3r-console.txt
+
+PASS DemoBuilder.ValidateScenes — exit 0; three scenes valid; LEVEL_LAYOUT_VALIDATED assertions=14430.
+Log: /tmp/palmbay-m3r-full-scenes.log
+Report: Evidence/level-layout-validation.txt
+
+PASS MainLoopPlaytest.Run — exit 0; three flights across all ramps, fourth arrival, saved scene reload; runtime errors False.
+Log: /tmp/palmbay-m3r-full-mainloop.log
+Report: Evidence/main-loop-playtest.txt
+
+PASS M1ReviewCapture.Run — exit 0; four PNGs; runtime errors False.
+Log: /tmp/palmbay-m3r-full-m1.log
+Report: Evidence/m1-review.txt
+
+PASS M2LobbyCapture.Run — exit 0; 17 PNGs; runtime errors False; manual IP layout passes 16:9 and 19.5:9.
+Log: /tmp/palmbay-m3r-full-m2.log
+Report: Evidence/m2-lobby-review.txt
+
+PASS M3ReplayFailureCapture.Run — exit 0; one PNG; single wrong-delivery attribution, 300 seconds, notice expiry after 81 steps, Retry reset; runtime errors False.
+Log: /tmp/palmbay-m3r-full-M3ReplayFailureCapture.log
+Report: Evidence/m3-baggage-replay.txt
+
+PASS M3FuelPlaytest.Run (M3.3r) — exit 0; 86 PASS lines, 0 FAIL; runtime errors 0; actual bot take/insert/open/fill/close(auto-return)/drive/take hose/attach/auto-transfer/detach plus tap-only input and spill checks. Previous 2026-10-05 report copied to Evidence/pre-m3.3r-full/.
+Log: /tmp/palmbay-m3r-full-fuel.log
+Report: Evidence/m3-fuel-playtest.txt
+
+PASS M4CoopCapture.Run — exit 0; three PNGs; runtime errors False. Bounded local 300-second round now reports score=466 stars=1 (pre-M3.3r archive: score=150 stars=0) with the same 1183 replay frames; the bot completes fuel faster under the simplified flow.
+Log: /tmp/palmbay-m3r-full-M4CoopCapture.log
+Report: Evidence/m4-coop-review.txt
+
+PASS M6ResultsCapture.Run — exit 0; runtime errors False; two results PNGs; Evidence/m6-replay.mp4 ffprobe h264 960x540 24 fps 624 frames 26.0 s.
+Log: /tmp/palmbay-m3r-full-m6.log
+Report: Evidence/m6-results-review.txt
+
+PASS sh Tools/test-netplay.sh (sessions 1–6) — script exit 0; 12 host/client exit codes 0; 12 reports Final PASS, runtime errors 0; 22 task PNGs 1920x1080 and three boarding frozen snapshots.
+Log: /tmp/palmbay-m3r-full-netplay.log
+Report: Evidence/netplay-summary.txt, Evidence/net-{host,client}-session{1..6}.txt
+
+PASS python3 Tools/test-m4-netplay.py (shift, clientdrop, hostleave, hostloss) — exit 0; eight processes exit 0, reports PASS, runtime errors 0; seven PNGs 1920x1080. hostleave/hostloss promotion retains partial truck fuel, home station nozzle and seat-1 held truck hose.
+Log: /tmp/palmbay-m3r-full-m4netplay.log
+Report: Evidence/m4-netplay/summary.txt
+
+Not run: M7IdentityReview.Run, M7 player smoke / packaging, BuildMac / BuildAndroid, loopback OAuth (no fuel coverage).
+Scope: editor / local isolated-process automation with FakeAuth and explicit fixtures; no human usability, physical Android pair, real OAuth or standalone package validation is inferred.

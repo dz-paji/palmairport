@@ -1,0 +1,11 @@
+PASS FakeAuthService injected and sign-in started; auth configuration and credentials are excluded.
+PASS Fake sign-in completed and TryVerifyAge authorized multiplayer before Room.Host/Join.
+FIXTURE: domain APIs prepared a partial meal order, partly filled stowed truck, loaded host-owned baggage cart, and closed gate with stable waiting/released passengers. No client snapshot or promotion state is manually replaced.
+PASS Client mirrored finite mode, round, score and populated checkpoint before continuing.
+PASS Silent client socket loss became bot takeover in the same round; host continued.
+Evidence/m4-clientdrop-results-host.png  1920x1080
+PASS 300-second result frozen, input ignored, actual history replay reaches final hold. frames=600
+Runtime errors: 0
+Final: PASS
+Details: Host completed finite match after abrupt client disconnect, with retained checkpoint and bot takeover.
+Diagnostics: scenario=host-m4-clientdrop,stage=5,scene=PalmBay,room=Playing,snapshots=4947,game=started=True,sandbox=False,remote=False,actors=p0=(-4.48, 0.00, -0.40),p1=(-6.71, 0.00, 5.01),cart0=1,signals=/private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.02cvl5gv/control,round=1,localSeat=0,elapsed=300,score=250,finished=True,replay=600/1,replayStatus=共同回放已同步

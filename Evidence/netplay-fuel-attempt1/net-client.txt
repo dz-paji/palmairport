@@ -1,0 +1,12 @@
+Session 5
+PASS FakeAuthService injected and sign-in started; auth configuration and credentials are excluded.
+PASS Fake sign-in completed and TryVerifyAge authorized multiplayer before Room.Host/Join.
+PASS Session 5 client called the real Room.Join for 127.0.0.1.
+Runtime errors: 0
+Final: FAIL
+Details: System.Exception: Fuel host did not place the client at the starting fuel station fixture.
+  at NetPlaytest.AdvanceClientFuel (System.Double now, System.Single dt) [0x0114e] in /private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.iZPran/client/Assets/Editor/NetPlaytest.Fuel.cs:941 
+  at NetPlaytest.AdvanceScenario (System.Double now, System.Single dt) [0x000f0] in /private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.iZPran/client/Assets/Editor/NetPlaytest.cs:326 
+  at NetPlaytest.Poll () [0x003f6] in /private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.iZPran/client/Assets/Editor/NetPlaytest.cs:218 
+Diagnostics: scenario=client-fuel,stage=1,scene=PalmBay,room=Playing,snapshots=0,game=started=True,sandbox=False,remote=True,actors=p0=(-7.00, 0.00, 0.44),p1=(-5.60, 0.00, 0.44),cart0=none,signals=/private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.iZPran/control,nozzle=AtStation,nozzleSeat=-1,valve=False,tank=0.000,spills=0,fuelProgress=0.000,truck=(-4.48, 0.00, -5.02),truckOwner=none,driveWaypoint=0
+

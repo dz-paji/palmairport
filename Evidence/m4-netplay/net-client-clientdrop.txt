@@ -1,0 +1,6 @@
+PASS FakeAuthService injected and sign-in started; auth configuration and credentials are excluded.
+PASS Fake sign-in completed and TryVerifyAge authorized multiplayer before Room.Host/Join.
+Runtime errors: 0
+Final: PASS
+Details: Client socket abruptly closed without leave; launcher waits for host same-round completion.
+Diagnostics: scenario=client-m4-clientdrop,stage=1,scene=PalmBay,room=Playing,snapshots=0,game=started=True,sandbox=False,remote=True,actors=p0=(-6.95, 0.00, 0.42),p1=(-5.60, 0.00, 0.44),cart0=none,signals=/private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.3_fzw2el/control,round=1,localSeat=1,elapsed=8.104791,score=100,finished=False,replay=5/0,replayStatus=正在补齐共同回放

@@ -1,0 +1,17 @@
+M2/M3 six-process-pair Unity UDP integration: PASS
+Session 1 host exit code: 0
+Session 1 client exit code: 0
+Session 2 host exit code: 0
+Session 2 client exit code: 0
+Session 3 (meal) host exit code: 0
+Session 3 (meal) client exit code: 0
+Session 4 (baggage) host exit code: 0
+Session 4 (baggage) client exit code: 0
+Session 5 (fuel) host exit code: 0
+Session 5 (fuel) client exit code: 0
+Session 6 (boarding) host exit code: 0
+Session 6 (boarding) client exit code: 0
+Host logs: Evidence/net-host-session1.log Evidence/net-host-session2.log Evidence/net-host-session3.log Evidence/net-host-session4.log Evidence/net-host-session5.log Evidence/net-host-session6.log
+Client logs: Evidence/net-client-session1.log Evidence/net-client-session2.log Evidence/net-client-session3.log Evidence/net-client-session4.log Evidence/net-client-session5.log Evidence/net-client-session6.log
+Fuel captures: Evidence/m3-fuel-captures.txt
+Boarding captures: Evidence/m3-boarding-captures.txt

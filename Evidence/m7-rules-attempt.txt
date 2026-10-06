@@ -1,0 +1,2 @@
+FAIL: <urlopen error [Errno 1] Operation not permitted>
+Start the local Firestore emulator before running this harness. No dependency or emulator downloads are performed by this script.

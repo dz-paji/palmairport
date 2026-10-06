@@ -1,0 +1,10 @@
+M3.2 replay failure capture: PASS
+Details: PASS
+Unity runtime errors: False
+Both fixture planes completed real taxi-in after 182 fixed steps at 9.100017 seconds
+Real local interaction completed one wrong baggage delivery: RX-318 <- SRC-724
+Fixed Step(0.05) progression reached shift end at 300 seconds
+Visible resultsHint: RX-318 收到了 SRC-724 航班的行李 · 行李任务失败
+Evidence/m3-baggage-replay.png  1920x1080
+Replay notice expired after 81 fixed 0.05 second steps with one trigger
+Retry cleared replay notice and started a fresh local shift: PASS

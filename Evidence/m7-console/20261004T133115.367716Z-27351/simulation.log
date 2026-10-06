@@ -1,0 +1,18 @@
+Command: sh Tools/test-simulation.sh
+Started UTC: 2026-10-04T13:31:15.368+00:00
+
+PASS  staggered arrivals and stand assignment
+PASS  three stands queue and reuse
+PASS  service prerequisites
+PASS  invalid input is rejected
+PASS  large and small ticks agree at deadlines
+PASS  deadline is processed at the exact boundary
+PASS  ending the shift freezes all state
+PASS  partial contribution is retained and score is idempotent
+PASS  all tasks complete and the flight departs
+PASS  stars use the 1, 2, and 4 flight thresholds
+PASS  endless shift with empty flight table never settles
+Simulation tests: 11 passed, 0 failed, 209 assertions.
+
+Exit code: 0
+Finished UTC: 2026-10-04T13:31:15.675+00:00

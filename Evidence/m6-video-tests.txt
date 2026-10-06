@@ -1,0 +1,5 @@
+SilentVideoEncoder: MP4, validation, finish, cancellation and cleanup passed
+ffprobe/decode: real H.264 MP4, 30 frames, correct duration/orientation, no audio; read-only provider manifest passed
+警告: [options] 未与 -source 8 一起设置引导类路径
+1 个警告
+RgbYuvConverter: planar/interleaved strides, range, flip and padding passed

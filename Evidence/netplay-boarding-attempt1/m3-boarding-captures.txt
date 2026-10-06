@@ -1,0 +1,6 @@
+MISSING or empty capture m3-boarding-blocked-host.png
+MISSING or empty capture m3-boarding-closed-host.png
+MISSING or empty capture m3-boarding-complete-host.png
+MISSING or empty capture m3-boarding-blocked-client.png
+MISSING or empty capture m3-boarding-closed-client.png
+MISSING or empty capture m3-boarding-complete-client.png

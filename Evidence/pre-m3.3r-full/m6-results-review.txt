@@ -1,0 +1,8 @@
+M6 Unity acceptance: PASS
+PASS
+Runtime errors: False
+FIXTURE: actual local 300-second simulation with injected HUMAN movement; isolated in-memory cooperation store, FakeAuth, no backend calls or system share posting.
+PASS mid-replay export/cancel preserves pose/clock; equal-count spill-ID replacement and backward seek immediately hide stale geometry before synchronous camera render.
+PASS actual 960x540,24fps silent export from 1202 recorded samples; output Evidence/m6-replay.mp4. Full video stream/ffprobe validation performed separately.
+PASS result stars, four ordered buttons, safe-area16:9/19.5:9, locked-next visible toast, automatic replay/finalhold, export/cancel restore and Retry.
+PASS BackToLobby navigates to CabinLobby. Native share panel not opened by unattended acceptance; device review remains separate.

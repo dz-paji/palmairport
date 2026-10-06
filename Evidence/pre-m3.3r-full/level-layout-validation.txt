@@ -1,0 +1,1 @@
+PASS: 14430 assertions; grouped road joins, all station/dock routes, all passenger routes, taxiway ground routes and shared ramp-3 pavement.

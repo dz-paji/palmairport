@@ -1,0 +1,1118 @@
+Tuanjie Editor version:  2022.3.61t14 (3a70663b70e0)
+Branch:                  tuanjie/1.6/staging
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 27.2 (Build 26B5091g)
+Darwin version:          27.2.0
+Architecture:            arm64
+Running under Rosetta:   NO
+Available memory:        16384 MB
+[Licensing::Module] Trying to connect to existing licensing client channel...
+[Licensing::IpcConnector] Successfully connected to the License Client on channel: "LicenseClient-qinziqian" at "2026-10-04T13:49:36.099747Z"
+[Licensing::Client] Error: Code 10 while verifying Licensing Client signature (process Id: 33870, path: "/Applications/Tuanjie Hub.app/Contents/Frameworks/TuanjieLicensingClient_V1.app/Contents/MacOS/Tuanjie.Licensing.Client")
+[Licensing::Module] Error: LicensingClient has failed validation; ignoring
+[Licensing::Client] Successfully send message: {"messageType":"HandshakeRequest","protocolVersion":"1.12","userAgent":"TuanjieEditor/2022.3.61t14 (Macintosh; U; Intel Mac OS X 27.2; zh-Hans-CN)","externalCorrelationId":"3440480140686908936"} at 1791121776
+[Licensing::Client] Successfully receive message: {"protocolVersion":"1.12","sessionId":"f891cc15c29a452dbe532a7c33243ddc","context":{"DeviceName":"Link's MBP","DeviceModel":"Mac17,2","PhysicalMemoryMB":"16384","SystemLanguageISO":"zh-Hans-CN","ProcessorCount":"10","ProcessorType":"Apple M5","OperatingSystem":"Mac OS X 27.2.0","OperatingSystemNumeric":"270200","Legacy.MachineBinding1":"A12EBA94-6CAE-536D-8639-8B28F22AAE12","Legacy.MachineBinding2":"HWF12RQ93K","Legacy.MachineBinding4":null,"Legacy.MachineBinding5":"5c:9b:a6:84:6a:ac","EnvironmentUser":"qinziqian","EnvironmentDomain":"Links-MBP","EnvironmentHostname":"Links-MBP"},"assemblyProductVersion":"1.14.0+af049b8","machineId":"2qJXSmjy+8qC9zvVypdceXsI7UU=","correlationId":"ee26600ca9f6c50f0a68447f7e54978e","responseCode":200,"responseStatus":"Handshake successful","messageType":"HandshakeResponse"} at 1791121776
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.14.0+af049b8
+  Session Id:              f891cc15c29a452dbe532a7c33243ddc
+  Correlation Id:          ee26600ca9f6c50f0a68447f7e54978e
+  External correlation Id: 3440480140686908936
+  Machine Id:              2qJXSmjy+8qC9zvVypdceXsI7UU=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-qinziqian" (connect: 0.00s, validation: 0.01s, handshake: 0.34s)
+[Licensing::IpcConnector] Successfully connected to the License Notification on channel: "LicenseClient-qinziqian-notifications" at "2026-10-04T13:49:36.455683Z"
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully send message: {"messageType":"UpdateLicenseRequest","AccessToken":"","OrgId":"","ProjectId":"","forceUpdateLicense":true} at 1791121776
+[Licensing::Client] Successfully receive message: {"responseCode":200,"responseStatus":"Licenses updated.","messageType":"UpdateLicenseResponse"} at 1791121777
+[Licensing::Client] Successfully updated license
+[Licensing::Client] Successfully send message: {"messageType":"EntitlementDetailsRequest","entitlementIds":["com.unity.editor.legacy.pro","com.unity.editor.headless"],"packageEntitlementIds":[],"includeCustomData":false} at 1791121777
+[Licensing::Client] Successfully receive message: {"entitlementGroups":[{"entitlementGroupId":"F4-W5GR-B6V2-Y5WE-WRK9-GR7N","entitlementGroupIdHash":"8d58bf4deb18ac7618b28a8936c405932a8efcb2","productName":"Unity Personal","productType":"TuanjieEditor","licenseType":"ULF","expiration":1791384576000,"matchedEntitlements":[{"entitlementId":"com.unity.editor.headless","isPackage":false,"count":1}]}],"responseCode":200,"responseStatus":"Found 1 entitlement groups and 0 free entitlements matching requested entitlement ids","messageType":"EntitlementDetailsResponse"} at 1791121777
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Serial number assigned to: "F4-W5GR-B6V2-Y5WE-WRK9-XXXX"
+Pro License: NO
+[Licensing::Client] Successfully send message: {"messageType":"EntitlementDetailsRequest","entitlementIds":["com.unity.editor.headless","com.unity.editor.ui"],"packageEntitlementIds":[],"includeCustomData":false} at 1791121777
+[Licensing::Client] Successfully receive message: {"entitlementGroups":[{"entitlementGroupId":"F4-W5GR-B6V2-Y5WE-WRK9-GR7N","entitlementGroupIdHash":"8d58bf4deb18ac7618b28a8936c405932a8efcb2","productName":"Unity Personal","productType":"TuanjieEditor","licenseType":"ULF","expiration":1791384576000,"matchedEntitlements":[{"entitlementId":"com.unity.editor.ui","isPackage":false,"count":1},{"entitlementId":"com.unity.editor.headless","isPackage":false,"count":1}]}],"responseCode":200,"responseStatus":"Found 1 entitlement groups and 0 free entitlements matching requested entitlement ids","messageType":"EntitlementDetailsResponse"} at 1791121777
+[Licensing::Client] Successfully resolved entitlement details
+Launching external process: /Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/Resources/PackageManager/Server/TuanjiePackageManager
+
+COMMAND LINE ARGUMENTS:
+/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MacOS/Tuanjie
+-batchmode
+-quit
+-projectPath
+/Users/qinziqian/Documents/overcooked-like/game
+-executeMethod
+DemoBuilder.BuildAndroid
+-logFile
+/Users/qinziqian/Documents/overcooked-like/game/Evidence/m7-android-build.log
+Successfully changed project path to: /Users/qinziqian/Documents/overcooked-like/game
+/Users/qinziqian/Documents/overcooked-like/game
+[Memory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [8621359872]  Target information:
+
+Player connection [8621359872]  * "[IP] 192.168.123.27 [Port] 55504 [Flags] 2 [Guid] 2357376354 [EditorId] 2357376354 [Version] 1048832 [Id] OSXEditor(0,Links-MBP.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
+
+Player connection [8621359872]  * "[IP] 192.168.200.6 [Port] 55504 [Flags] 2 [Guid] 2357376354 [EditorId] 2357376354 [Version] 1048832 [Id] OSXEditor(0,Links-MBP.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
+
+Player connection [8621359872] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [8621359872] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+AS: AutoStreaming module initializing.
+Begin write certificate to file.
+Write certificate complete, return 1.
+StartServer, cert is /Users/qinziqian/Library/Tuanjie/46488-rest-certificate.pem
+Start HTTP server port 38000, HTTPS server port 38443.
+[Package Manager] UpmClient::Connect -- Connected to IPC stream "Upm-46488" after 0.4 seconds.
+[Licensing::Client] Successfully send message: {"messageType":"EntitlementDetailsRequest","entitlementIds":["com.unity.editor.last.activation.date","com.unity.editor.headless"],"packageEntitlementIds":[],"includeCustomData":false} at 1791121778
+[Licensing::Client] Successfully receive message: {"entitlementGroups":[{"entitlementGroupId":"F4-W5GR-B6V2-Y5WE-WRK9-GR7N","entitlementGroupIdHash":"8d58bf4deb18ac7618b28a8936c405932a8efcb2","productName":"Unity Personal","productType":"TuanjieEditor","licenseType":"ULF","expiration":1791384576000,"matchedEntitlements":[{"entitlementId":"com.unity.editor.headless","isPackage":false,"count":1},{"entitlementId":"com.unity.editor.last.activation.date","isPackage":false,"count":1}]}],"responseCode":200,"responseStatus":"Found 1 entitlement groups and 0 free entitlements matching requested entitlement ids","messageType":"EntitlementDetailsResponse"} at 1791121778
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully send message: {"messageType":"EntitlementDetailsRequest","entitlementIds":["com.unity.editor.disable-splash-screen","com.unity.editor.headless"],"packageEntitlementIds":[],"includeCustomData":false} at 1791121778
+[Licensing::Client] Successfully receive message: {"entitlementGroups":[{"entitlementGroupId":"F4-W5GR-B6V2-Y5WE-WRK9-GR7N","entitlementGroupIdHash":"8d58bf4deb18ac7618b28a8936c405932a8efcb2","productName":"Unity Personal","productType":"TuanjieEditor","licenseType":"ULF","expiration":1791384576000,"matchedEntitlements":[{"entitlementId":"com.unity.editor.headless","isPackage":false,"count":1}]}],"responseCode":200,"responseStatus":"Found 1 entitlement groups and 0 free entitlements matching requested entitlement ids","messageType":"EntitlementDetailsResponse"} at 1791121778
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully send message: {"messageType":"EntitlementDetailsRequest","entitlementIds":["com.unity.editor.allow-mix-usage","com.unity.editor.headless"],"packageEntitlementIds":[],"includeCustomData":false} at 1791121778
+[Licensing::Client] Successfully receive message: {"entitlementGroups":[{"entitlementGroupId":"F4-W5GR-B6V2-Y5WE-WRK9-GR7N","entitlementGroupIdHash":"8d58bf4deb18ac7618b28a8936c405932a8efcb2","productName":"Unity Personal","productType":"TuanjieEditor","licenseType":"ULF","expiration":1791384576000,"matchedEntitlements":[{"entitlementId":"com.unity.editor.headless","isPackage":false,"count":1}]}],"responseCode":200,"responseStatus":"Found 1 entitlement groups and 0 free entitlements matching requested entitlement ids","messageType":"EntitlementDetailsResponse"} at 1791121778
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully send message: {"messageType":"EntitlementDetailsRequest","entitlementIds":[],"packageEntitlementIds":["com.unity.modules.audio","com.unity.modules.androidjni","com.unity.modules.imgui","com.unity.modules.physics","com.unity.modules.jsonserialize","com.unity.modules.screencapture","com.unity.modules.ui","cn.tuanjie.codely.bridge","com.unity.modules.imageconversion","com.unity.ugui","com.unity.modules.unitywebrequest","com.unity.ext.nunit"],"includeCustomData":false} at 1791121778
+[Licensing::Client] Successfully receive message: {"freeEntitlementIds":["com.unity.modules.audio","com.unity.modules.androidjni","com.unity.modules.imgui","com.unity.modules.physics","com.unity.modules.jsonserialize","com.unity.modules.screencapture","com.unity.modules.ui","cn.tuanjie.codely.bridge","com.unity.modules.imageconversion","com.unity.ugui","com.unity.modules.unitywebrequest","com.unity.ext.nunit"],"responseCode":200,"responseStatus":"Found 0 entitlement groups and 12 free entitlements matching requested entitlement ids","messageType":"EntitlementDetailsResponse"} at 1791121778
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 12 packages:
+  Packages from [https://packages.tuanjie.cn]:
+    com.unity.ext.nunit@1.0.6 (location: /Users/qinziqian/Documents/overcooked-like/game/Library/PackageCache/com.unity.ext.nunit@1.0.6)
+  Built-in packages:
+    com.unity.modules.audio@1.0.0 (location: /Users/qinziqian/Documents/overcooked-like/game/Library/PackageCache/com.unity.modules.audio@1.0.0)
+    com.unity.modules.androidjni@1.0.0 (location: /Users/qinziqian/Documents/overcooked-like/game/Library/PackageCache/com.unity.modules.androidjni@1.0.0)
+    com.unity.modules.imgui@1.0.0 (location: /Users/qinziqian/Documents/overcooked-like/game/Library/PackageCache/com.unity.modules.imgui@1.0.0)
+    com.unity.modules.physics@1.0.0 (location: /Users/qinziqian/Documents/overcooked-like/game/Library/PackageCache/com.unity.modules.physics@1.0.0)
+    com.unity.modules.jsonserialize@1.0.0 (location: /Users/qinziqian/Documents/overcooked-like/game/Library/PackageCache/com.unity.modules.jsonserialize@1.0.0)
+    com.unity.modules.screencapture@1.0.0 (location: /Users/qinziqian/Documents/overcooked-like/game/Library/PackageCache/com.unity.modules.screencapture@1.0.0)
+    com.unity.modules.ui@1.0.0 (location: /Users/qinziqian/Documents/overcooked-like/game/Library/PackageCache/com.unity.modules.ui@1.0.0)
+    com.unity.modules.imageconversion@1.0.0 (location: /Users/qinziqian/Documents/overcooked-like/game/Library/PackageCache/com.unity.modules.imageconversion@1.0.0)
+    com.unity.ugui@1.0.0 (location: /Users/qinziqian/Documents/overcooked-like/game/Library/PackageCache/com.unity.ugui@1.0.0)
+    com.unity.modules.unitywebrequest@1.0.0 (location: /Users/qinziqian/Documents/overcooked-like/game/Library/PackageCache/com.unity.modules.unitywebrequest@1.0.0)
+  Local packages:
+    cn.tuanjie.codely.bridge@file:/Users/qinziqian/Documents/overcooked-like/game/.codely.packages/cn.tuanjie.codely.bridge@1.0.85-785dea6a (location: /Users/qinziqian/Documents/overcooked-like/game/.codely.packages/cn.tuanjie.codely.bridge@1.0.85-785dea6a)
+[Subsystems] No new subsystems found in resolved package list.
+Package Manager log level set to [2]
+[Package Manager] Done registering packages in 0.16 seconds
+[Package Manager] Done resolving packages in 0.73 seconds
+[Package Manager] Registered 12 packages:
+  Packages from [https://packages.tuanjie.cn]:
+    com.unity.ext.nunit@1.0.6 (location: /Users/qinziqian/Documents/overcooked-like/game/Library/PackageCache/com.unity.ext.nunit@1.0.6)
+  Built-in packages:
+    com.unity.modules.audio@1.0.0 (location: /Users/qinziqian/Documents/overcooked-like/game/Library/PackageCache/com.unity.modules.audio@1.0.0)
+    com.unity.modules.androidjni@1.0.0 (location: /Users/qinziqian/Documents/overcooked-like/game/Library/PackageCache/com.unity.modules.androidjni@1.0.0)
+    com.unity.modules.imgui@1.0.0 (location: /Users/qinziqian/Documents/overcooked-like/game/Library/PackageCache/com.unity.modules.imgui@1.0.0)
+    com.unity.modules.physics@1.0.0 (location: /Users/qinziqian/Documents/overcooked-like/game/Library/PackageCache/com.unity.modules.physics@1.0.0)
+    com.unity.modules.jsonserialize@1.0.0 (location: /Users/qinziqian/Documents/overcooked-like/game/Library/PackageCache/com.unity.modules.jsonserialize@1.0.0)
+    com.unity.modules.screencapture@1.0.0 (location: /Users/qinziqian/Documents/overcooked-like/game/Library/PackageCache/com.unity.modules.screencapture@1.0.0)
+    com.unity.modules.ui@1.0.0 (location: /Users/qinziqian/Documents/overcooked-like/game/Library/PackageCache/com.unity.modules.ui@1.0.0)
+    com.unity.modules.imageconversion@1.0.0 (location: /Users/qinziqian/Documents/overcooked-like/game/Library/PackageCache/com.unity.modules.imageconversion@1.0.0)
+    com.unity.ugui@1.0.0 (location: /Users/qinziqian/Documents/overcooked-like/game/Library/PackageCache/com.unity.ugui@1.0.0)
+    com.unity.modules.unitywebrequest@1.0.0 (location: /Users/qinziqian/Documents/overcooked-like/game/Library/PackageCache/com.unity.modules.unitywebrequest@1.0.0)
+  Local packages:
+    cn.tuanjie.codely.bridge@file:/Users/qinziqian/Documents/overcooked-like/game/.codely.packages/cn.tuanjie.codely.bridge@1.0.85-785dea6a (location: /Users/qinziqian/Documents/overcooked-like/game/.codely.packages/cn.tuanjie.codely.bridge@1.0.85-785dea6a)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.00 seconds
+Artifact Garbage Collection - Removed 1 unused hashed content files
+Refreshing native plugins compatible for Editor in 10.89 ms, found 7 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.61t14 (3a70663b70e0)
+[Subsystems] Discovering subsystems at path /Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/qinziqian/Documents/overcooked-like/game/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+ preferred device: Apple M5 (high power)
+Metal devices available: 1
+0: Apple M5 (high power)
+Using device Apple M5 (high power)
+Initializing Metal device caps: Apple M5
+[Licensing::Client] Successfully send message: {"messageType":"EntitlementDetailsRequest","entitlementIds":["com.unity.editor.cluster","com.unity.editor.headless"],"packageEntitlementIds":[],"includeCustomData":false} at 1791121779
+[Licensing::Client] Successfully receive message: {"entitlementGroups":[{"entitlementGroupId":"F4-W5GR-B6V2-Y5WE-WRK9-GR7N","entitlementGroupIdHash":"8d58bf4deb18ac7618b28a8936c405932a8efcb2","productName":"Unity Personal","productType":"TuanjieEditor","licenseType":"ULF","expiration":1791384576000,"matchedEntitlements":[{"entitlementId":"com.unity.editor.headless","isPackage":false,"count":1}]}],"responseCode":200,"responseStatus":"Found 1 entitlement groups and 0 free entitlements matching requested entitlement ids","messageType":"EntitlementDetailsResponse"} at 1791121779
+[Licensing::Client] Successfully resolved entitlement details
+Initialize mono
+Mono path[0] = '/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/Managed'
+Mono path[1] = '/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
+Mono config path = '/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=0.0.0.0:56488
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+ImportWorker Server TCP listen port: 0
+Begin MonoManager ReloadAssembly
+Registering precompiled tuanjie dll's ...
+Register platform support module: /Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+[Licensing::Client] Successfully send message: {"messageType":"EntitlementDetailsRequest","entitlementIds":["com.unity.editor.platforms.android","com.unity.editor.headless"],"packageEntitlementIds":[],"includeCustomData":false} at 1791121779
+[Licensing::Client] Successfully receive message: {"entitlementGroups":[{"entitlementGroupId":"F4-W5GR-B6V2-Y5WE-WRK9-GR7N","entitlementGroupIdHash":"8d58bf4deb18ac7618b28a8936c405932a8efcb2","productName":"Unity Personal","productType":"TuanjieEditor","licenseType":"ULF","expiration":1791384576000,"matchedEntitlements":[{"entitlementId":"com.unity.editor.platforms.android","isPackage":false,"count":1},{"entitlementId":"com.unity.editor.headless","isPackage":false,"count":1}]}],"responseCode":200,"responseStatus":"Found 1 entitlement groups and 0 free entitlements matching requested entitlement ids","messageType":"EntitlementDetailsResponse"} at 1791121779
+[Licensing::Client] Successfully resolved entitlement details
+Register platform support module: /Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Registered in 0.017588 seconds.
+- Loaded All Assemblies, in  0.355 seconds
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 216 ms
+Native extension for OSXStandalone target not found
+[Licensing::Client] Successfully send message: {"messageType":"EntitlementDetailsRequest","entitlementIds":["com.unity.editor.minigame.subplatform.wechat","com.unity.editor.headless"],"packageEntitlementIds":[],"includeCustomData":false} at 1791121780
+[Licensing::Client] Successfully receive message: {"entitlementGroups":[{"entitlementGroupId":"F4-W5GR-B6V2-Y5WE-WRK9-GR7N","entitlementGroupIdHash":"8d58bf4deb18ac7618b28a8936c405932a8efcb2","productName":"Unity Personal","productType":"TuanjieEditor","licenseType":"ULF","expiration":1791384576000,"matchedEntitlements":[{"entitlementId":"com.unity.editor.headless","isPackage":false,"count":1},{"entitlementId":"com.unity.editor.minigame.subplatform.wechat","isPackage":false,"count":1}]}],"responseCode":200,"responseStatus":"Found 1 entitlement groups and 0 free entitlements matching requested entitlement ids","messageType":"EntitlementDetailsResponse"} at 1791121780
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully send message: {"messageType":"EntitlementDetailsRequest","entitlementIds":["com.unity.editor.minigame.subplatform.douyin","com.unity.editor.headless"],"packageEntitlementIds":[],"includeCustomData":false} at 1791121780
+[Licensing::Client] Successfully receive message: {"entitlementGroups":[{"entitlementGroupId":"F4-W5GR-B6V2-Y5WE-WRK9-GR7N","entitlementGroupIdHash":"8d58bf4deb18ac7618b28a8936c405932a8efcb2","productName":"Unity Personal","productType":"TuanjieEditor","licenseType":"ULF","expiration":1791384576000,"matchedEntitlements":[{"entitlementId":"com.unity.editor.headless","isPackage":false,"count":1},{"entitlementId":"com.unity.editor.minigame.subplatform.douyin","isPackage":false,"count":1}]}],"responseCode":200,"responseStatus":"Found 1 entitlement groups and 0 free entitlements matching requested entitlement ids","messageType":"EntitlementDetailsResponse"} at 1791121780
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully send message: {"messageType":"EntitlementDetailsRequest","entitlementIds":["com.unity.editor.minigame.subplatform.kuaishou","com.unity.editor.headless"],"packageEntitlementIds":[],"includeCustomData":false} at 1791121780
+[Licensing::Client] Successfully receive message: {"entitlementGroups":[{"entitlementGroupId":"F4-W5GR-B6V2-Y5WE-WRK9-GR7N","entitlementGroupIdHash":"8d58bf4deb18ac7618b28a8936c405932a8efcb2","productName":"Unity Personal","productType":"TuanjieEditor","licenseType":"ULF","expiration":1791384576000,"matchedEntitlements":[{"entitlementId":"com.unity.editor.headless","isPackage":false,"count":1},{"entitlementId":"com.unity.editor.minigame.subplatform.kuaishou","isPackage":false,"count":1}]}],"responseCode":200,"responseStatus":"Found 1 entitlement groups and 0 free entitlements matching requested entitlement ids","messageType":"EntitlementDetailsResponse"} at 1791121780
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully send message: {"messageType":"EntitlementDetailsRequest","entitlementIds":["com.unity.editor.minigame.subplatform.minihost","com.unity.editor.headless"],"packageEntitlementIds":[],"includeCustomData":false} at 1791121780
+[Licensing::Client] Successfully receive message: {"entitlementGroups":[{"entitlementGroupId":"F4-W5GR-B6V2-Y5WE-WRK9-GR7N","entitlementGroupIdHash":"8d58bf4deb18ac7618b28a8936c405932a8efcb2","productName":"Unity Personal","productType":"TuanjieEditor","licenseType":"ULF","expiration":1791384576000,"matchedEntitlements":[{"entitlementId":"com.unity.editor.headless","isPackage":false,"count":1},{"entitlementId":"com.unity.editor.minigame.subplatform.minihost","isPackage":false,"count":1}]}],"responseCode":200,"responseStatus":"Found 1 entitlement groups and 0 free entitlements matching requested entitlement ids","messageType":"EntitlementDetailsResponse"} at 1791121780
+[Licensing::Client] Successfully resolved entitlement details
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.488 seconds
+Domain Reload Profiling: 844ms
+	BeginReloadAssembly (110ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (55ms)
+	LoadAllAssembliesAndSetupDomain (149ms)
+		LoadAssemblies (112ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (145ms)
+			TypeCache.Refresh (143ms)
+				TypeCache.ScanAssembly (128ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (488ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (450ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (283ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (151ms)
+			ProcessInitializeOnLoadMethodAttributes (11ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+[Licensing::Client] Successfully send message: {"messageType":"EntitlementDetailsRequest","entitlementIds":["com.unity.editor.legacy.pro","com.unity.editor.watermarks.disable","com.unity.editor.watermarks.prototyping","com.unity.editor.watermarks.edu","com.unity.editor.watermarks.trial","com.unity.editor.time-limited-license","com.unity.editor.cluster","com.unity.editor.unity.compliant","com.unity.editor.watermarks.forcedisable","com.unity.editor.open-harmony.analytics.disabled","com.unity.editor.mini-game.analytics.disabled","com.unity.editor.unity.expiration.2d","com.unity.editor.unity.expiration.7d","com.unity.editor.headless"],"packageEntitlementIds":[],"includeCustomData":false} at 1791121780
+[Licensing::Client] Successfully receive message: {"entitlementGroups":[{"entitlementGroupId":"F4-W5GR-B6V2-Y5WE-WRK9-GR7N","entitlementGroupIdHash":"8d58bf4deb18ac7618b28a8936c405932a8efcb2","productName":"Unity Personal","productType":"TuanjieEditor","licenseType":"ULF","expiration":1791384576000,"matchedEntitlements":[{"entitlementId":"com.unity.editor.headless","isPackage":false,"count":1},{"entitlementId":"com.unity.editor.unity.expiration.2d","isPackage":false,"count":1},{"entitlementId":"com.unity.editor.watermarks.forcedisable","isPackage":false,"count":1},{"entitlementId":"com.unity.editor.unity.compliant","isPackage":false,"count":1},{"entitlementId":"com.unity.editor.mini-game.analytics.disabled","isPackage":false,"count":1},{"entitlementId":"com.unity.editor.time-limited-license","isPackage":false,"count":1}]}],"responseCode":200,"responseStatus":"Found 1 entitlement groups and 0 free entitlements matching requested entitlement ids","messageType":"EntitlementDetailsResponse"} at 1791121780
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[ScriptCompilation] Requested script compilation because: Assetdatabase observed changes in script compilation related files
+[40m[32minfo[39m[22m[49m: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://unix:/tmp/ilpp.sock-f756a1c31a2391e118913e99e0bc0cce
+[40m[32minfo[39m[22m[49m: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+[40m[32minfo[39m[22m[49m: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+[40m[32minfo[39m[22m[49m: Microsoft.Hosting.Lifetime[0]
+      Content root path: /Users/qinziqian/Documents/overcooked-like/game/
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping application/grpc -
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping application/grpc - - 200 - application/grpc 55.6990ms
+Starting: /Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/bee_backend --dont-print-to-structured-log --ipc --defer-dag-verification --dagfile="Library/Bee/200b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: /Users/qinziqian/Documents/overcooked-like/game
+DisplayProgressbar: Compiling Scripts
+ExitCode: 0 Duration: 2s67ms
+[155/158    2s] Csc Library/Bee/artifacts/200b0aE.dag/Assembly-CSharp-Editor.dll (+2 others)
+[156/158    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb
+[157/158    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+*** Tundra build success (2.05 seconds), 3 items updated, 158 evaluated
+AssetDatabase: script compilation time: 2.723358s
+Total cache size 14125764
+Total cache size after purge 14125764
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.378 seconds
+Refreshing native plugins compatible for Editor in 4.16 ms, found 7 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Start importing Assets/Editor/M7SmokeBuilder.cs using Guid(3411cf1221914127a6c2158e010bc2a3) Importer(Primary)  -> (artifact id: '26c4599d3bbe042351d8f7a856bed7e9') in 0.009851 seconds
+Refreshing native plugins compatible for Editor in 4.38 ms, found 7 plugins.
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.236 seconds
+Domain Reload Profiling: 615ms
+	BeginReloadAssembly (107ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (19ms)
+	RebuildCommonClasses (23ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (16ms)
+	LoadAllAssembliesAndSetupDomain (223ms)
+		LoadAssemblies (156ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (124ms)
+			TypeCache.Refresh (120ms)
+				TypeCache.ScanAssembly (104ms)
+			ScanForSourceGeneratedMonoScriptInfo (2ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (236ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (141ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (18ms)
+			ProcessInitializeOnLoadAttributes (96ms)
+			ProcessInitializeOnLoadMethodAttributes (12ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (3ms)
+Refreshing native plugins compatible for Editor in 2.35 ms, found 7 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=e6be740de433c4ed981079faa19d9b13): Total: 3.764 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=2 ms, native=357 ms
+		Asset DB Callback time: managed=31 ms, native=12 ms
+		Scripting: domain reloads=1, domain reload time=632 ms, compile time=2725 ms, other=3 ms
+		Project Asset Count: scripts=608, non-scripts=4229
+		Asset File Changes: new=0, changed=1, moved=0, deleted=0
+		Scan Filter Count: 1
+		OnDemandAssets Count:0
+	InvokeBeforeRefreshCallbacks: 0.712ms
+	ApplyChangesToAssetFolders: 0.026ms
+	Scan: 116.146ms
+	OnSourceAssetsModified: 2.148ms
+	GetAllGuidsForCategorization: 0.281ms
+	CategorizeAssets: 46.217ms
+	ImportOutOfDateAssets: 266.014ms (-2475.048ms without children)
+		ImportManagerImport: 14.004ms (3.843ms without children)
+			ImportInProcess: 10.146ms
+			UpdateCategorizedAssets: 0.015ms
+		CompileScripts: 2724.634ms
+		ReloadNativeAssets: 0.000ms
+		UnloadImportedAssets: 1.224ms
+		ReloadImportedAssets: 0.107ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.634ms
+		InitializingProgressBar: 0.000ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.000ms
+		OnDemandSchedulerStart: 0.458ms
+	PostProcessAllAssets: 37.761ms
+	Hotreload: 3.791ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.000ms
+	UnloadStreamsBegin: 0.232ms
+	PersistCurrentRevisions: 0.268ms
+	UnloadStreamsEnd: 0.003ms
+	GenerateScriptTypeHashes: 0.000ms
+	Untracked: 3290.279ms
+Application.AssetDatabase Initial Refresh End
+plugin_module success
+g_query_callback success 
+g_get_assembly_csharp load success 
+Launching external process: /Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/Tools/TuanjieShaderCompiler
+Launched and connected shader compiler TuanjieShaderCompiler after 0.07 seconds
+Scanning for USB devices : 0.049ms
+Initializing Tuanjie extensions:
+[Licensing::Client] Successfully send message: {"messageType":"ProductNameRequest","Value":"studio.palmbay.airport"} at 1791121784
+[Licensing::Client] Successfully receive message: {"responseCode":200,"messageType":"ProductNameResponse"} at 1791121784
+[Licensing::Client] Error: ProductNameResponse could not be deserialized
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-PALM BAY
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 51 unused Assets / (388.2 KB). Loaded Objects now: 958.
+Memory consumption went from 97.7 MB to 97.3 MB.
+Total: 3.591167 ms (FindLiveObjects: 0.056583 ms CreateObjectMapping: 0.014625 ms MarkObjects: 3.230917 ms  DeleteObjects: 0.288541 ms)
+
+[Licensing::Client] Successfully send message: {"messageType":"EntitlementDetailsRequest","entitlementIds":["com.unity.editor.platforms.android.pro","com.unity.editor.headless"],"packageEntitlementIds":[],"includeCustomData":false} at 1791121784
+[Licensing::Client] Successfully receive message: {"entitlementGroups":[{"entitlementGroupId":"F4-W5GR-B6V2-Y5WE-WRK9-GR7N","entitlementGroupIdHash":"8d58bf4deb18ac7618b28a8936c405932a8efcb2","productName":"Unity Personal","productType":"TuanjieEditor","licenseType":"ULF","expiration":1791384576000,"matchedEntitlements":[{"entitlementId":"com.unity.editor.headless","isPackage":false,"count":1}]}],"responseCode":200,"responseStatus":"Found 1 entitlement groups and 0 free entitlements matching requested entitlement ids","messageType":"EntitlementDetailsResponse"} at 1791121784
+[Licensing::Client] Successfully resolved entitlement details
+Start importing Packages/cn.tuanjie.codely.bridge/Editor/Bridge/fonts/Inter.ttc using Guid(e5ccdd55a2638f4479b92c50548030bf) Importer(Primary)  -> (artifact id: '8044139778f25fabf15e6599ddc61311') in 0.026779 seconds
+Start importing Packages/cn.tuanjie.codely.bridge/Editor/Bridge/fonts/FiraMono-Regular.ttf using Guid(c65026091fecbf845938112797b179e5) Importer(Primary)  -> (artifact id: '3eb4e26ea8fb6be78e10c6f88334f22d') in 0.002385 seconds
+Start importing Packages/cn.tuanjie.codely.bridge/Editor/Bridge/fonts/NotoSans-Regular.ttf using Guid(6aaf3e29151e0be47b7e92f0ed091c73) Importer(Primary)  -> (artifact id: '26652f86dfdf7c0718f653fe625a9a40') in 0.002921 seconds
+Refreshing native plugins compatible for Editor in 4.11 ms, found 7 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=5c2cc2948a3944745a13a39f7059c16a): Total: 0.138 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=b6bf1f765525f4e939b156980aa136dd): Total: 0.052 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+[ScriptCompilation] Requested script compilation because: Switching to platform Android:AndroidPlayer:0
+Start importing ProjectSettings/ProjectSettings.asset using Guid(00000000000000004000000000000000) Importer(Primary)  -> (artifact id: '050d720d03676a014273b7c94f76458e') in 0.002380 seconds
+Refreshing native plugins compatible for Editor in 2.25 ms, found 7 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=f6ec8d62269c64b3ba424d3c95ee37e1): Total: 0.024 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+[Licensing::Client] Successfully send message: {"messageType":"EntitlementDetailsRequest","entitlementIds":["com.unity.editor","com.unity.editor.headless"],"packageEntitlementIds":[],"includeCustomData":false} at 1791121784
+[Licensing::Client] Successfully receive message: {"entitlementGroups":[{"entitlementGroupId":"F4-W5GR-B6V2-Y5WE-WRK9-GR7N","entitlementGroupIdHash":"8d58bf4deb18ac7618b28a8936c405932a8efcb2","productName":"Unity Personal","productType":"TuanjieEditor","licenseType":"ULF","expiration":1791384576000,"matchedEntitlements":[{"entitlementId":"com.unity.editor","isPackage":false,"count":1},{"entitlementId":"com.unity.editor.headless","isPackage":false,"count":1}]}],"responseCode":200,"responseStatus":"Found 1 entitlement groups and 0 free entitlements matching requested entitlement ids","messageType":"EntitlementDetailsResponse"} at 1791121784
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully send message: {"messageType":"EntitlementDetailsRequest","entitlementIds":["com.unity.editor","com.unity.editor.headless"],"packageEntitlementIds":[],"includeCustomData":false} at 1791121784
+[Licensing::Client] Successfully receive message: {"entitlementGroups":[{"entitlementGroupId":"F4-W5GR-B6V2-Y5WE-WRK9-GR7N","entitlementGroupIdHash":"8d58bf4deb18ac7618b28a8936c405932a8efcb2","productName":"Unity Personal","productType":"TuanjieEditor","licenseType":"ULF","expiration":1791384576000,"matchedEntitlements":[{"entitlementId":"com.unity.editor","isPackage":false,"count":1},{"entitlementId":"com.unity.editor.headless","isPackage":false,"count":1}]}],"responseCode":200,"responseStatus":"Found 1 entitlement groups and 0 free entitlements matching requested entitlement ids","messageType":"EntitlementDetailsResponse"} at 1791121784
+[Licensing::Client] Successfully resolved entitlement details
+DisplayProgressbar: Checking prerequisites
+Android PostProcess task "Checking prerequisites" took 20.4092 ms
+DisplayProgressbar: Detect Java Development Kit (JDK)
+Android PostProcess task "Detect Java Development Kit (JDK)" took 438.5194 ms
+DisplayProgressbar: Detecting Android SDK
+AndroidSDKTools:
+
+	root          : /Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/SDK
+	cmdline-tools : /Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/SDK/cmdline-tools/6.0
+	platform-tools: /Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/SDK/platform-tools
+	build-tools   : /Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/SDK/build-tools/34.0.0
+
+	adb           : /Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/SDK/platform-tools/adb
+
+Android PostProcess task "Detecting Android SDK" took 6169.2737 ms
+DisplayProgressbar: Detect Android NDK
+Android PostProcess task "Detect Android NDK" took 5.7487 ms
+Android PostProcess task "Trying to find a suitable Android device" took 0.3216 ms
+DisplayProgressbar: Checking Graphics API compatibility
+Android PostProcess task "Checking Graphics API compatibility" took 0.9115 ms
+DisplayProgressbar: Check resources
+Android PostProcess task "Check resources" took 0.2177 ms
+DisplayProgressbar: Check Android Player Settings
+Android PostProcess task "Check Android Player Settings" took 0.0926 ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping application/grpc -
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping application/grpc - - 200 - application/grpc 1.7370ms
+Starting: /Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/bee_backend --dont-print-to-structured-log --ipc --defer-dag-verification --dagfile="Library/Bee/1300b0aESkipCompile.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssembliesAndTypeDB
+WorkingDir: /Users/qinziqian/Documents/overcooked-like/game
+DisplayProgressbar: Compiling Scripts
+ExitCode: 0 Duration: 0s64ms
+*** Tundra build success (0.04 seconds), 0 items updated, 3 evaluated
+Total cache size 14125764
+Total cache size after purge 14125764
+Asset Pipeline Refresh (id=9acf9db2b435443cba22a77fa723ee89): Total: 0.042 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+[ScriptCompilation] Requested script compilation because: Recompiling scripts for player build.
+BuildPlayer: start building target 13
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping application/grpc -
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping application/grpc - - 200 - application/grpc 0.4240ms
+Starting: /Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/bee_backend --dont-print-to-structured-log --ipc --defer-dag-verification --dagfile="Library/Bee/1300b0aP.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssembliesAndTypeDB
+WorkingDir: /Users/qinziqian/Documents/overcooked-like/game
+ExitCode: 0 Duration: 0s947ms
+[55/62      0s] CopyFiles Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.dll
+[56/62      0s] CopyFiles Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.pdb
+[57/62      0s] Csc Library/Bee/artifacts/1300b0aP.dag/Assembly-CSharp.dll (+2 others)
+[58/62      0s] CopyFiles Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.pdb
+[59/62      0s] CopyFiles Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.dll
+[61/62      0s] BuildPlayerDataGenerator Library/BuildPlayerData/Player/RuntimeInitializeOnLoads.json (+1 other)
+*** Tundra build success (0.93 seconds), 6 items updated, 62 evaluated
+Total cache size 14125764
+Total cache size after purge 14125764
+Not rebuilding Data files -- no changes
+Asset Pipeline Refresh (id=2da0131cb67a447819eca6196c483d82): Total: 0.059 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+
+
+Mono dependencies included in the build
+Dependency assembly - netstandard.dll
+Dependency assembly - Microsoft.Win32.Registry.dll
+Dependency assembly - System.Security.Cryptography.Hashing.dll
+Dependency assembly - Microsoft.CSharp.dll
+Dependency assembly - System.Runtime.InteropServices.RuntimeInformation.dll
+Dependency assembly - System.Security.Cryptography.Encryption.dll
+Dependency assembly - System.Management.dll
+Dependency assembly - Microsoft.Win32.Registry.AccessControl.dll
+Dependency assembly - System.Runtime.Serialization.dll
+Dependency assembly - System.ComponentModel.TypeConverter.dll
+Dependency assembly - System.Diagnostics.TraceEvent.dll
+Dependency assembly - System.Runtime.Remoting.dll
+Dependency assembly - System.ComponentModel.Annotations.dll
+Dependency assembly - System.Data.Entity.dll
+Dependency assembly - System.Security.AccessControl.dll
+Dependency assembly - System.Drawing.Primitives.dll
+Dependency assembly - System.Text.Encoding.Extensions.dll
+Dependency assembly - System.Xml.Serialization.dll
+Dependency assembly - System.Web.RegularExpressions.dll
+Dependency assembly - System.IO.FileSystem.Watcher.dll
+Dependency assembly - System.Xml.XmlSerializer.dll
+Dependency assembly - System.Resources.ResourceManager.dll
+Dependency assembly - System.Linq.Parallel.dll
+Dependency assembly - System.Security.Claims.dll
+Dependency assembly - System.Net.Mail.dll
+Dependency assembly - System.Numerics.dll
+Dependency assembly - System.Data.Common.dll
+Dependency assembly - System.Globalization.Extensions.dll
+Dependency assembly - System.Security.Cryptography.Pkcs.dll
+Dependency assembly - System.Net.Security.dll
+Dependency assembly - System.Web.ApplicationServices.dll
+Dependency assembly - System.Security.Cryptography.DeriveBytes.dll
+Dependency assembly - System.ServiceModel.Web.dll
+Dependency assembly - System.Messaging.dll
+Dependency assembly - System.Reflection.DispatchProxy.dll
+Dependency assembly - System.Reflection.Emit.Lightweight.dll
+Dependency assembly - System.Security.Cryptography.Encoding.dll
+Dependency assembly - System.Collections.Specialized.dll
+Dependency assembly - System.Runtime.DurableInstancing.dll
+Dependency assembly - System.Windows.dll
+Dependency assembly - System.Runtime.CompilerServices.VisualC.dll
+Dependency assembly - System.Xml.XmlDocument.dll
+Dependency assembly - System.Xml.Linq.dll
+Dependency assembly - System.Collections.dll
+Dependency assembly - System.Security.Cryptography.Hashing.Algorithms.dll
+Dependency assembly - System.Runtime.Caching.dll
+Dependency assembly - UnityEngine.UI.dll
+Dependency assembly - System.Globalization.dll
+Dependency assembly - System.ComponentModel.dll
+Dependency assembly - System.Core.dll
+Dependency assembly - System.ServiceModel.dll
+Dependency assembly - System.Reflection.dll
+Dependency assembly - System.Xml.Xsl.Primitives.dll
+Dependency assembly - System.Net.Primitives.dll
+Dependency assembly - System.Xml.XPath.XDocument.dll
+Dependency assembly - System.Threading.AccessControl.dll
+Dependency assembly - System.Security.Cryptography.X509Certificates.dll
+Dependency assembly - System.Data.dll
+Dependency assembly - System.Net.Sockets.dll
+Dependency assembly - System.Net.HttpListener.dll
+Dependency assembly - System.Security.Cryptography.OpenSsl.dll
+Dependency assembly - System.Threading.Thread.dll
+Dependency assembly - Assembly-CSharp.dll
+Dependency assembly - System.IO.dll
+Dependency assembly - System.Net.NameResolution.dll
+Dependency assembly - System.Security.SecureString.dll
+Dependency assembly - Microsoft.Win32.Primitives.dll
+Dependency assembly - System.Transactions.dll
+Dependency assembly - System.ServiceModel.Security.dll
+Dependency assembly - System.Xml.XPath.dll
+Dependency assembly - System.Reflection.Emit.dll
+Dependency assembly - Mono.Data.Tds.dll
+Dependency assembly - System.Resources.ReaderWriter.dll
+Dependency assembly - System.Net.Http.WebRequest.dll
+Dependency assembly - nunit.framework.dll
+Dependency assembly - System.Windows.Forms.dll
+Dependency assembly - System.ComponentModel.Primitives.dll
+Dependency assembly - System.Diagnostics.Debug.dll
+Dependency assembly - System.ServiceModel.Primitives.dll
+Dependency assembly - System.ServiceModel.NetTcp.dll
+Dependency assembly - System.Windows.Forms.DataVisualization.dll
+Dependency assembly - System.Net.Requests.dll
+Dependency assembly - System.Security.Principal.Windows.dll
+Dependency assembly - System.IO.Compression.ZipFile.dll
+Dependency assembly - System.Reflection.Primitives.dll
+Dependency assembly - System.ServiceProcess.dll
+Dependency assembly - System.Security.Cryptography.Cng.dll
+Dependency assembly - System.Threading.dll
+Dependency assembly - System.Runtime.Serialization.Formatters.dll
+Dependency assembly - System.Net.dll
+Dependency assembly - System.Web.DynamicData.dll
+Dependency assembly - System.ObjectModel.dll
+Dependency assembly - System.Diagnostics.Contracts.dll
+Dependency assembly - System.Web.dll
+Dependency assembly - System.Net.WebSockets.dll
+Dependency assembly - System.Reflection.TypeExtensions.dll
+Dependency assembly - System.IO.Pipes.dll
+Dependency assembly - System.Runtime.InteropServices.WindowsRuntime.dll
+Dependency assembly - System.Runtime.Loader.dll
+Dependency assembly - System.Runtime.Serialization.Formatters.Soap.dll
+Dependency assembly - System.Runtime.Extensions.dll
+Dependency assembly - Accessibility.dll
+Dependency assembly - System.Diagnostics.FileVersionInfo.dll
+Dependency assembly - System.ServiceModel.Discovery.dll
+Dependency assembly - System.IO.UnmanagedMemoryStream.dll
+Dependency assembly - System.Threading.Overlapped.dll
+Dependency assembly - System.ServiceModel.Duplex.dll
+Dependency assembly - System.Net.AuthenticationManager.dll
+Dependency assembly - System.Console.dll
+Dependency assembly - System.Net.NetworkInformation.dll
+Dependency assembly - System.ServiceProcess.ServiceController.dll
+Dependency assembly - System.IdentityModel.dll
+Dependency assembly - System.Security.Cryptography.ProtectedData.dll
+Dependency assembly - System.IO.FileSystem.DriveInfo.dll
+Dependency assembly - System.Security.Cryptography.Algorithms.dll
+Dependency assembly - System.Net.Cache.dll
+Dependency assembly - System.Linq.dll
+Dependency assembly - System.Runtime.Serialization.Xml.dll
+Dependency assembly - System.Configuration.dll
+Dependency assembly - System.Diagnostics.Process.dll
+Dependency assembly - System.Runtime.dll
+Dependency assembly - System.ComponentModel.DataAnnotations.dll
+Dependency assembly - System.ServiceModel.Routing.dll
+Dependency assembly - System.IO.FileSystem.Primitives.dll
+Dependency assembly - System.Text.RegularExpressions.dll
+Dependency assembly - System.Security.Cryptography.Csp.dll
+Dependency assembly - System.Data.DataSetExtensions.dll
+Dependency assembly - System.Diagnostics.TraceSource.dll
+Dependency assembly - System.Web.Extensions.dll
+Dependency assembly - System.IO.FileSystem.dll
+Dependency assembly - System.Security.Cryptography.Encryption.Aes.dll
+Dependency assembly - System.Diagnostics.TextWriterTraceListener.dll
+Dependency assembly - System.Threading.Timer.dll
+Dependency assembly - System.Memory.dll
+Dependency assembly - System.Json.dll
+Dependency assembly - System.Diagnostics.Tools.dll
+Dependency assembly - System.Text.Encoding.CodePages.dll
+Dependency assembly - System.Net.WebHeaderCollection.dll
+Dependency assembly - System.ServiceModel.Http.dll
+Dependency assembly - System.Threading.ThreadPool.dll
+Dependency assembly - System.IdentityModel.Selectors.dll
+Dependency assembly - System.Runtime.InteropServices.dll
+Dependency assembly - System.IO.Compression.FileSystem.dll
+Dependency assembly - System.ComponentModel.Composition.dll
+Dependency assembly - System.ComponentModel.EventBasedAsync.dll
+Dependency assembly - System.Web.Services.dll
+Dependency assembly - System.Threading.Tasks.Extensions.dll
+Dependency assembly - System.Security.Cryptography.Encryption.ECDsa.dll
+Dependency assembly - System.Net.Utilities.dll
+Dependency assembly - System.Diagnostics.Tracing.dll
+Dependency assembly - System.Text.Encoding.dll
+Dependency assembly - System.Runtime.Numerics.dll
+Dependency assembly - System.Runtime.Handles.dll
+Dependency assembly - System.Xml.ReaderWriter.dll
+Dependency assembly - System.IO.IsolatedStorage.dll
+Dependency assembly - System.Xml.XPath.XmlDocument.dll
+Dependency assembly - System.Dynamic.Runtime.dll
+Dependency assembly - System.Web.Extensions.Design.dll
+Dependency assembly - System.Collections.NonGeneric.dll
+Dependency assembly - System.Security.Cryptography.Encryption.ECDiffieHellman.dll
+Dependency assembly - Mono.Security.dll
+Dependency assembly - System.Data.Services.Client.dll
+Dependency assembly - System.Numerics.Vectors.dll
+Dependency assembly - System.Diagnostics.StackTrace.dll
+Dependency assembly - System.Data.OracleClient.dll
+Dependency assembly - System.Security.dll
+Dependency assembly - System.Drawing.Design.dll
+Dependency assembly - System.Linq.Expressions.dll
+Dependency assembly - System.Resources.Writer.dll
+Dependency assembly - System.AppContext.dll
+Dependency assembly - System.Drawing.dll
+Dependency assembly - System.dll
+Dependency assembly - System.Runtime.Serialization.Json.dll
+Dependency assembly - System.Design.dll
+Dependency assembly - System.Net.ServicePoint.dll
+Dependency assembly - System.IO.MemoryMappedFiles.dll
+Dependency assembly - System.Configuration.Install.dll
+Dependency assembly - System.Reflection.Context.dll
+Dependency assembly - System.Xml.dll
+Dependency assembly - System.Data.Services.dll
+Dependency assembly - System.EnterpriseServices.dll
+Dependency assembly - System.Net.Ping.dll
+Dependency assembly - System.Security.Cryptography.Primitives.dll
+Dependency assembly - System.Threading.Tasks.dll
+Dependency assembly - System.Xml.XDocument.dll
+Dependency assembly - System.ValueTuple.dll
+Dependency assembly - System.Threading.Tasks.Parallel.dll
+Dependency assembly - System.Globalization.Calendars.dll
+Dependency assembly - System.IO.FileSystem.AccessControl.dll
+Dependency assembly - System.Security.Cryptography.RSA.dll
+Dependency assembly - System.Reflection.Emit.ILGeneration.dll
+Dependency assembly - System.Buffers.dll
+Dependency assembly - System.Security.Principal.dll
+Dependency assembly - System.Runtime.Serialization.Primitives.dll
+Dependency assembly - System.DirectoryServices.Protocols.dll
+Dependency assembly - System.Resources.Reader.dll
+Dependency assembly - System.IO.Compression.dll
+Dependency assembly - System.Net.Http.dll
+Dependency assembly - System.Data.Linq.dll
+Dependency assembly - Mono.Data.Sqlite.dll
+Dependency assembly - System.Reflection.Extensions.dll
+Dependency assembly - System.Collections.Concurrent.dll
+Dependency assembly - System.Data.SqlClient.dll
+Dependency assembly - System.Net.WebSockets.Client.dll
+Dependency assembly - System.ServiceModel.Activation.dll
+Dependency assembly - System.Security.Cryptography.RandomNumberGenerator.dll
+Dependency assembly - System.Linq.Queryable.dll
+Dependency assembly - System.ServiceModel.Internals.dll
+Dependency assembly - System.DirectoryServices.dll
+Dependency assembly - mscorlib.dll
+Dependency assembly - System.Xaml.dll
+
+Compressed texture icon is used as icon. This might compromise visual quality of the final image. Uncompressed format might be considered as better import option.
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEditor.BuildPipeline:BuildPlayerInternalNoCheck (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[],bool) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:657)
+UnityEditor.BuildPipeline:BuildPlayerInternal (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[]) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:640)
+UnityEditor.BuildPipeline:BuildPlayer (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[]) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:501)
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:447)
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.EditorBuildSettingsScene[],string,UnityEditor.BuildTarget,UnityEditor.BuildOptions) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:397)
+DemoBuilder:BuildAndroid () (at Assets/Editor/DemoBuilder.cs:123)
+
+[/Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs line 657]
+
+Compressed texture icon is used as icon. This might compromise visual quality of the final image. Uncompressed format might be considered as better import option.
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEditor.BuildPipeline:BuildPlayerInternalNoCheck (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[],bool) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:657)
+UnityEditor.BuildPipeline:BuildPlayerInternal (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[]) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:640)
+UnityEditor.BuildPipeline:BuildPlayer (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[]) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:501)
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:447)
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.EditorBuildSettingsScene[],string,UnityEditor.BuildTarget,UnityEditor.BuildOptions) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:397)
+DemoBuilder:BuildAndroid () (at Assets/Editor/DemoBuilder.cs:123)
+
+[/Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs line 657]
+
+Compressed texture icon is used as icon. This might compromise visual quality of the final image. Uncompressed format might be considered as better import option.
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEditor.BuildPipeline:BuildPlayerInternalNoCheck (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[],bool) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:657)
+UnityEditor.BuildPipeline:BuildPlayerInternal (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[]) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:640)
+UnityEditor.BuildPipeline:BuildPlayer (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[]) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:501)
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:447)
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.EditorBuildSettingsScene[],string,UnityEditor.BuildTarget,UnityEditor.BuildOptions) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:397)
+DemoBuilder:BuildAndroid () (at Assets/Editor/DemoBuilder.cs:123)
+
+[/Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs line 657]
+
+Compressed texture icon is used as icon. This might compromise visual quality of the final image. Uncompressed format might be considered as better import option.
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEditor.BuildPipeline:BuildPlayerInternalNoCheck (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[],bool) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:657)
+UnityEditor.BuildPipeline:BuildPlayerInternal (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[]) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:640)
+UnityEditor.BuildPipeline:BuildPlayer (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[]) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:501)
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:447)
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.EditorBuildSettingsScene[],string,UnityEditor.BuildTarget,UnityEditor.BuildOptions) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:397)
+DemoBuilder:BuildAndroid () (at Assets/Editor/DemoBuilder.cs:123)
+
+[/Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs line 657]
+
+Compressed texture icon is used as icon. This might compromise visual quality of the final image. Uncompressed format might be considered as better import option.
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEditor.BuildPipeline:BuildPlayerInternalNoCheck (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[],bool) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:657)
+UnityEditor.BuildPipeline:BuildPlayerInternal (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[]) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:640)
+UnityEditor.BuildPipeline:BuildPlayer (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[]) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:501)
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:447)
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.EditorBuildSettingsScene[],string,UnityEditor.BuildTarget,UnityEditor.BuildOptions) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:397)
+DemoBuilder:BuildAndroid () (at Assets/Editor/DemoBuilder.cs:123)
+
+[/Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs line 657]
+
+Compressed texture icon is used as icon. This might compromise visual quality of the final image. Uncompressed format might be considered as better import option.
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEditor.BuildPipeline:BuildPlayerInternalNoCheck (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[],bool) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:657)
+UnityEditor.BuildPipeline:BuildPlayerInternal (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[]) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:640)
+UnityEditor.BuildPipeline:BuildPlayer (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[]) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:501)
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:447)
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.EditorBuildSettingsScene[],string,UnityEditor.BuildTarget,UnityEditor.BuildOptions) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:397)
+DemoBuilder:BuildAndroid () (at Assets/Editor/DemoBuilder.cs:123)
+
+[/Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs line 657]
+
+Compressed texture icon is used as icon. This might compromise visual quality of the final image. Uncompressed format might be considered as better import option.
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEditor.BuildPipeline:BuildPlayerInternalNoCheck (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[],bool) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:657)
+UnityEditor.BuildPipeline:BuildPlayerInternal (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[]) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:640)
+UnityEditor.BuildPipeline:BuildPlayer (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[]) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:501)
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:447)
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.EditorBuildSettingsScene[],string,UnityEditor.BuildTarget,UnityEditor.BuildOptions) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:397)
+DemoBuilder:BuildAndroid () (at Assets/Editor/DemoBuilder.cs:123)
+
+[/Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs line 657]
+
+Compressed texture icon is used as icon. This might compromise visual quality of the final image. Uncompressed format might be considered as better import option.
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEditor.BuildPipeline:BuildPlayerInternalNoCheck (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[],bool) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:657)
+UnityEditor.BuildPipeline:BuildPlayerInternal (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[]) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:640)
+UnityEditor.BuildPipeline:BuildPlayer (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[]) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:501)
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:447)
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.EditorBuildSettingsScene[],string,UnityEditor.BuildTarget,UnityEditor.BuildOptions) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:397)
+DemoBuilder:BuildAndroid () (at Assets/Editor/DemoBuilder.cs:123)
+
+[/Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs line 657]
+
+Compressed texture icon is used as icon. This might compromise visual quality of the final image. Uncompressed format might be considered as better import option.
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEditor.BuildPipeline:BuildPlayerInternalNoCheck (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[],bool) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:657)
+UnityEditor.BuildPipeline:BuildPlayerInternal (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[]) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:640)
+UnityEditor.BuildPipeline:BuildPlayer (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[]) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:501)
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:447)
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.EditorBuildSettingsScene[],string,UnityEditor.BuildTarget,UnityEditor.BuildOptions) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:397)
+DemoBuilder:BuildAndroid () (at Assets/Editor/DemoBuilder.cs:123)
+
+[/Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs line 657]
+
+Compressed texture icon is used as icon. This might compromise visual quality of the final image. Uncompressed format might be considered as better import option.
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEditor.BuildPipeline:BuildPlayerInternalNoCheck (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[],bool) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:657)
+UnityEditor.BuildPipeline:BuildPlayerInternal (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[]) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:640)
+UnityEditor.BuildPipeline:BuildPlayer (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[]) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:501)
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:447)
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.EditorBuildSettingsScene[],string,UnityEditor.BuildTarget,UnityEditor.BuildOptions) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:397)
+DemoBuilder:BuildAndroid () (at Assets/Editor/DemoBuilder.cs:123)
+
+[/Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs line 657]
+
+Compressed texture icon is used as icon. This might compromise visual quality of the final image. Uncompressed format might be considered as better import option.
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEditor.BuildPipeline:BuildPlayerInternalNoCheck (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[],bool) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:657)
+UnityEditor.BuildPipeline:BuildPlayerInternal (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[]) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:640)
+UnityEditor.BuildPipeline:BuildPlayer (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[]) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:501)
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:447)
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.EditorBuildSettingsScene[],string,UnityEditor.BuildTarget,UnityEditor.BuildOptions) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:397)
+DemoBuilder:BuildAndroid () (at Assets/Editor/DemoBuilder.cs:123)
+
+[/Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs line 657]
+
+Compressed texture icon is used as icon. This might compromise visual quality of the final image. Uncompressed format might be considered as better import option.
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEditor.BuildPipeline:BuildPlayerInternalNoCheck (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[],bool) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:657)
+UnityEditor.BuildPipeline:BuildPlayerInternal (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[]) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:640)
+UnityEditor.BuildPipeline:BuildPlayer (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[]) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:501)
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:447)
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.EditorBuildSettingsScene[],string,UnityEditor.BuildTarget,UnityEditor.BuildOptions) (at /Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs:397)
+DemoBuilder:BuildAndroid () (at Assets/Editor/DemoBuilder.cs:123)
+
+[/Users/bokken/build/output/dev/tj/Editor/Mono/BuildPipeline.bindings.cs line 657]
+
+DisplayProgressbar: Initializing
+Android PostProcess task "Initializing" took 0.4486 ms
+DisplayProgressbar: Check gradle project collisions
+Android PostProcess task "Check gradle project collisions" took 0.1983 ms
+DisplayProgressbar: Preparing banner
+Android PostProcess task "Preparing banner" took 0.2575 ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping application/grpc -
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping application/grpc - - 200 - application/grpc 0.2346ms
+Starting: /Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/bee_backend --dont-print-to-structured-log --ipc --dagfile="Library/Bee/Player863ca9f3.dag" --profile="Library/Bee/backend1.traceevents" Player
+WorkingDir: /Users/qinziqian/Documents/overcooked-like/game
+DisplayProgressbar: Incremental Player Build
+[282/575    0s] AddBootConfigGUID Library/Bee/artifacts/Android/boot.config
+[283/575    0s] CopyFiles /Users/qinziqian/Documents/overcooked-like/game/Library/Bee/Android/Prj/IL2CPP/Gradle/tuanjieLibrary/src/main/assets/bin/Data/boot.config
+[284/575    3s] UnityLinker /Users/qinziqian/Documents/overcooked-like/game/Library/Bee/artifacts/unitylinker_xy1a.traceevents
+/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/il2cpp/build/deploy/UnityLinker --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.AIModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.ARModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.AccessibilityModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.AndroidAppViewModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.AndroidJNIModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.AnimationModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.AssetBundleModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.AudioModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.AutoStreamingModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.ClothModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.ContentLoadModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.CoreModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.CrashReportingModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.DSPGraphModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.DirectorModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.GIModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.GameCenterModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.GridModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.HotReloadModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.IMGUIModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.ImageConversionModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.InfinityModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.InputLegacyModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.InputModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.JSONSerializeModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.LocalizationModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.OcclusionCullingModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.OpenHarmonyJSModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.ParticleSystemModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.PerformanceReportingModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.Physics2DModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.PhysicsModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.ProfilerModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.PropertiesModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.ScreenCaptureModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.SharedInternalsModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.SpriteMaskModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.SpriteShapeModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.StreamingModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.SubstanceModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.SubsystemsModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.TLSModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.TerrainModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.TerrainPhysicsModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.TextCoreFontEngineModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.TextCoreTextEngineModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.TextRenderingModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.TextureManagerModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.TilemapModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.UIElementsModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.UIModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.UmbraModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.UnityAnalyticsCommonModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.UnityAnalyticsModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.UnityConnectModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.UnityCurlModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.UnityTestProtocolModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.UnityWebRequestAudioModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.UnityWebRequestModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.UnityWebRequestTextureModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.UnityWebRequestWWWModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.VFXModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.VRModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.VehiclesModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.VideoModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.WindModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.XRModule.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.dll --allowed-assembly=/Users/qinziqian/Documents/overcooked-like/game/Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.dll --allowed-assembly=/Users/qinziqian/Documents/overcooked-like/game/Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.dll --allowed-assembly=/Users/qinziqian/Documents/overcooked-like/game/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Accessibility.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/Microsoft.Win32.Primitives.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/Microsoft.Win32.Registry.AccessControl.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/Microsoft.Win32.Registry.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.AppContext.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Buffers.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Collections.Concurrent.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Collections.NonGeneric.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Collections.Specialized.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Collections.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.ComponentModel.Annotations.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.ComponentModel.EventBasedAsync.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.ComponentModel.Primitives.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.ComponentModel.TypeConverter.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.ComponentModel.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Console.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Data.Common.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Data.SqlClient.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Diagnostics.Contracts.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Diagnostics.Debug.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Diagnostics.FileVersionInfo.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Diagnostics.Process.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Diagnostics.StackTrace.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Diagnostics.TextWriterTraceListener.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Diagnostics.Tools.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Diagnostics.TraceEvent.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Diagnostics.TraceSource.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Diagnostics.Tracing.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Drawing.Primitives.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Dynamic.Runtime.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Globalization.Calendars.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Globalization.Extensions.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Globalization.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.IO.Compression.ZipFile.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.IO.FileSystem.AccessControl.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.IO.FileSystem.DriveInfo.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.IO.FileSystem.Primitives.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.IO.FileSystem.Watcher.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.IO.FileSystem.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.IO.IsolatedStorage.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.IO.MemoryMappedFiles.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.IO.Pipes.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.IO.UnmanagedMemoryStream.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.IO.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Linq.Expressions.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Linq.Parallel.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Linq.Queryable.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Linq.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Memory.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Net.AuthenticationManager.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Net.Cache.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Net.HttpListener.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Net.Mail.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Net.NameResolution.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Net.NetworkInformation.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Net.Ping.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Net.Primitives.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Net.Requests.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Net.Security.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Net.ServicePoint.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Net.Sockets.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Net.Utilities.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Net.WebHeaderCollection.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Net.WebSockets.Client.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Net.WebSockets.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.ObjectModel.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Reflection.DispatchProxy.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Reflection.Emit.ILGeneration.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Reflection.Emit.Lightweight.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Reflection.Emit.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Reflection.Extensions.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Reflection.Primitives.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Reflection.TypeExtensions.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Reflection.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Resources.Reader.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Resources.ReaderWriter.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Resources.ResourceManager.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Resources.Writer.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Runtime.CompilerServices.VisualC.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Runtime.Extensions.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Runtime.Handles.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Runtime.InteropServices.RuntimeInformation.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Runtime.InteropServices.WindowsRuntime.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Runtime.InteropServices.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Runtime.Loader.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Runtime.Numerics.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Runtime.Serialization.Formatters.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Runtime.Serialization.Json.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Runtime.Serialization.Primitives.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Runtime.Serialization.Xml.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Runtime.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Security.AccessControl.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Security.Claims.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Security.Cryptography.Algorithms.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Security.Cryptography.Cng.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Security.Cryptography.Csp.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Security.Cryptography.DeriveBytes.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Security.Cryptography.Encoding.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Security.Cryptography.Encryption.Aes.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Security.Cryptography.Encryption.ECDiffieHellman.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Security.Cryptography.Encryption.ECDsa.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Security.Cryptography.Encryption.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Security.Cryptography.Hashing.Algorithms.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Security.Cryptography.Hashing.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Security.Cryptography.OpenSsl.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Security.Cryptography.Pkcs.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Security.Cryptography.Primitives.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Security.Cryptography.ProtectedData.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Security.Cryptography.RSA.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Security.Cryptography.RandomNumberGenerator.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Security.Cryptography.X509Certificates.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Security.Principal.Windows.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Security.Principal.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Security.SecureString.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.ServiceModel.Duplex.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.ServiceModel.Http.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.ServiceModel.NetTcp.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.ServiceModel.Primitives.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.ServiceModel.Security.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.ServiceProcess.ServiceController.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Text.Encoding.CodePages.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Text.Encoding.Extensions.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Text.Encoding.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Text.RegularExpressions.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Threading.AccessControl.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Threading.Overlapped.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Threading.Tasks.Extensions.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Threading.Tasks.Parallel.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Threading.Tasks.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Threading.Thread.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Threading.ThreadPool.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Threading.Timer.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Threading.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.ValueTuple.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Xml.ReaderWriter.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Xml.XDocument.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Xml.XPath.XDocument.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Xml.XPath.XmlDocument.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Xml.XPath.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Xml.XmlDocument.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Xml.XmlSerializer.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/System.Xml.Xsl.Primitives.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades/netstandard.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Microsoft.CSharp.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Mono.Data.Sqlite.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Mono.Data.Tds.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Mono.Security.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.ComponentModel.Composition.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.ComponentModel.DataAnnotations.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Configuration.Install.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Configuration.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Core.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Data.DataSetExtensions.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Data.Entity.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Data.Linq.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Data.OracleClient.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Data.Services.Client.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Data.Services.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Data.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Design.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.DirectoryServices.Protocols.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.DirectoryServices.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Drawing.Design.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Drawing.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.EnterpriseServices.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.IO.Compression.FileSystem.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.IO.Compression.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.IdentityModel.Selectors.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.IdentityModel.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Json.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Management.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Messaging.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Net.Http.WebRequest.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Net.Http.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Net.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Numerics.Vectors.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Numerics.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Reflection.Context.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Runtime.Caching.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Runtime.DurableInstancing.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Runtime.Remoting.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Runtime.Serialization.Formatters.Soap.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Runtime.Serialization.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Security.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.ServiceModel.Activation.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.ServiceModel.Discovery.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.ServiceModel.Internals.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.ServiceModel.Routing.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.ServiceModel.Web.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.ServiceModel.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.ServiceProcess.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Transactions.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Web.ApplicationServices.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Web.DynamicData.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Web.Extensions.Design.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Web.Extensions.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Web.RegularExpressions.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Web.Services.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Web.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Windows.Forms.DataVisualization.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Windows.Forms.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Windows.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Xaml.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Xml.Linq.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Xml.Serialization.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.Xml.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/System.dll --allowed-assembly=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/mscorlib.dll --out=Library/Bee/artifacts/Android/ManagedStripped --include-link-xml=/Users/qinziqian/Documents/overcooked-like/game/Temp/StagingArea/Data/Managed/TypesInScenes.xml --include-link-xml=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Tools/AndroidNativeLink.xml --include-directory=/Users/qinziqian/Documents/overcooked-like/game/Library/Bee/PlayerScriptAssemblies --include-directory=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed --include-directory=/Users/qinziqian/Documents/overcooked-like/game/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom --include-directory=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux --include-directory=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MonoBleedingEdge/lib/mono/unityaot-linux/Facades --profiler-report --profiler-output-file=/Users/qinziqian/Documents/overcooked-like/game/Library/Bee/artifacts/unitylinker_xy1a.traceevents --dotnetprofile=unityaot-linux --dotnetruntime=Il2Cpp --platform=Android --use-editor-options --enable-engine-module-stripping --engine-modules-asset-file=/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/modules.asset --editor-data-file=/Users/qinziqian/Documents/overcooked-like/game/Temp/StagingArea/Data/Managed/EditorToUnityLinkerData.json --include-unity-root-assembly=/Users/qinziqian/Documents/overcooked-like/game/Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.dll --print-command-line --enable-analytics
+Unable to process reflection call because there are not enough loads on the stack, needs 3, found 2
+*** Tundra requires additional run (3.86 seconds), 3 items updated, 575 evaluated
+*** Additional run caused by: contents change of Library/Bee/artifacts/Android/ManagedStripped
+Starting: /Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/Tools/netcorerun/netcorerun "/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/AndroidPlayerBuildProgram.exe" "/Applications/Tuanjie/Hub/Editor/2022.3.61t14/PlaybackEngines/AndroidPlayer/Bee:/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/Tools/BuildPipeline" "Library/Bee/Player863ca9f3.dag.json" "Library/Bee/Player863ca9f3-inputdata.json" "Library/Bee/buildprogram0.traceevents"
+WorkingDir: /Users/qinziqian/Documents/overcooked-like/game
+ExitCode: 4 Duration: 3s946ms
+ExitCode: 0 Duration: 0s696ms
+Starting: /Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/bee_backend --dont-print-to-structured-log --ipc --dagfile="Library/Bee/Player863ca9f3.dag" --dagfilejson="Library/Bee/Player863ca9f3.dag.json" --profile="Library/Bee/backend2.traceevents" Player
+WorkingDir: /Users/qinziqian/Documents/overcooked-like/game
+[W] opendir() failed: /Users/qinziqian/Documents/overcooked-like/game/Library/Bee/artifacts/Android/il2cppOutput/cpp/Symbols
+Finished compiling graph: 579 nodes, 1465 flattened edges (1461 ToBuild, 4 ToUse), maximum node priority 293
+[           0s] Delete 1 artifact files that are no longer in use. (like /Users/qinziqian/Documents/overcooked-like/game/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/Managed/icallsummary.txt)
+[334/574    0s] CopyFiles /Users/qinziqian/Documents/overcooked-like/game/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/Managed/Assembly-CSharp.dll
+[335/574    0s] CopyFiles /Users/qinziqian/Documents/overcooked-like/game/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/Managed/Assembly-CSharp.pdb
+[355/574    0s] ExtractUsedFeatures Library/Bee/artifacts/Android/Features/Assembly-CSharp-FeaturesChecked.txt
+[357/574    2s] IL2CPP_CodeGen /Users/qinziqian/Documents/overcooked-like/game/Library/Bee/artifacts/il2cpp_conv_rxym.traceevents
+/Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/il2cpp/build/deploy/il2cpp --convert-to-cpp --assembly=Library/Bee/artifacts/Android/ManagedStripped/Assembly-CSharp.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/Mono.Security.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/mscorlib.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/System.Configuration.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/System.Core.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/System.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/System.Xml.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/UnityEngine.AndroidJNIModule.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/UnityEngine.AudioModule.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/UnityEngine.CoreModule.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/UnityEngine.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/UnityEngine.ImageConversionModule.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/UnityEngine.IMGUIModule.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/UnityEngine.InputLegacyModule.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/UnityEngine.JSONSerializeModule.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/UnityEngine.PhysicsModule.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/UnityEngine.PropertiesModule.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/UnityEngine.SharedInternalsModule.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/UnityEngine.TextRenderingModule.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/UnityEngine.UI.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/UnityEngine.UIModule.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/UnityEngine.UnityWebRequestModule.dll --generatedcppdir=/Users/qinziqian/Documents/overcooked-like/game/Library/Bee/artifacts/Android/il2cppOutput/cpp --symbols-folder=/Users/qinziqian/Documents/overcooked-like/game/Library/Bee/artifacts/Android/il2cppOutput/cpp/Symbols --enable-analytics --emit-null-checks --enable-array-bounds-check --generics-option=None,EnableFullSharing --dotnetprofile=unityaot-linux --profiler-report --profiler-output-file=/Users/qinziqian/Documents/overcooked-like/game/Library/Bee/artifacts/il2cpp_conv_rxym.traceevents --print-command-line --data-folder=/Users/qinziqian/Documents/overcooked-like/game/Library/Bee/artifacts/Android/il2cppOutput/data
+[453/574    0s] CopyFiles /Users/qinziqian/Documents/overcooked-like/game/Library/Bee/Android/Prj/IL2CPP/Gradle/tuanjieLibrary/src/main/assets/bin/Data/Managed/Resources/mscorlib.dll-resources.dat
+[462/574    0s] CopyFiles /Users/qinziqian/Documents/overcooked-like/game/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Il2CppCCalculateFieldValues.cpp
+[479/574    0s] CopyFiles /Users/qinziqian/Documents/overcooked-like/game/Library/Bee/artifacts/Android/il2cppOutput/build/arm64-v8a/Data/Resources/mscorlib.dll-resources.dat
+[483/574    0s] CopyFiles /Users/qinziqian/Documents/overcooked-like/game/Library/Bee/Android/Prj/IL2CPP/Gradle/tuanjieLibrary/src/main/assets/bin/Data/Managed/Metadata/global-metadata.dat
+[500/574    0s] CopyFiles /Users/qinziqian/Documents/overcooked-like/game/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Assembly-CSharp__1.cpp
+[526/574    0s] CopyFiles /Users/qinziqian/Documents/overcooked-like/game/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Assembly-CSharp__3.cpp
+[538/574    0s] CopyFiles /Users/qinziqian/Documents/overcooked-like/game/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Il2CppMetadataUsage.c
+[555/574    0s] CopyFiles /Users/qinziqian/Documents/overcooked-like/game/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Il2CppCCalculateTypeValues.cpp
+[556/574    0s] CopyFiles /Users/qinziqian/Documents/overcooked-like/game/Library/Bee/artifacts/Android/il2cppOutput/build/arm64-v8a/Data/Metadata/global-metadata.dat
+[557/574    0s] CopyFiles /Users/qinziqian/Documents/overcooked-like/game/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Il2CppCCFieldValuesTable.cpp
+[558/574    0s] GuidGenerator /Users/qinziqian/Documents/overcooked-like/game/Library/Bee/Android/Prj/IL2CPP/Gradle/tuanjieLibrary/src/main/assets/bin/Data/unity_app_guid
+[559/574    0s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/zwyhkcuo48lh.o
+[560/574    0s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/rtwyfxxw82af.o
+[561/574    0s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/mp9wmolxtidf.o
+[562/574    0s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/s81vrx18xrys.o
+[563/574    1s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/gr54nsmbmzdn.o
+[564/574    1s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/2et9nhh7sp6l.o
+[565/574    0s] Link_Android_arm64 Library/Bee/artifacts/Android/d8kzr/libil2cpp.so
+[566/574    0s] CopyFiles Library/Bee/artifacts/objcopy_5lmi/libil2cpp.dbg.so
+[567/574    0s] CopyFiles /Users/qinziqian/Documents/overcooked-like/game/Library/Bee/artifacts/Android/il2cppOutput/build/arm64-v8a/libil2cpp.dbg.so
+[568/574    0s] NdkObjCopy Library/Bee/artifacts/objcopy_5lmi/stripped/libil2cpp.so
+[569/574    0s] NdkObjCopy Library/Bee/artifacts/objcopy_5lmi/libil2cpp.sym.so
+[570/574    0s] CopyFiles /Users/qinziqian/Documents/overcooked-like/game/Library/Bee/artifacts/Android/il2cppOutput/build/arm64-v8a/libil2cpp.sym.so
+[571/574    0s] NdkObjCopy Library/Bee/artifacts/objcopy_5lmi/libil2cpp.so
+[572/574    0s] CopyFiles /Users/qinziqian/Documents/overcooked-like/game/Library/Bee/Android/Prj/IL2CPP/Gradle/tuanjieLibrary/src/main/jniLibs/arm64-v8a/libil2cpp.so
+[573/574    0s] CopyFiles /Users/qinziqian/Documents/overcooked-like/game/Library/Bee/artifacts/Android/il2cppOutput/build/arm64-v8a/libil2cpp.so
+*** Tundra build success (5.12 seconds), 30 items updated, 574 evaluated
+Total cache size 14125764
+Total cache size after purge 14125764
+DisplayProgressbar: Calling IPostGenerateGradleAndroidProject callbacks
+Calling IPostGenerateGradleAndroidProject callbacks on '/Users/qinziqian/Documents/overcooked-like/game/Library/Bee/Android/Prj/IL2CPP/Gradle/tuanjieLibrary':
+Android PostProcess task "Calling IPostGenerateGradleAndroidProject callbacks" took 1.1864 ms
+Android PostProcess task "Cloud Diagnostics Symbol Upload" took 0.1942 ms
+DisplayProgressbar: Building Gradle project
+ExitCode: 0 Duration: 5s243ms
+Android PostProcess task "Building Gradle project" took 29493.7718 ms
+DisplayProgressbar: Processing Mapping File
+Android PostProcess task "Processing Mapping File" took 0.2945 ms
+DisplayProgressbar: Moving output package(s)
+Android PostProcess task "Moving output package(s)" took 9.2444 ms
+Refreshing native plugins compatible for Editor in 6.21 ms, found 7 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+
+-------------------------------------------------------------------------------
+Build Report
+Information on used Assets is not available, since player data was not rebuilt.
+Do a clean build to view the Asset build report information.
+-------------------------------------------------------------------------------
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 62 unused Assets / (0.6 MB). Loaded Objects now: 998.
+Memory consumption went from 123.0 MB to 122.4 MB.
+Total: 4.776583 ms (FindLiveObjects: 0.057959 ms CreateObjectMapping: 0.014666 ms MarkObjects: 3.950542 ms  DeleteObjects: 0.752875 ms)
+
+Build Finished, Result: Success.
+Launching external process: /Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/il2cpp/build/deploy/Analytics
+##utp:{"type":"PlayerBuildInfo","version":2,"phase":"Immediate","time":1791121832903,"processId":46488,"steps":[{"description":"Preprocess Player","duration":70},{"description":"Prepare For Build","duration":6655},{"description":"ProducePlayerScriptAssemblies","duration":1443},{"description":"Verify Build setup","duration":48},{"description":"Prepare assets for target platform","duration":62},{"description":"Prepare splash screen","duration":1},{"description":"Run script only build","duration":20},{"description":"Postprocess built player","duration":39541}],"duration":47840}
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            0.904 ms
+	Integration:            3.771 ms
+	Integration of assets:  0.019 ms
+	Thread Wait Time:       -0.002 ms
+	Total Operation Time:   4.693 ms
+Unloading 0 unused Assets / (Unknown). Loaded Objects now: 998.
+Memory consumption went from 120.9 MB to 120.9 MB.
+Total: 2.887541 ms (FindLiveObjects: 0.044750 ms CreateObjectMapping: 0.012958 ms MarkObjects: 2.826333 ms  DeleteObjects: 0.003209 ms)
+
+PALM_BAY_ANDROID_READY path=Builds/PalmBay.apk scenes=3
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+DemoBuilder:BuildAndroid () (at Assets/Editor/DemoBuilder.cs:125)
+
+(Filename: Assets/Editor/DemoBuilder.cs Line: 125)
+
+Batchmode quit successfully invoked - shutting down!
+Killing ADB server in 0.027573 seconds.
+Thread 0x170603000 may have been prematurely finalized
+Input System module state changed to: ShutdownInProgress.
+Input System polling thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] License Notification channel disconnected successfully.
+[Licensing::IpcConnector] License Client channel disconnected successfully.
+Shutting down server...
+Thread 0x170c07000 may have been prematurely finalized
+[40m[32minfo[39m[22m[49m: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+Cleanup mono
+debugger-agent: Unable to listen on 53
+[Performance] Application.InitializeProject                                                                                   :        1 samples, Peak.  6.90 s (1.0x), Avg.  6.90 s, Total. 6.897 s (11.7%)
+[Performance] Application.PackageManager.StartServer                                                                          :        1 samples, Peak.  13.6 ms (1.0x), Avg.  13.6 ms, Total. 13.55 ms (0.0%)
+[Performance] Application.AcquireProjectLock                                                                                  :        1 samples, Peak.  3.17 ms (1.0x), Avg.  3.17 ms, Total. 3.172 ms (0.0%)
+[Performance] Application.InitializeEngineNoGraphics                                                                          :        1 samples, Peak.   279 ms (1.0x), Avg.   279 ms, Total. 279.4 ms (0.5%)
+[Performance] Application.PackageManager.Initialize                                                                           :        1 samples, Peak.   440 ms (1.0x), Avg.   440 ms, Total. 440.2 ms (0.7%)
+[Performance] Connecting to Package Manager                                                                                   :       45 samples, Peak.  56.0 us (33.5x), Avg.  1.67 us, Total. 75.17 us (0.0%)
+[Performance] PackageManager::Api::RunRequestSynchronously                                                                    :       14 samples, Peak.  4.00 us (1.5x), Avg.  2.61 us, Total. 36.50 us (0.0%)
+[Performance] Application.EngineGraphics.Initialize                                                                           :        1 samples, Peak.  32.4 ms (1.0x), Avg.  32.4 ms, Total. 32.42 ms (0.1%)
+[Performance] Application.GI.Initialize                                                                                       :        1 samples, Peak.  1.35 ms (1.0x), Avg.  1.35 ms, Total. 1.350 ms (0.0%)
+[Performance] Application.LoadAllDefaultResourcesFromEditor                                                                   :        1 samples, Peak.  1.47 ms (1.0x), Avg.  1.47 ms, Total. 1.469 ms (0.0%)
+[Performance] Application.LoadMonoAssemblies                                                                                  :        1 samples, Peak.   853 ms (1.0x), Avg.   853 ms, Total. 852.8 ms (1.4%)
+[Performance] RestoreManagedReferences                                                                                        :        2 samples, Peak.  50.1 ms (2.0x), Avg.  25.0 ms, Total. 50.09 ms (0.1%)
+[Performance] InitializeOnLoad BuildProfileHelperManager                                                                      :        2 samples, Peak.  76.8 ms (1.9x), Avg.  40.9 ms, Total. 81.85 ms (0.1%)
+[Performance] InitializeOnLoad SceneSearch                                                                                    :        2 samples, Peak.  89.2 us (1.1x), Avg.  80.7 us, Total. 161.4 us (0.0%)
+[Performance] InitializeOnLoad DrivenRectTransformUndo                                                                        :        2 samples, Peak.   219 us (1.2x), Avg.   187 us, Total. 373.5 us (0.0%)
+[Performance] InitializeOnLoad EditMode                                                                                       :        2 samples, Peak.   220 us (1.1x), Avg.   204 us, Total. 409.0 us (0.0%)
+[Performance] InitializeOnLoad PlayModeDownload                                                                               :        2 samples, Peak.   526 us (1.8x), Avg.   296 us, Total. 592.0 us (0.0%)
+[Performance] InitializeOnLoad ShortcutIntegration                                                                            :        2 samples, Peak.  46.8 us (1.2x), Avg.  38.6 us, Total. 77.29 us (0.0%)
+[Performance] InitializeOnLoad ManagedDebuggerWindow                                                                          :        2 samples, Peak.   448 us (1.1x), Avg.   425 us, Total. 850.0 us (0.0%)
+[Performance] InitializeOnLoad MenuItems                                                                                      :        2 samples, Peak.   206 us (1.1x), Avg.   181 us, Total. 362.7 us (0.0%)
+[Performance] InitializeOnLoad ConsoleEntrance                                                                                :        2 samples, Peak.   230 us (1.1x), Avg.   217 us, Total. 434.0 us (0.0%)
+[Performance] InitializeOnLoad MixerEffectDefinitionReloader                                                                  :        2 samples, Peak.  1.95 ms (1.3x), Avg.  1.48 ms, Total. 2.967 ms (0.0%)
+[Performance] InitializeOnLoad SearchService                                                                                  :        2 samples, Peak.  80.2 us (1.1x), Avg.  71.8 us, Total. 143.6 us (0.0%)
+[Performance] InitializeOnLoad CloudBuild                                                                                     :        2 samples, Peak.  2.75 us (1.1x), Avg.  2.44 us, Total. 4.875 us (0.0%)
+[Performance] InitializeOnLoad PrefabInstanceChangedListener                                                                  :        2 samples, Peak.   105 us (1.2x), Avg.  88.1 us, Total. 176.2 us (0.0%)
+[Performance] InitializeOnLoad ManagedDebugger                                                                                :        2 samples, Peak.   250 ns (1.2x), Avg.   208 ns, Total. 417.0 ns (0.0%)
+[Performance] InitializeOnLoad AssetStoreContext                                                                              :        2 samples, Peak.  15.5 ms (1.7x), Avg.  8.96 ms, Total. 17.92 ms (0.0%)
+[Performance] InitializeOnLoad NativeFormatImporterUtility                                                                    :        2 samples, Peak.  1.66 ms (1.2x), Avg.  1.43 ms, Total. 2.860 ms (0.0%)
+[Performance] InitializeOnLoad ObjectSelectorSearch                                                                           :        2 samples, Peak.  39.6 us (1.2x), Avg.  33.3 us, Total. 66.67 us (0.0%)
+[Performance] InitializeOnLoad CacheServerWindow                                                                              :        2 samples, Peak.  13.2 us (1.2x), Avg.  11.1 us, Total. 22.29 us (0.0%)
+[Performance] InitializeOnLoad PoolManager                                                                                    :        2 samples, Peak.  37.7 us (1.1x), Avg.  35.8 us, Total. 71.63 us (0.0%)
+[Performance] InitializeOnLoad UISystemProfilerRenderService                                                                  :        2 samples, Peak.  7.33 us (1.1x), Avg.  6.75 us, Total. 13.50 us (0.0%)
+[Performance] InitializeOnLoad ProfilerConnectionPopupWindow                                                                  :        2 samples, Peak.  16.9 us (1.0x), Avg.  16.4 us, Total. 32.71 us (0.0%)
+[Performance] InitializeOnLoad ProjectSearch                                                                                  :        2 samples, Peak.  32.3 us (1.2x), Avg.  27.6 us, Total. 55.21 us (0.0%)
+[Performance] InitializeOnLoad TuanjiePathAndNameFix                                                                          :        2 samples, Peak.   111 us (1.1x), Avg.   104 us, Total. 208.8 us (0.0%)
+[Performance] InitializeOnLoad UnityConnect                                                                                   :        2 samples, Peak.   625 ns (1.5x), Avg.   417 ns, Total. 834.0 ns (0.0%)
+[Performance] InitializeOnLoad WindowLayout                                                                                   :        2 samples, Peak.  30.1 us (1.2x), Avg.  25.1 us, Total. 50.29 us (0.0%)
+[Performance] InitializeOnLoad SettingsService                                                                                :        2 samples, Peak.  8.08 us (1.0x), Avg.  8.00 us, Total. 16.00 us (0.0%)
+[Performance] InitializeOnLoad AddComponentWindow                                                                             :        2 samples, Peak.  71.1 us (1.0x), Avg.  68.1 us, Total. 136.2 us (0.0%)
+[Performance] InitializeOnLoad EditorMonitor                                                                                  :        2 samples, Peak.   475 us (1.1x), Avg.   427 us, Total. 854.5 us (0.0%)
+[Performance] InitializeOnLoad RetainedMode                                                                                   :        2 samples, Peak.  1.76 ms (1.1x), Avg.  1.59 ms, Total. 3.189 ms (0.0%)
+[Performance] InitializeOnLoad EditorShaderLoader                                                                             :        2 samples, Peak.   774 us (1.4x), Avg.   570 us, Total. 1.139 ms (0.0%)
+[Performance] InitializeOnLoad EditorDelegateRegistration                                                                     :        2 samples, Peak.   352 us (1.0x), Avg.   351 us, Total. 701.3 us (0.0%)
+[Performance] InitializeOnLoad UIDocumentHierarchyWatcher                                                                     :        2 samples, Peak.  44.5 us (1.0x), Avg.  43.0 us, Total. 85.92 us (0.0%)
+[Performance] InitializeOnLoad LiveReloadTrackerCreator                                                                       :        2 samples, Peak.   128 us (1.1x), Avg.   119 us, Total. 237.7 us (0.0%)
+[Performance] InitializeOnLoad UxmlObjectEditorFactories                                                                      :        2 samples, Peak.   366 us (1.0x), Avg.   354 us, Total. 708.1 us (0.0%)
+[Performance] InitializeOnLoad UXMLEditorFactories                                                                            :        2 samples, Peak.  39.0 ms (1.0x), Avg.  37.4 ms, Total. 74.86 ms (0.1%)
+[Performance] InitializeOnLoad PurchasingService                                                                              :        2 samples, Peak.  5.31 ms (1.1x), Avg.  4.88 ms, Total. 9.754 ms (0.0%)
+[Performance] InitializeOnLoad CloudBuildPoller                                                                               :        2 samples, Peak.  72.7 us (1.0x), Avg.  70.0 us, Total. 140.1 us (0.0%)
+[Performance] InitializeOnLoad EditorGameServicesAnalytics                                                                    :        2 samples, Peak.   811 us (1.2x), Avg.   670 us, Total. 1.341 ms (0.0%)
+[Performance] InitializeOnLoad AnalyticsService                                                                               :        2 samples, Peak.   110 us (1.0x), Avg.   108 us, Total. 215.8 us (0.0%)
+[Performance] InitializeOnLoad BuildService                                                                                   :        2 samples, Peak.   180 us (1.3x), Avg.   136 us, Total. 272.7 us (0.0%)
+[Performance] InitializeOnLoad AdsService                                                                                     :        2 samples, Peak.   249 us (1.0x), Avg.   242 us, Total. 483.1 us (0.0%)
+[Performance] InitializeOnLoad UDPService                                                                                     :        2 samples, Peak.  87.0 us (1.0x), Avg.  86.5 us, Total. 173.0 us (0.0%)
+[Performance] InitializeOnLoad CrashService                                                                                   :        2 samples, Peak.  92.8 us (1.0x), Avg.  90.6 us, Total. 181.2 us (0.0%)
+[Performance] InitializeOnLoad ServicesRepository                                                                             :        2 samples, Peak.   250 ns (1.1x), Avg.   230 ns, Total. 459.0 ns (0.0%)
+[Performance] InitializeOnLoad SearchWindow                                                                                   :        2 samples, Peak.  86.3 us (1.1x), Avg.  80.1 us, Total. 160.3 us (0.0%)
+[Performance] InitializeOnLoad CustomIndexers                                                                                 :        2 samples, Peak.  12.6 ms (1.0x), Avg.  12.0 ms, Total. 24.07 ms (0.0%)
+[Performance] InitializeOnLoad SearchMonitor                                                                                  :        2 samples, Peak.  3.09 ms (1.7x), Avg.  1.81 ms, Total. 3.623 ms (0.0%)
+[Performance] InitializeOnLoad ParameterControllerEditor                                                                      :        2 samples, Peak.  22.7 us (1.2x), Avg.  19.1 us, Total. 38.17 us (0.0%)
+[Performance] InitializeOnLoad LayerSettingsWindow                                                                            :        2 samples, Peak.  30.1 us (1.8x), Avg.  16.6 us, Total. 33.25 us (0.0%)
+[Performance] InitializeOnLoad PackageManagerHookGUIDConverter.RegisterPackagesEventHandler                                   :        2 samples, Peak.   515 us (1.8x), Avg.   293 us, Total. 586.8 us (0.0%)
+[Performance] InitializeOnLoad EditorDragAndDrop.RegisterEditorClient                                                         :        2 samples, Peak.   157 us (1.1x), Avg.   142 us, Total. 284.6 us (0.0%)
+[Performance] InitializeOnLoad EditorEventCallbacks.InitializeFontAssetResourceChangeCallBacks                                :        2 samples, Peak.   713 us (1.0x), Avg.   682 us, Total. 1.364 ms (0.0%)
+[Performance] InitializeOnLoad SceneTemplateService.Init                                                                      :        2 samples, Peak.   786 us (1.0x), Avg.   770 us, Total. 1.540 ms (0.0%)
+[Performance] InitializeOnLoad DiagnosticSwitchesConsoleMessage.Init                                                          :        2 samples, Peak.  2.06 ms (1.5x), Avg.  1.39 ms, Total. 2.786 ms (0.0%)
+[Performance] InitializeOnLoad EditorWindow.Initialize                                                                        :        2 samples, Peak.   156 us (1.0x), Avg.   149 us, Total. 298.8 us (0.0%)
+[Performance] InitializeOnLoad MemoryProfilerCompilationGuard.InjectCompileGuard                                              :        2 samples, Peak.  96.7 us (1.0x), Avg.  95.7 us, Total. 191.4 us (0.0%)
+[Performance] InitializeOnLoad ToolShortcutContext.Init                                                                       :        2 samples, Peak.  75.3 us (1.1x), Avg.  69.5 us, Total. 138.9 us (0.0%)
+[Performance] InitializeOnLoad SceneVisibilityManager.Initialize                                                              :        2 samples, Peak.  2.84 ms (1.6x), Avg.  1.72 ms, Total. 3.444 ms (0.0%)
+[Performance] InitializeOnLoad AssetPostprocessingInternal.RefreshCustomDependencies                                          :        2 samples, Peak.  2.37 ms (1.5x), Avg.  1.59 ms, Total. 3.190 ms (0.0%)
+[Performance] InitializeOnLoad SysrootManager.Initialize                                                                      :        2 samples, Peak.   313 us (1.0x), Avg.   303 us, Total. 607.0 us (0.0%)
+[Performance] InitializeOnLoad ScopedRegistryAddedPopup.SubscribeToRegistriesAdded                                            :        2 samples, Peak.   129 us (1.2x), Avg.   110 us, Total. 219.6 us (0.0%)
+[Performance] InitializeOnLoad PackageManagerWindow.EditorInitializedInSafeMode                                               :        2 samples, Peak.  66.2 us (1.5x), Avg.  43.5 us, Total. 86.96 us (0.0%)
+[Performance] AssemblyReloadEvents.afterAssemblyReload: UnityEditor.PackageManager.TuanjiePathAndNameFix.FixTuanjieNameOrPath :        2 samples, Peak.  2.35 ms (1.0x), Avg.  2.33 ms, Total. 4.668 ms (0.0%)
+[Performance] AssemblyReloadEvents.afterAssemblyReload: UnityEditor.SceneTemplate.SceneTemplateService.AfterAssemblyReload    :        2 samples, Peak.  2.11 ms (1.8x), Avg.  1.15 ms, Total. 2.308 ms (0.0%)
+[Performance] ProcessService.EditorAfterLoadAllAssemblies                                                                     :        2 samples, Peak.   215 us (1.0x), Avg.   214 us, Total. 429.0 us (0.0%)
+[Performance] Application.ReadLicenseInfo                                                                                     :        1 samples, Peak.  14.8 ms (1.0x), Avg.  14.8 ms, Total. 14.78 ms (0.0%)
+[Performance] Application.InitialRefresh                                                                                      :        1 samples, Peak.  3.77 s (1.0x), Avg.  3.77 s, Total. 3.770 s (6.4%)
+[Performance] ShaderImporter.SourceAssetModified                                                                              :        3 samples, Peak.   666 ns (1.4x), Avg.   486 ns, Total. 1.458 us (0.0%)
+[Performance] ShaderIncludeImporter.SourceAssetModified                                                                       :        3 samples, Peak.   750 ns (1.0x), Avg.   722 ns, Total. 2.167 us (0.0%)
+[Performance] Compiling Scripts                                                                                               :        1 samples, Peak.  2.72 s (1.0x), Avg.  2.72 s, Total. 2.723 s (4.6%)
+[Performance] AssemblyReloadEvents.beforeAssemblyReload: UnityEditor.SceneTemplate.SceneTemplateService.BeforeAssemblyReload  :        1 samples, Peak.   554 us (1.0x), Avg.   554 us, Total. 553.9 us (0.0%)
+[Performance] PresetManagerPostProcessor.OnPreprocessAsset                                                                    :        5 samples, Peak.   717 us (4.1x), Avg.   174 us, Total. 869.9 us (0.0%)
+[Performance] CancelSplashScreenOnAssetChange.OnPreprocessAsset                                                               :        5 samples, Peak.   285 us (4.9x), Avg.  58.5 us, Total. 292.7 us (0.0%)
+[Performance] InitializeOnLoad M3ReplayFailureCapture                                                                         :        1 samples, Peak.   130 us (1.0x), Avg.   130 us, Total. 129.8 us (0.0%)
+[Performance] InitializeOnLoad M3FuelPlaytest                                                                                 :        1 samples, Peak.   154 us (1.0x), Avg.   154 us, Total. 153.7 us (0.0%)
+[Performance] InitializeOnLoad M7IdentityReview                                                                               :        1 samples, Peak.  48.6 us (1.0x), Avg.  48.6 us, Total. 48.62 us (0.0%)
+[Performance] InitializeOnLoad M6ResultsCapture                                                                               :        1 samples, Peak.  35.7 us (1.0x), Avg.  35.7 us, Total. 35.75 us (0.0%)
+[Performance] InitializeOnLoad NetPlaytest                                                                                    :        1 samples, Peak.   104 us (1.0x), Avg.   104 us, Total. 104.5 us (0.0%)
+[Performance] InitializeOnLoad MainLoopPlaytest                                                                               :        1 samples, Peak.  30.6 us (1.0x), Avg.  30.6 us, Total. 30.62 us (0.0%)
+[Performance] InitializeOnLoad M2LobbyCapture                                                                                 :        1 samples, Peak.  33.3 us (1.0x), Avg.  33.3 us, Total. 33.33 us (0.0%)
+[Performance] InitializeOnLoad MacVideoShareBuilder                                                                           :        1 samples, Peak.  75.3 us (1.0x), Avg.  75.3 us, Total. 75.29 us (0.0%)
+[Performance] InitializeOnLoad M4CoopCapture                                                                                  :        1 samples, Peak.   488 us (1.0x), Avg.   488 us, Total. 487.6 us (0.0%)
+[Performance] InitializeOnLoad M1ReviewCapture                                                                                :        1 samples, Peak.  34.0 us (1.0x), Avg.  34.0 us, Total. 33.96 us (0.0%)
+[Performance] InitializeOnLoad CodelyToolbar                                                                                  :        1 samples, Peak.   104 us (1.0x), Avg.   104 us, Total. 103.8 us (0.0%)
+[Performance] InitializeOnLoad CodelyLayoutInstaller                                                                          :        1 samples, Peak.  40.7 us (1.0x), Avg.  40.7 us, Total. 40.71 us (0.0%)
+[Performance] InitializeOnLoad SelectionChangedNotifier                                                                       :        1 samples, Peak.  68.0 us (1.0x), Avg.  68.0 us, Total. 68.04 us (0.0%)
+[Performance] InitializeOnLoad UnityTcpBridge                                                                                 :        1 samples, Peak.   313 us (1.0x), Avg.   313 us, Total. 312.8 us (0.0%)
+[Performance] InitializeOnLoad BridgeUpdateRestartPrompt                                                                      :        1 samples, Peak.  42.5 us (1.0x), Avg.  42.5 us, Total. 42.46 us (0.0%)
+[Performance] InitializeOnLoad TmpEssentialsAutoImporter                                                                      :        1 samples, Peak.  35.5 us (1.0x), Avg.  35.5 us, Total. 35.46 us (0.0%)
+[Performance] InitializeOnLoad NativeDllLoader                                                                                :        1 samples, Peak.   375 us (1.0x), Avg.   375 us, Total. 375.4 us (0.0%)
+[Performance] InitializeOnLoad DialogWatcher                                                                                  :        1 samples, Peak.   710 us (1.0x), Avg.   710 us, Total. 710.4 us (0.0%)
+[Performance] InitializeOnLoad StepJobRunner                                                                                  :        1 samples, Peak.  2.43 ms (1.0x), Avg.  2.43 ms, Total. 2.430 ms (0.0%)
+[Performance] InitializeOnLoad ManageWindowBridge                                                                             :        1 samples, Peak.   440 us (1.0x), Avg.   440 us, Total. 439.6 us (0.0%)
+[Performance] InitializeOnLoad PrefabLayoutRebuilder                                                                          :        1 samples, Peak.   152 us (1.0x), Avg.   152 us, Total. 152.5 us (0.0%)
+[Performance] InitializeOnLoad ManageScreenshot.ScheduleStaleCaptureWindowCleanup                                             :        1 samples, Peak.  1.31 ms (1.0x), Avg.  1.31 ms, Total. 1.310 ms (0.0%)
+[Performance] InitializeOnLoad ManageInput.Initialize                                                                         :        1 samples, Peak.   112 us (1.0x), Avg.   112 us, Total. 111.7 us (0.0%)
+[Performance] InitializeOnLoad NativeWindowBridgeHost.OnDomainReload                                                          :        1 samples, Peak.  3.71 ms (1.0x), Avg.  3.71 ms, Total. 3.709 ms (0.0%)
+[Performance] InitializeOnLoad DrillWindow.AutoOpenOnLoadIfDrillIncomplete                                                    :        1 samples, Peak.  1.37 ms (1.0x), Avg.  1.37 ms, Total. 1.375 ms (0.0%)
+[Performance] InitializeOnLoad CodelyWindow.RegisterReloadEvents                                                              :        1 samples, Peak.   359 us (1.0x), Avg.   359 us, Total. 358.8 us (0.0%)
+[Performance] InitializeOnLoad CodelyLogger.Init                                                                              :        1 samples, Peak.  53.5 us (1.0x), Avg.  53.5 us, Total. 53.54 us (0.0%)
+[Performance] DidReloadScriptsAdvancedDropdownWindow.OnScriptReload                                                           :        1 samples, Peak.   133 us (1.0x), Avg.   133 us, Total. 133.2 us (0.0%)
+[Performance] AssetDatabase.ImportAssets                                                                                      :        7 samples, Peak.  24.4 ms (7.0x), Avg.  3.48 ms, Total. 24.35 ms (0.0%)
+[Performance] VersionControl.Task.Wait                                                                                        :        1 samples, Peak.   210 us (1.0x), Avg.   210 us, Total. 209.7 us (0.0%)
+[Performance] BuilderAssetPostprocessor.OnPostprocessAllAssets                                                                :        6 samples, Peak.  3.22 ms (2.5x), Avg.  1.29 ms, Total. 7.726 ms (0.0%)
+[Performance] ArtifactBrowserPostProcessor.OnPostprocessAllAssets                                                             :        6 samples, Peak.   347 us (3.0x), Avg.   117 us, Total. 701.0 us (0.0%)
+[Performance] AssetEvents.OnPostprocessAllAssets                                                                              :       12 samples, Peak.   118 us (4.5x), Avg.  26.2 us, Total. 314.1 us (0.0%)
+[Performance] AudioMixerPostprocessor.OnPostprocessAllAssets                                                                  :        6 samples, Peak.   173 us (2.9x), Avg.  59.0 us, Total. 353.8 us (0.0%)
+[Performance] DomainReloadPostprocessor.OnPostprocessAllAssets                                                                :        6 samples, Peak.  1.26 ms (2.9x), Avg.   427 us, Total. 2.559 ms (0.0%)
+[Performance] StyleCatalogPostProcessor.OnPostprocessAllAssets                                                                :        6 samples, Peak.  12.6 ms (3.0x), Avg.  4.21 ms, Total. 25.24 ms (0.0%)
+[Performance] BuildCatalog                                                                                                    :        1 samples, Peak.  11.9 ms (1.0x), Avg.  11.9 ms, Total. 11.90 ms (0.0%)
+[Performance] ModelImporterPostProcessor.OnPostprocessAllAssets                                                               :        6 samples, Peak.   661 us (2.6x), Avg.   258 us, Total. 1.546 ms (0.0%)
+[Performance] RetainedModeAssetPostprocessor.OnPostprocessAllAssets                                                           :        6 samples, Peak.  1.59 ms (3.0x), Avg.   535 us, Total. 3.212 ms (0.0%)
+[Performance] AssetChangedListener.OnPostprocessAllAssets                                                                     :        6 samples, Peak.  1.28 ms (2.4x), Avg.   528 us, Total. 3.169 ms (0.0%)
+[Performance] SpeedTreePostProcessor.OnPostprocessAllAssets                                                                   :        6 samples, Peak.   161 us (1.5x), Avg.   107 us, Total. 642.7 us (0.0%)
+[Performance] TextAssetPostProcessor.OnPostprocessAllAssets                                                                   :        6 samples, Peak.  1.19 ms (2.4x), Avg.   496 us, Total. 2.976 ms (0.0%)
+[Performance] SyncVS.PostprocessSyncProject                                                                                   :        3 samples, Peak.   903 us (3.0x), Avg.   305 us, Total. 913.6 us (0.0%)
+[Performance] Application.ImportPackagesAndSetTemplateWhenCreatingProject                                                     :        1 samples, Peak.  33.7 ms (1.0x), Avg.  33.7 ms, Total. 33.73 ms (0.1%)
+[Performance] Application.SyncCurrentColorSpace                                                                               :        1 samples, Peak.   115 ms (1.0x), Avg.   115 ms, Total. 115.4 ms (0.2%)
+[Performance] Application.OnUsbDevicesChanged                                                                                 :        1 samples, Peak.  96.9 us (1.0x), Avg.  96.9 us, Total. 96.88 us (0.0%)
+[Performance] Application.AssetInstanceCacheUpdate                                                                            :        1 samples, Peak.   333 ns (1.0x), Avg.   333 ns, Total. 333.0 ns (0.0%)
+[Performance] Application.UnityExtensions.Initialize                                                                          :        1 samples, Peak.  1.17 ms (1.0x), Avg.  1.17 ms, Total. 1.170 ms (0.0%)
+[Performance] CodeEditorProjectSync.SyncEditorProject                                                                         :        1 samples, Peak.  53.4 us (1.0x), Avg.  53.4 us, Total. 53.38 us (0.0%)
+[Performance] Application.ExecuteStartups                                                                                     :        1 samples, Peak.  59.7 ms (1.0x), Avg.  59.7 ms, Total. 59.75 ms (0.1%)
+[Performance] Menu.RegisterMenuInterface                                                                                      :       26 samples, Peak.   458 ns (3.5x), Avg.   130 ns, Total. 3.378 us (0.0%)
+[Performance] Gizmo.RebuildRenderers                                                                                          :        2 samples, Peak.  53.2 ms (1.6x), Avg.  33.1 ms, Total. 66.22 ms (0.1%)
+[Performance] Gizmo.AddGizmoRenderers                                                                                         :       68 samples, Peak.  1.83 ms (48.3x), Avg.  37.9 us, Total. 2.577 ms (0.0%)
+[Performance] Application.editorInitializingProject                                                                           :        1 samples, Peak.  1.46 ms (1.0x), Avg.  1.46 ms, Total. 1.455 ms (0.0%)
+[Performance] Application.InitializeMenu                                                                                      :        1 samples, Peak.  37.9 ms (1.0x), Avg.  37.9 ms, Total. 37.95 ms (0.1%)
+[Performance] Menu.RebuildAll                                                                                                 :        1 samples, Peak.  37.9 ms (1.0x), Avg.  37.9 ms, Total. 37.94 ms (0.1%)
+[Performance] Menu.BuildRegisteredMenuInterfaces                                                                              :        1 samples, Peak.  33.6 ms (1.0x), Avg.  33.6 ms, Total. 33.65 ms (0.1%)
+[Performance] Menu.FilterMenuItem                                                                                             :      494 samples, Peak.  14.6 ms (450.1x), Avg.  32.5 us, Total. 16.03 ms (0.0%)
+[Performance] UpdateAllMenus                                                                                                  :        1 samples, Peak.   799 us (1.0x), Avg.   799 us, Total. 799.0 us (0.0%)
+[Performance] EditorSceneManager.sceneClosing: UnityEditor.SceneVisibilityManager.EditorSceneManagerOnSceneClosing            :        2 samples, Peak.   207 us (1.9x), Avg.   109 us, Total. 217.5 us (0.0%)
+[Performance] GUIView.RepaintAll.PlayerLoopController                                                                         :        2 samples, Peak.  6.75 us (1.8x), Avg.  3.75 us, Total. 7.500 us (0.0%)
+[Performance] EditorSceneManager.newSceneCreated: UnityEditor.SceneTemplate.SceneTemplateService.OnNewSceneCreated            :        1 samples, Peak.   185 us (1.0x), Avg.   185 us, Total. 185.3 us (0.0%)
+[Performance] EditorSceneManager.newSceneCreated: UnityEditor.SceneVisibilityManager.EditorSceneManagerOnNewSceneCreated      :        1 samples, Peak.   111 us (1.0x), Avg.   111 us, Total. 110.8 us (0.0%)
+[Performance] EditorSceneManager.newSceneCreated: UnityEditor.SceneManagement.StageNavigationManager.OnNewSceneCreated        :        1 samples, Peak.  37.0 us (1.0x), Avg.  37.0 us, Total. 36.96 us (0.0%)
+[Performance] Application.InvokeFinishedLoadingProject                                                                        :        1 samples, Peak.  7.08 ms (1.0x), Avg.  7.08 ms, Total. 7.076 ms (0.0%)
+[Performance] ProcessService.OnProjectLoaded                                                                                  :        1 samples, Peak.  36.9 us (1.0x), Avg.  36.9 us, Total. 36.88 us (0.0%)
+[Performance] BuilderAssetModificationProcessor.OnWillSaveAssets                                                              :        3 samples, Peak.   228 us (2.8x), Avg.  80.5 us, Total. 241.4 us (0.0%)
+[Performance] TerrainModificationProcessor.OnWillSaveAssets                                                                   :        3 samples, Peak.   381 us (3.0x), Avg.   128 us, Total. 384.8 us (0.0%)
+[Performance] Inspector.InitOrRebuild                                                                                         :        2 samples, Peak.   229 us (1.1x), Avg.   213 us, Total. 426.9 us (0.0%)
+[Performance] Application.Message                                                                                             :      107 samples, Peak.  2.33 us (11.0x), Avg.   213 ns, Total. 22.75 us (0.0%)
+[Performance] Application.Idle                                                                                                :      107 samples, Peak.  3.40 ms (1.0x), Avg.  3.32 ms, Total. 355.4 ms (0.6%)
+[Performance] GenerateAssemblyTypeInfos                                                                                       :        2 samples, Peak.  18.6 ms (1.6x), Avg.  11.6 ms, Total. 23.18 ms (0.0%)
+[Performance] AssetDatabase.Refresh                                                                                           :        1 samples, Peak.  41.7 ms (1.0x), Avg.  41.7 ms, Total. 41.67 ms (0.1%)
+[Performance] EditorApplication.quitting: UnityTcp.Editor.Native.NativeDllLoader.OnEditorQuitting                             :        1 samples, Peak.   139 us (1.0x), Avg.   139 us, Total. 138.7 us (0.0%)
+[Performance] EditorApplication.quitting: UnityTcp.Editor.Tools.ManageWindowBridge.OnEditorQuitting                           :        1 samples, Peak.  39.9 ms (1.0x), Avg.  39.9 ms, Total. 39.89 ms (0.1%)
+[Performance] EditorApplication.quitting: UnityTcp.Editor.Tools.ManageScreenshot.CleanupRecordingBeforeDomainExit             :        1 samples, Peak.  23.5 us (1.0x), Avg.  23.5 us, Total. 23.54 us (0.0%)
+[Performance] EditorApplication.quitting: Cn.Tuanjie.Codely.Editor.CodelyWindow.OnEditorQuitting                              :        1 samples, Peak.   541 us (1.0x), Avg.   541 us, Total. 540.7 us (0.0%)
+[Performance] EditorApplication.quitting: callback in UnityEditor.TextCore.Text.EditorEventCallbacks                          :        1 samples, Peak.  2.36 ms (1.0x), Avg.  2.36 ms, Total. 2.363 ms (0.0%)
+[Performance] Killing ADB server                                                                                              :        1 samples, Peak.  27.7 ms (1.0x), Avg.  27.7 ms, Total. 27.68 ms (0.0%)
+[Performance] Application.Shutdown.PauseProfilerSession                                                                       :        1 samples, Peak.  39.0 us (1.0x), Avg.  39.0 us, Total. 39.00 us (0.0%)
+[Performance] Application.Shutdown.PauseAssetImportWorkers                                                                    :        1 samples, Peak.   188 us (1.0x), Avg.   188 us, Total. 188.4 us (0.0%)
+[Performance] Application.Shutdown.SaveAssets                                                                                 :        1 samples, Peak.  1.99 ms (1.0x), Avg.  1.99 ms, Total. 1.993 ms (0.0%)
+[Performance] Application.Shutdown.CleanupRenderPipeline                                                                      :        1 samples, Peak.  5.04 us (1.0x), Avg.  5.04 us, Total. 5.041 us (0.0%)
+[Performance] Application.Shutdown.StopPreloadManager                                                                         :        1 samples, Peak.  10.8 ms (1.0x), Avg.  10.8 ms, Total. 10.82 ms (0.0%)
+[Performance] Application.Shutdown.DestroyWorld                                                                               :        1 samples, Peak.   442 us (1.0x), Avg.   442 us, Total. 442.2 us (0.0%)
+[Performance] Application.Shutdown.CleanupAfterLoad                                                                           :        1 samples, Peak.  2.40 ms (1.0x), Avg.  2.40 ms, Total. 2.399 ms (0.0%)
+[Performance] Application.Shutdown.Progress                                                                                   :        1 samples, Peak.  21.0 us (1.0x), Avg.  21.0 us, Total. 20.96 us (0.0%)
+[Performance] Application.Shutdown.GICleanupManagers                                                                          :        1 samples, Peak.  1.34 ms (1.0x), Avg.  1.34 ms, Total. 1.337 ms (0.0%)
+[Performance] Application.Shutdown.MenuCleanupClass                                                                           :        1 samples, Peak.  71.1 us (1.0x), Avg.  71.1 us, Total. 71.08 us (0.0%)
+[Performance] Application.Shutdown.ADBSaveStateBeforeShutdown                                                                 :        1 samples, Peak.  7.63 us (1.0x), Avg.  7.63 us, Total. 7.625 us (0.0%)
+[Performance] Application.Shutdown.RemoteShutdown                                                                             :        1 samples, Peak.   584 ns (1.0x), Avg.   584 ns, Total. 584.0 ns (0.0%)
+[Performance] Application.Shutdown.CleanupVCProvider                                                                          :        1 samples, Peak.  10.2 us (1.0x), Avg.  10.2 us, Total. 10.21 us (0.0%)
+[Performance] Application.Shutdown.InputShutdown                                                                              :        1 samples, Peak.   405 us (1.0x), Avg.   405 us, Total. 404.8 us (0.0%)
+[Performance] Application.Shutdown.GizmoManagerDestroy                                                                        :        1 samples, Peak.   283 us (1.0x), Avg.   283 us, Total. 283.0 us (0.0%)
+[Performance] Application.Shutdown.ProfilerSession                                                                            :        1 samples, Peak.   348 us (1.0x), Avg.   348 us, Total. 348.0 us (0.0%)
+[Performance] Application.Shutdown.ReleaseGfxWindowOnAllGUIViews                                                              :        1 samples, Peak.  1.25 us (1.0x), Avg.  1.25 us, Total. 1.250 us (0.0%)
+[Performance] Application.Shutdown.CleanupEngine                                                                              :        1 samples, Peak.   115 ms (1.0x), Avg.   115 ms, Total. 115.0 ms (0.2%)
+[Performance] Application.Shutdown.CleanupAssetDatabase                                                                       :        1 samples, Peak.  1.73 ms (1.0x), Avg.  1.73 ms, Total. 1.734 ms (0.0%)
+[Performance] Application.Shutdown.ScriptCompilationCleanUp                                                                   :        1 samples, Peak.  12.6 us (1.0x), Avg.  12.6 us, Total. 12.63 us (0.0%)
+[Performance] Application.Shutdown.DestroyJobSystem                                                                           :        1 samples, Peak.   281 us (1.0x), Avg.   281 us, Total. 280.8 us (0.0%)
+[Performance] Application.Shutdown.CleanupPersistentManager                                                                   :        1 samples, Peak.   879 us (1.0x), Avg.   879 us, Total. 879.1 us (0.0%)
+[Performance] Application.Shutdown.CleanupAsyncReadManager                                                                    :        1 samples, Peak.  89.1 us (1.0x), Avg.  89.1 us, Total. 89.13 us (0.0%)
+[Performance] Application.Shutdown.CleanupMono                                                                                :        1 samples, Peak.  37.8 ms (1.0x), Avg.  37.8 ms, Total. 37.76 ms (0.1%)
+[Performance] Application.Shutdown.CleanupStdConverters                                                                       :        1 samples, Peak.  9.08 us (1.0x), Avg.  9.08 us, Total. 9.084 us (0.0%)
+[Performance] Application.Shutdown.UnloadAllPlatformSupportModuleNativeDlls                                                   :        1 samples, Peak.  2.21 us (1.0x), Avg.  2.21 us, Total. 2.208 us (0.0%)
+[Performance] Application.Shutdown.UnloadAllPlatformSupportNativeLibraries                                                    :        1 samples, Peak.   250 ns (1.0x), Avg.   250 ns, Total. 250.0 ns (0.0%)
+[Performance] Application.Shutdown.CleanupAutoDocumentation                                                                   :        1 samples, Peak.   140 us (1.0x), Avg.   140 us, Total. 140.2 us (0.0%)
+[Performance] Application.Shutdown.ShaderNameManagerDestroy                                                                   :        1 samples, Peak.  37.3 us (1.0x), Avg.  37.3 us, Total. 37.29 us (0.0%)
+[Performance] Application.Shutdown.CleanupCacheServer                                                                         :        1 samples, Peak.   167 ns (1.0x), Avg.   167 ns, Total. 167.0 ns (0.0%)
+[Performance] Application.Shutdown.Virtualization_Shutdown                                                                    :        1 samples, Peak.  1.88 us (1.0x), Avg.  1.88 us, Total. 1.875 us (0.0%)
+[Performance] Application.Shutdown.DevConnections                                                                             :        1 samples, Peak.  94.2 us (1.0x), Avg.  94.2 us, Total. 94.17 us (0.0%)
+Exiting batchmode successfully now!
+[Package Manager] Server::Kill -- Server was shutdown

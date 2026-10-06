@@ -1,0 +1,19 @@
+Command: sh Tools/test-settlement.sh
+Started UTC: 2026-10-04T13:31:17.581+00:00
+
+PASS  Local finished account requires stable opening identity
+PASS  Guest fake and malformed opening contexts cannot qualify
+PASS  LAN final snapshot requires live room and eligible human seat
+PASS  Leave before Finish invalidates stale eligible seat during grace
+PASS  Logout then same UID relogin remains excluded but refresh stays valid
+PASS  Loss of human participation remains excluded after bot finishes
+PASS  Starting observation and stable migrated seat one retain identity
+PASS  Wrong round or seat observations permanently revoke context
+PASS  Decision is caller latched and independent contexts do not deduplicate
+PASS  Five-minute export has 624 frames and exact final hold
+PASS  Fractional exports cover terminal state and reject bad frame indices
+PASS  Export rejects nonfinite zero negative and oversized durations
+Settlement tests: 12 passed, 0 failed, 712 assertions.
+
+Exit code: 0
+Finished UTC: 2026-10-04T13:31:17.911+00:00

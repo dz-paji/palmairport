@@ -1,0 +1,29 @@
+Mono path[0] = '/Users/qinziqian/Documents/overcooked-like/game/Builds/M7-Smoke.app/Contents/Resources/Data/Managed'
+Mono config path = '/Users/qinziqian/Documents/overcooked-like/game/Builds/M7-Smoke.app/Contents/MonoBleedingEdge/etc'
+Input System module state changed to: Initialized.
+Obtained 25 stack frames.
+#0  0x00000194b2b650 in __pthread_kill
+#1  0x00000194bfb480 in abort
+#2  0x000001a6cabd64 in ___RegisterApplication_block_invoke
+#3  0x00000199ad55a0 in _dispatch_client_callout
+#4  0x00000199abe624 in _dispatch_once_callout
+#5  0x000001a6c7c994 in _RegisterApplication
+#6  0x000001a6c7c7b0 in GetCurrentProcess
+#7  0x0000019bb27fa4 in -[NSMenuBarPresentationInstance _getAggregateUIMode:withOptions:]
+#8  0x0000019bb2b7f0 in +[NSMenuBarPresentationInstance _getAggregateUIMode:withOptionsPtr:]
+#9  0x0000019be72d2c in __swift_memcpy240_8
+#10 0x0000019be71f90 in __swift_closure_destructor.14
+#11 0x0000019bf43fb8 in __swift_closure_destructor.7
+#12 0x0000019bf43ea0 in __swift_closure_destructor.7
+#13 0x00000199ad55a0 in _dispatch_client_callout
+#14 0x00000199abe624 in _dispatch_once_callout
+#15 0x0000019bea0274 in __swift_memcpy34_4
+#16 0x00000106eca27c in PlayerMain(int, char const**)
+#17 0x0000010666d404 in operator delete[](void*, std::nothrow_t const&)
+#18 0x00000106eb72e4 in PlayerMain(int, char const**)
+#19 0x00000106339758 in operator delete[](void*, std::nothrow_t const&)
+#20 0x000001064048a8 in operator delete[](void*, std::nothrow_t const&)
+#21 0x0000010641ddc8 in operator delete[](void*, std::nothrow_t const&)
+#22 0x00000106eb25f0 in operator delete[](void*, std::nothrow_t const&)
+#23 0x00000106eb33f8 in PlayerMain(int, char const**)
+#24 0x00000194a93ef0 in start

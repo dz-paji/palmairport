@@ -1,0 +1,18 @@
+PASS FakeAuthService injected and sign-in started; auth configuration and credentials are excluded.
+PASS Fake sign-in completed and TryVerifyAge authorized multiplayer before Room.Host/Join.
+PASS Meal session client called the real Room.Join for 127.0.0.1.
+PASS Client read-only mirror shows practice flight UBA826 at stand 0 before ordering (dual-end flight board parity).
+Probe: one Pressed=true Remote step queued for the meal order.
+PASS Client's own press ordered the meal through UDP; the mirror reads back Ordered.
+Evidence/m3-meal-ready-client.png  1920x1080
+PASS Client captured the same meal-ready moment; MirrorElapsed=12.3 MirrorScore=0.
+PASS Client snapshot confirms seat 1 owns the meal cart after the grab edge.
+PASS Client mirror shows meal cargo bound to UBA826 (cargo→flightId).
+Evidence/m3-meal-deliver-client.png  1920x1080
+PASS Client captured the delivery read-out at mirror work=0.20.
+PASS Client mirror confirms UBA826 meals completed exactly once; cart cleared; MirrorScore=50 MirrorElapsed=15.5.
+PASS Meal session client returned to CabinLobby after the host close control.
+Runtime errors: 0
+Final: PASS
+Details: Session 3 client ran the full meal flow over UDP with mirror-consistent task feedback.
+Diagnostics: scenario=client-meal,stage=8,scene=CabinLobby,room=Idle,snapshots=0,game=none,actors=none,signals=/private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.zV0Rjk/control

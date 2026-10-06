@@ -1,0 +1,6 @@
+M1 review capture: PASS
+Unity runtime errors: False
+Evidence/m1-ingame-16x9.png  1920x1080
+Evidence/m1-ingame-19_5x9.png  2340x1080
+Evidence/m1-boarding-16x9.png  1920x1080
+Evidence/m1-sample-trio.png  1920x1080

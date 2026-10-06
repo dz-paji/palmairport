@@ -1,0 +1,32 @@
+M2 CabinLobby smoke: PASS
+Runtime errors: False
+Manual IP + join remain inside safe area and above footer at aspect 1.778: PASS
+Manual IP + join remain inside safe area and above footer at aspect 2.167: PASS
+Evidence/m2-lobby-main.png  1600x900
+Evidence/m2-lobby-main-19_5x9.png  2340x1080
+Evidence/m2-auth-signin.png  1600x900
+Evidence/m2-auth-signin-19_5x9.png  2340x1080
+Evidence/m2-auth-dob.png  1600x900
+Evidence/m2-auth-dob-19_5x9.png  2340x1080
+Evidence/m2-lobby-connecting.png  1600x900
+Evidence/m2-lobby-connecting-19_5x9.png  2340x1080
+Fake sign-in cancel, failure/retry, login marker, and logout cleanup: PASS
+Invalid/future/under-13/exact-13 DOB and pending create/join resumption: PASS
+Pending manual IP retained through login and age verification: 127.0.0.1
+Evidence/m2-lobby-roomlist.png  1600x900
+Evidence/m2-lobby-roomlist-19_5x9.png  2340x1080
+Evidence/m2-lobby-room-full.png  1600x900
+Room list lobby/ingame/full states and manual-IP entry: PASS
+Evidence/m2-lobby-host-fixture.png  1600x900
+Evidence/m2-lobby-host-fixture-19_5x9.png  2340x1080
+Evidence/m2-lobby-client-fixture.png  1600x900
+Evidence/m2-lobby-client-fixture-19_5x9.png  2340x1080
+Host/client room display fixtures are tagged and client start remains disabled: PASS
+Evidence/m2-lobby-invite.png  1600x900
+Evidence/m2-lobby-invite-19_5x9.png  2340x1080
+Invitation roles, link-free LAN setup instructions, preview bounds, clipboard result, and panel-open event: PASS
+CabinLobby 16:9 + 19.5:9 capture: PASS
+Local solo and coop launch, wardrobe appearance, and return round-trips: PASS
+Host sandbox practice mode (endless + scheduled first flight), movement, cart pickup/release, and retry: PASS
+Remote mirror-simulation input/HUD/retry placeholder: PASS
+Wardrobe archive retained across all mode round-trips: PASS

@@ -1,0 +1,47 @@
+<svg width="874" height="402" viewBox="0 0 874 402" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="iPhone 17 - 1" clip-path="url(#clip0_1_2)">
+<rect width="402" height="874" transform="matrix(0 -1 1 0 0 402)" fill="white"/>
+<rect id="kitchen" x="23" y="30" width="106" height="59" fill="#FF9500"/>
+<rect id="fuel" x="23" y="297" width="106" height="59" fill="#FF9500"/>
+<rect id="baggage" x="23" y="208" width="106" height="59" fill="#FF8D28"/>
+<rect id="boarding gate" x="23" y="119" width="106" height="59" fill="#34C759"/>
+<rect id="ramp1" x="287" y="19" width="213" height="92" fill="#30B0C7"/>
+<rect id="ramp3" x="287" y="303" width="213" height="92" fill="#30B0C7"/>
+<rect id="ramp2" x="205" y="166" width="295" height="92" fill="#30B0C7"/>
+<g id="pavement group">
+<rect id="pavement" x="449" y="111" width="13" height="38" fill="#AC7F5E"/>
+<rect id="pavement_2" x="191" y="166" width="14" height="109" fill="#AC7F5E"/>
+<rect id="pavement_3" x="205" y="259" width="257" height="16" fill="#A2845E"/>
+<rect id="pavement_4" x="449" y="273" width="13" height="30" fill="#A2845E"/>
+<rect id="pavement_5" x="129" y="149" width="333" height="17" fill="#A2845E"/>
+</g>
+<g id="road gorup">
+<rect id="road" x="235" y="64" width="52" height="25" fill="#D9D9D9"/>
+<rect id="road_2" x="128" y="314" width="43" height="25" fill="#D9D9D9"/>
+<rect id="road_3" x="232" y="314" width="55" height="25" fill="#D9D9D9"/>
+<rect id="road_4" x="128" y="232" width="43" height="25" fill="#D9D9D9"/>
+<rect id="road_5" x="129" y="60" width="42" height="25" fill="#D9D9D9"/>
+<rect id="road_6" x="171" y="43" width="64" height="328" fill="#D9D9D9"/>
+</g>
+<rect id="runway" x="784" y="7" width="75" height="388" fill="#D9D9D9"/>
+<g id="taxiway group">
+<rect id="taxiway" x="792.095" y="14" width="47.4384" height="110.314" transform="rotate(51.4593 792.095 14)" fill="#D9D9D9"/>
+<rect id="taxiway_2" x="752.838" y="105.283" width="47.4384" height="110.314" transform="rotate(141.459 752.838 105.283)" fill="#D9D9D9"/>
+<rect id="taxiway_3" x="742.838" y="252.284" width="47.4384" height="110.314" transform="rotate(141.459 742.838 252.284)" fill="#D9D9D9"/>
+<rect id="taxiway_4" x="666.557" y="382.838" width="47.4384" height="110.314" transform="rotate(-128.541 666.557 382.838)" fill="#D9D9D9"/>
+<rect id="taxiway_5" x="500" y="66" width="47" height="184" transform="rotate(-90 500 66)" fill="#D9D9D9"/>
+<rect id="taxiway_6" x="500" y="213" width="47" height="174" transform="rotate(-90 500 213)" fill="#D9D9D9"/>
+<rect id="taxiway_7" x="500" y="383" width="47" height="167" transform="rotate(-90 500 383)" fill="#D9D9D9"/>
+<path id="taxiway_8" d="M706 314.105L735.557 277L821.841 345.732L792.284 382.837L706 314.105Z" fill="#D9D9D9"/>
+<rect id="taxiway_9" x="706" y="83" width="47" height="231" fill="#D9D9D9"/>
+</g>
+<ellipse id="boarding point 1" cx="456" cy="110" rx="7" ry="5" fill="#D9D9D9"/>
+<ellipse id="boarding point 2" cx="455" cy="165" rx="7" ry="5" fill="#D9D9D9"/>
+<ellipse id="boarding point 3" cx="455" cy="303" rx="7" ry="5" fill="#D9D9D9"/>
+</g>
+<defs>
+<clipPath id="clip0_1_2">
+<rect width="402" height="874" fill="white" transform="matrix(0 -1 1 0 0 402)"/>
+</clipPath>
+</defs>
+</svg>

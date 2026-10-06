@@ -1,0 +1,9 @@
+Runtime model factory review
+model-meals: renderers=65, triangles=6496, bounds=(1.58, 1.89, 1.77)
+model-baggage: renderers=79, triangles=7708, bounds=(1.50, 1.19, 3.28)
+model-fuel: renderers=54, triangles=6380, bounds=(1.58, 1.54, 2.31)
+model-aircraft: renderers=42, triangles=4648, bounds=(6.16, 2.02, 3.80)
+model-crew: renderers=64, triangles=15092, bounds=(0.71, 1.29, 0.62)
+model-passengers: renderers=198, triangles=64260, bounds=(3.70, 1.21, 0.73)
+PASS: factory creation, nonempty geometry, finite bounds, no colliders.
+Not a device performance test.

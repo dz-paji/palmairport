@@ -1,0 +1,35 @@
+{
+  "scope": "Local offline macOS player; synthetic input + real bot; no OAuth/cloud/device/multiplayer acceptance",
+  "player": "/Users/qinziqian/Documents/overcooked-like/game/Builds/M7-Smoke.app",
+  "buildIdentity": {
+    "protocol": "PALMBAY_M7_PLAYER_SMOKE_V1",
+    "nonce": "65340ead6ed442e6a1864983c61912da",
+    "company": "Palm Bay M7 Smoke 65340ead6ed442e6a1864983c61912da",
+    "product": "M7Smoke-65340ead6ed442e6a1864983c61912da",
+    "bundle": "com.palmbay.m7smoke.65340ead6ed442e6a1864983c61912da",
+    "app": "/Users/qinziqian/Documents/overcooked-like/game/Builds/M7-Smoke.app"
+  },
+  "isolatedHome": "/private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-m7-player.ii_x5nc9/home",
+  "evidence": "/Users/qinziqian/Documents/overcooked-like/game/Evidence/m7-player-20261004",
+  "command": [
+    "/Users/qinziqian/Documents/overcooked-like/game/Builds/M7-Smoke.app/Contents/MacOS/M7Smoke-65340ead6ed442e6a1864983c61912da",
+    "-palmbayM7Smoke",
+    "-palmbayM7Isolation",
+    "/private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-m7-player.ii_x5nc9/isolation.json",
+    "-palmbayM7Evidence",
+    "/Users/qinziqian/Documents/overcooked-like/game/Evidence/m7-player-20261004",
+    "-logFile",
+    "/Users/qinziqian/Documents/overcooked-like/game/Evidence/m7-player-20261004/player.log",
+    "-screen-width",
+    "1920",
+    "-screen-height",
+    "1080",
+    "-screen-fullscreen",
+    "0"
+  ],
+  "status": "FAIL",
+  "playerExitCode": -6,
+  "reason": "Player exited with code -6; inspect player.log and launcher.log",
+  "wallSeconds": 1.008,
+  "temporaryStorageKept": false
+}

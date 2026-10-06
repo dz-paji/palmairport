@@ -1,0 +1,11 @@
+Command: sh Tools/test-m6-video.sh
+Started UTC: 2026-10-04T13:31:17.912+00:00
+
+SilentVideoEncoder: MP4, validation, finish, cancellation and cleanup passed
+ffprobe/decode: real H.264 MP4, 30 frames, correct duration/orientation, no audio; read-only provider manifest passed
+警告: [options] 未与 -source 8 一起设置引导类路径
+1 个警告
+RgbYuvConverter: planar/interleaved strides, range, flip and padding passed
+
+Exit code: 0
+Finished UTC: 2026-10-04T13:31:21.202+00:00

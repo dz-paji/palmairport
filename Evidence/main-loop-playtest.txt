@@ -1,0 +1,2 @@
+PASS: three flights completed through movement + interaction across all ramps; fourth flight arrived; saved scene models and cargo references survived reload.
+Unity runtime errors: False

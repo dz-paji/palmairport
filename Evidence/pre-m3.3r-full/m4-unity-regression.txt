@@ -1,0 +1,39 @@
+M4 Unity editor regression — 2026-10-04
+Editor: /Applications/Tuanjie/Hub/Editor/2022.3.61t14/Tuanjie.app/Contents/MacOS/Tuanjie
+Project: /Users/qinziqian/Documents/overcooked-like/game
+All commands used -batchmode -projectPath <Project> -executeMethod <Method> -logFile <Log>.
+Only DemoBuilder.ValidateScenes additionally used -quit; other harnesses exit themselves.
+
+PASS DemoBuilder.ValidateScenes — exit 0; all three scenes valid; LEVEL_LAYOUT_VALIDATED assertions=14430.
+Log: /tmp/palmbay-m4-final-scenes.log
+Report: Evidence/level-layout-validation.txt
+
+PASS MainLoopPlaytest.Run — exit 0; three complete flight cycles across all ramps, 27 route checks, fourth arrival; runtime errors False.
+Log: /tmp/palmbay-m4-final-mainloop.log
+Report: Evidence/main-loop-playtest.txt
+
+PASS M1ReviewCapture.Run — exit 0; four PNGs; runtime errors False.
+Log: /tmp/palmbay-m4-final-m1.log
+Report: Evidence/m1-review.txt
+
+PASS M2LobbyCapture.Run — exit 0; 17 PNGs; runtime errors False; manual IP layout passes both tested aspect ratios.
+Log: /tmp/palmbay-m4-final-m2.log
+Report: Evidence/m2-lobby-review.txt
+
+PASS M3ReplayFailureCapture.Run — exit 0; one PNG; wrong-delivery attribution once, full 300 seconds, transient replay notice and retry reset; runtime errors False.
+Log: /tmp/palmbay-m4-final-replay.log
+Report: Evidence/m3-baggage-replay.txt
+
+PASS M3FuelPlaytest.Run — exit 0; actual bot fuel sequence, partial-tank remount, input and spill movement checks; runtime errors 0.
+Log: /tmp/palmbay-m4-fuel-regression.log
+Report: Evidence/m3-fuel-playtest.txt
+
+PASS M4CoopCapture.Run — exit 0; three PNGs; bot preference, human contribution, two 300-second rounds, automatic replay final hold, JSON reload and deduplication; runtime errors False.
+Log: /tmp/palmbay-m4-final-coop.log
+Report: Evidence/m4-coop-review.txt
+Fixture scope: seeded history, domain task completion, camera crop, displaced partner and simulated safe area. Real device memory bytes preserved.
+
+Additional command: sh Tools/test-loopback-oauth.sh
+PASS — exit 0; 2 groups, 9 assertions; localhost socket only, not real Google OAuth.
+
+Scope: editor/local automation. No human usability, physical Android pair, real OAuth or current standalone package validation is inferred.

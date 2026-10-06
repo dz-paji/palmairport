@@ -1,0 +1,9 @@
+Command: sh Tools/test-android-manifest.sh
+Started UTC: 2026-10-04T13:31:21.497+00:00
+
+PASS  current manifest locates and updates one OAuth filter
+PASS  duplicate OAuth filters are rejected
+Android manifest XML tests: 2 passed, 0 failed, 7 assertions.
+
+Exit code: 0
+Finished UTC: 2026-10-04T13:31:21.774+00:00

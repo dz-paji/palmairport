@@ -1,0 +1,12 @@
+M7 identity review: PASS
+PASS
+Runtime errors: False
+Successful silent token refresh retains room panel and ready state: PASS
+Revocation closes lobby room; existing valid identity is preserved on unrelated failure: PASS
+Stale UI/direct start callback cannot start a revoked account: PASS
+Client refresh retains waiting room; revoked client leaves and can regroup: PASS
+Explicit logout leaves room; guest + bot remains available: PASS
+Production checkpoint promotion + completed-shift retry preserves seat-1 name/color and bot mapping: PASS
+Revocation dispatch: invalidated=True, room=Idle, gameStarted=False, scene=PalmBay
+Global mid-shift auth revocation returns to lobby without real credentials: PASS
+FIXTURE: explicit FakeAuth, in-memory room socket, no backend calls or share posting.

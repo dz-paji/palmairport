@@ -1,0 +1,8 @@
+PASS FakeAuthService injected and sign-in started; auth configuration and credentials are excluded.
+PASS Fake sign-in completed and TryVerifyAge authorized multiplayer before Room.Host/Join.
+FIXTURE: domain APIs prepared a partial meal order, partly filled truck with its hose in seat 1's hand, loaded host-owned baggage cart, and closed gate with stable waiting/released passengers. No client snapshot or promotion state is manually replaced.
+PASS Client mirrored finite mode, round, score and populated checkpoint before continuing.
+Runtime errors: 0
+Final: PASS
+Details: Abrupt host-loss fixture closed the real socket without sending leave; client must independently timeout, restore checkpoint and finish.
+Diagnostics: scenario=host-m4-hostloss,stage=3,scene=PalmBay,room=Playing,snapshots=124,game=started=True,sandbox=False,remote=False,actors=p0=(-4.48, 0.00, -0.40),p1=(-5.60, 0.00, 0.44),cart0=none,signals=/private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.3_fzw2el/control,round=1,localSeat=0,elapsed=8.105295,score=100,finished=False,replay=16/0,replayStatus=共同回放已同步

@@ -1,0 +1,17 @@
+Command: sh Tools/test-single-cycle.sh
+Started UTC: 2026-10-04T13:05:33.949+00:00
+
+PASS  starts with one arriving flight
+PASS  arrival waits and then assigns stand zero
+PASS  service requires all four tasks and arrival bags
+PASS  incomplete service cannot depart
+PASS  completion animates and creates a fresh flight
+PASS  second flight resets task state
+PASS  servicing does not time out
+PASS  large ticks stop at human servicing
+PASS  invalid ticks are ignored
+PASS  reset returns to the first flight
+SingleFlightCycle tests: 10 passed, 0 failed, 127 assertions.
+
+Exit code: 0
+Finished UTC: 2026-10-04T13:05:34.260+00:00

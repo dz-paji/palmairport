@@ -1,0 +1,19 @@
+PASS FakeAuthService injected and sign-in started; auth configuration and credentials are excluded.
+PASS Fake sign-in completed and TryVerifyAge authorized multiplayer before Room.Host/Join.
+PASS Session 4 host bound a real UDP socket for the baggage scenario.
+PASS Practice scheduler supplied flight A=UBA826 at stand 0 and flight B=QMR152 at stand 1; fixtures placed the client beside the baggage cart.
+PASS Client Pressed input grabbed the baggage cart through host Interact after UDP delivery.
+PASS Client Pressed input unloaded UBA826 arrival bags at its stand through UDP.
+PASS Client returned the arrival baggage through the station Pressed edge; flight A now permits outgoing bags.
+PASS Client Pressed input loaded outgoing baggage for flight A=UBA826.
+PASS Client released Held after a partial A delivery; host EndFrame reset DeliverWork to 0 and preserved cargo.
+Evidence/m3-baggage-wrong-host.png  1920x1080
+PASS Host captured wrong-delivery failure QMR152:1 with consumed cargo and visible source/receiver attribution.
+PASS Source flight A was unaffected and its outgoing baggage could be loaded again while flight B stayed Failed.
+Evidence/m3-baggage-deliver-host.png  1920x1080
+PASS Host captured normal baggage delivery: flight A reached 1 once, the cart cleared, and flight B remained Failed.
+PASS Session 4 host sent the real close control after both failure and delivery captures were confirmed.
+Runtime errors: 0
+Final: PASS
+Details: Session 4 verified arrival-bag return, outgoing load, canceled delivery reset, permanent wrong-receiver failure, source reload, and correct delivery over real client UDP input.
+Diagnostics: scenario=host-baggage,stage=13,scene=PalmBay,room=Closed,snapshots=769,game=started=True,sandbox=True,remote=False,actors=p0=(-7.00, 0.00, 0.44),p1=(-0.80, 0.00, 5.38),cart0=none,signals=/private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.CKsvBS/control

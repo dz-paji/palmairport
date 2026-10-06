@@ -1,0 +1,8 @@
+m3-boarding-blocked-host.png  438109 bytes  1920x1080
+m3-boarding-closed-host.png  428232 bytes  1920x1080
+MISSING or empty capture m3-boarding-complete-host.png
+m3-boarding-blocked-client.png  439190 bytes  1920x1080
+m3-boarding-closed-client.png  428347 bytes  1920x1080
+MISSING or empty capture m3-boarding-complete-client.png
+Snapshot expectation: m3-boarding-blocked-snapshot.txt (host X/Z, blocked, task progress, gate, passenger count and stable rows)
+Snapshot expectation: m3-boarding-closed-snapshot.txt (host X/Z, blocked, task progress, gate, passenger count and stable rows)

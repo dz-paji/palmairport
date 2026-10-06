@@ -1,0 +1,11 @@
+PASS FakeAuthService injected and sign-in started; auth configuration and credentials are excluded.
+PASS Fake sign-in completed and TryVerifyAge authorized multiplayer before Room.Host/Join.
+PASS Session 5 host bound a real UDP socket for the fuel scenario.
+PASS Practice scheduler supplied flight UBA826 at stand 0; fixtures placed both crew near the station and the fuel truck on its service road.
+Probe: host seat 0 pressed at the fuel rack while client seat 1 held the single nozzle.
+PASS Client retained the sole nozzle after the host rack Pressed input; the input routed to the valve without transferring ownership.
+Runtime errors: 0
+Final: FAIL
+Details: System.TimeoutException: NetPlaytest stage 3 exceeded 25 seconds. scenario=host-fuel,stage=3,scene=PalmBay,room=Playing,snapshots=487,game=started=True,sandbox=True,remote=False,actors=p0=(-7.99, 0.00, -4.72),p1=(-5.54, 0.00, -5.02),cart0=none,signals=/private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.iZPran/control,nozzle=Held,nozzleSeat=1,valve=False,tank=0.000,spills=1,fuelProgress=0.000,truck=(-4.48, 0.00, -5.02),truckOwner=none,driveWaypoint=0
+  at NetPlaytest.Poll () [0x00226] in /private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.iZPran/host/Assets/Editor/NetPlaytest.cs:183 
+Diagnostics: scenario=host-fuel,stage=3,scene=PalmBay,room=Playing,snapshots=487,game=started=True,sandbox=True,remote=False,actors=p0=(-7.99, 0.00, -4.72),p1=(-5.54, 0.00, -5.02),cart0=none,signals=/private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.iZPran/control,nozzle=Held,nozzleSeat=1,valve=False,tank=0.000,spills=1,fuelProgress=0.000,truck=(-4.48, 0.00, -5.02),truckOwner=none,driveWaypoint=0

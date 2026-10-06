@@ -1,0 +1,25 @@
+Mono path[0] = '/Users/qinziqian/Documents/overcooked-like/game/Builds/M7-UI-Smoke.app/Contents/Resources/Data/Managed'
+Mono config path = '/Users/qinziqian/Documents/overcooked-like/game/Builds/M7-UI-Smoke.app/Contents/MonoBleedingEdge/etc'
+Input System module state changed to: Initialized.
+Initialize engine version: 2022.3.61t14 (3a70663b70e0)
+[Subsystems] Discovering subsystems at path /Users/qinziqian/Documents/overcooked-like/game/Builds/M7-UI-Smoke.app/Contents/Resources/Data/UnitySubsystems
+GfxDevice: creating device client; threaded=1; jobified=0
+ preferred device: Apple M5 (high power)
+Metal devices available: 1
+0: Apple M5 (high power)
+Using device Apple M5 (high power)
+Initializing Metal device caps: Apple M5
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.085 seconds
+- Finished resetting the current domain, in  0.001 seconds
+2026-10-04 21:38:41.326 M7Smoke-c6274551c44942c8a0abaede810395ad[36612:4715474] NSKeyBindingManager: Bad key binding atom for '$^uF72B' = 'moveToEndOfDocumentAndModifySelection:'
+2026-10-04 21:38:41.326 M7Smoke-c6274551c44942c8a0abaede810395ad[36612:4715474] NSKeyBindingManager: Bad key binding atom for '^uF72B' = 'moveToEndOfDocument:'
+2026-10-04 21:38:41.326 M7Smoke-c6274551c44942c8a0abaede810395ad[36612:4715474] NSKeyBindingManager: Bad key binding atom for 'uF72B' = 'moveToEndOfLine:'
+2026-10-04 21:38:41.326 M7Smoke-c6274551c44942c8a0abaede810395ad[36612:4715474] NSKeyBindingManager: Bad key binding atom for '^uF729' = 'moveToBeginningOfDocument:'
+2026-10-04 21:38:41.326 M7Smoke-c6274551c44942c8a0abaede810395ad[36612:4715474] NSKeyBindingManager: Bad key binding atom for '$^uF729' = 'moveToBeginningOfDocumentAndModifySelection:'
+2026-10-04 21:38:41.326 M7Smoke-c6274551c44942c8a0abaede810395ad[36612:4715474] NSKeyBindingManager: Bad key binding atom for '$uF72B' = 'moveToEndOfLineAndModifySelection:'
+2026-10-04 21:38:41.326 M7Smoke-c6274551c44942c8a0abaede810395ad[36612:4715474] NSKeyBindingManager: Bad key binding atom for '$uF729' = 'moveToBeginningOfLineAndModifySelection:'
+2026-10-04 21:38:41.326 M7Smoke-c6274551c44942c8a0abaede810395ad[36612:4715474] NSKeyBindingManager: Bad key binding atom for 'uF729' = 'moveToBeginningOfLine:'
+UnloadTime: 0.743708 ms
+M7_SMOKE_ISOLATION_REJECTED: System.Exception: Unity persistent storage did not resolve to the dedicated smoke identity: /Users/qinziqian/Library/Application Support/com.palmbay.m7smoke.c6274551c44942c8a0abaede810395ad
+  at IslandAirport.M7PlayerSmoke.Bootstrap () [0x00341] in <bd5fb6a771b34530911fe6b49bcae576>:0 

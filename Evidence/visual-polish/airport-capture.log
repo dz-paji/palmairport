@@ -1,0 +1,21 @@
+Tuanjie Editor version:  2022.3.61t14 (3a70663b70e0)
+Branch:                  tuanjie/1.6/staging
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 27.2 (Build 26B5091g)
+Darwin version:          27.2.0
+Architecture:            arm64
+Running under Rosetta:   NO
+Available memory:        16384 MB
+[Licensing::Module] Trying to connect to existing licensing client channel...
+No explicit failure code handling for error of type 1
+[Licensing::IpcConnector] Error: Failed to connect to License Client channel (error code: 0x80000000) .
+[Licensing::IpcConnector] Error: Connection attempt to the License Client on channel: "LicenseClient-qinziqian" failed); code: "0x80000000"
+[Licensing::IpcConnector] Error: Failed to connect to License Client channel (error code: 0x80000000) .
+[Licensing::IpcConnector] Connection attempt to the License Client on channel: "LicenseClient-qinziqian-2022.3.61" failed because channel doesn't exist; code: "0x80000002"
+[Licensing::Module] GetFullLicensingClientPath:	 /Applications/Tuanjie Hub.app/Contents/Frameworks/TuanjieLicensingClient_V1.app/Contents/MacOS/Tuanjie.Licensing.Client
+Launching external process: /Applications/Tuanjie Hub.app/Contents/Frameworks/TuanjieLicensingClient_V1.app/Contents/MacOS/Tuanjie.Licensing.Client
+[Licensing::Module] Successfully launched the LicensingClient (PId: 73057)
+[Licensing::IpcConnector] Connection attempt to the License Client on channel: "LicenseClient-qinziqian-2022.3.61" failed because channel doesn't exist; code: "0x80000002"
+[Licensing::Module] Timed-out after 60.00s, waiting for channel: "LicenseClient-qinziqian-2022.3.61"
+IPC channel to LicensingClient doesn't exist; aborting

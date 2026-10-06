@@ -1,0 +1,18 @@
+PASS FakeAuthService injected and sign-in started; auth configuration and credentials are excluded.
+PASS Fake sign-in completed and TryVerifyAge authorized multiplayer before Room.Host/Join.
+PASS Real Room.Join started for 127.0.0.1.
+PASS Client launched Remote after the real start control and consumed host snapshots.
+PASS Client supplied movement through its Remote input path.
+PASS Host movement arrived at the client through UDP snapshots; displacement=3.46m.
+Probe: simultaneous contention queued one client Pressed=true Remote step at dt=0.1s.
+PASS Client snapshot confirms host seat 0 won simultaneous cart contention with a single owner.
+Probe: one Pressed=true client grab step used dt=0.1s, then neutral frames.
+PASS Client snapshot matches host cart 0 ownership by seat 1 after repeated host Steps.
+Probe: one Pressed=true release step used dt=0.1s, then neutral frames.
+PASS Client snapshot reports no owner after the single release edge and neutral frames.
+PASS Client closed its real UDP session socket without sending leave.
+PASS Client heartbeat timeout returned the session to CabinLobby after the host confirmed BOT takeover.
+Runtime errors: 0
+Final: PASS
+Details: Session 1 client verified replicated movement and cart ownership, then disconnected without a leave packet.
+Diagnostics: scenario=client-movement,stage=13,scene=CabinLobby,room=Idle,snapshots=0,game=none,actors=none,signals=/private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.zV0Rjk/control

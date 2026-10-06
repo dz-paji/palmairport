@@ -1,0 +1,6 @@
+PASS Android final build: native video encoder/share Java classes and resolved content provider authority present.
+SHA256 aad4aa00fb94567287181e692adf107728bc8e04915fdc7c050d97a9c5106f44
+Bytes 13254368
+Installation/device codec/share not tested.
+PASS Mac final build: CabinLobby entry, three scenes, native sharing bundle present at Builds/Palm Bay.app/Contents/PlugIns/PalmBayVideoShare.bundle.
+Standalone player interaction not tested.

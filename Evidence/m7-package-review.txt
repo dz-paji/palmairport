@@ -1,0 +1,3 @@
+PASS: All manifest byte lengths and SHA256 digests verified; macOS ZIP CRC/structure verified.
+Delivery: /Users/qinziqian/Documents/overcooked-like/game/Builds/M7-1.0.7-20261004T135139Z
+Version 1.0.7; Android code 7. macOS product identity studio.palmbay.airport; resources.assets does not contain UI smoke autorun config.

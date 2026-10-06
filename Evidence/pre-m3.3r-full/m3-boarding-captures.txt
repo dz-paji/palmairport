@@ -1,0 +1,10 @@
+m3-boarding-blocked-host.png  438110 bytes  1920x1080
+m3-boarding-closed-host.png  428260 bytes  1920x1080
+m3-boarding-complete-host.png  428002 bytes  1920x1080
+m3-boarding-blocked-client.png  439196 bytes  1920x1080
+m3-boarding-closed-client.png  428362 bytes  1920x1080
+m3-boarding-complete-client.png  428163 bytes  1920x1080
+Snapshot expectation: m3-boarding-blocked-snapshot.txt (host X/Z, blocked, task progress, gate, passenger count and stable rows)
+Snapshot expectation: m3-boarding-closed-snapshot.txt (host X/Z, blocked, task progress, gate, passenger count and stable rows)
+Snapshot expectation: m3-boarding-complete-snapshot.txt (host X/Z, blocked, task progress, gate, passenger count and stable rows)
+Same-state frozen UDP snapshot pairs: blocked host vehicle, closed gate after walkers finish with waiting IDs preserved, exact completed boarding. Fixtures place actors and satisfy only meal/fuel prerequisites.

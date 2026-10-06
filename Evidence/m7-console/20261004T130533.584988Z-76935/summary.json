@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "run_id": "20261004T130533.584988Z-76935",
+  "project_root": "/Users/qinziqian/Documents/overcooked-like/game",
+  "started_utc": "2026-10-04T13:05:33.585+00:00",
+  "status": "passed",
+  "execution": "serial local console; no Editor, listeners, ADB or cloud",
+  "gates": [
+    {
+      "name": "simulation",
+      "command": [
+        "sh",
+        "Tools/test-simulation.sh"
+      ],
+      "status": "passed",
+      "log": "simulation.log",
+      "exit_code_file": "simulation.exitcode",
+      "started_utc": "2026-10-04T13:05:33.585+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-10-04T13:05:33.948+00:00",
+      "duration_seconds": 0.362
+    },
+    {
+      "name": "single-cycle",
+      "command": [
+        "sh",
+        "Tools/test-single-cycle.sh"
+      ],
+      "status": "passed",
+      "log": "single-cycle.log",
+      "exit_code_file": "single-cycle.exitcode",
+      "started_utc": "2026-10-04T13:05:33.949+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-10-04T13:05:34.260+00:00",
+      "duration_seconds": 0.311
+    },
+    {
+      "name": "net",
+      "command": [
+        "sh",
+        "Tools/test-net.sh"
+      ],
+      "status": "passed",
+      "log": "net.log",
+      "exit_code_file": "net.exitcode",
+      "started_utc": "2026-10-04T13:05:34.261+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-10-04T13:05:34.661+00:00",
+      "duration_seconds": 0.399
+    },
+    {
+      "name": "identity",
+      "command": [
+        "sh",
+        "Tools/test-identity.sh"
+      ],
+      "status": "passed",
+      "log": "identity.log",
+      "exit_code_file": "identity.exitcode",
+      "started_utc": "2026-10-04T13:05:34.661+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-10-04T13:05:35.039+00:00",
+      "duration_seconds": 0.378
+    },
+    {
+      "name": "shift",
+      "command": [
+        "sh",
+        "Tools/test-shift.sh"
+      ],
+      "status": "passed",
+      "log": "shift.log",
+      "exit_code_file": "shift.exitcode",
+      "started_utc": "2026-10-04T13:05:35.041+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-10-04T13:05:35.419+00:00",
+      "duration_seconds": 0.378
+    },
+    {
+      "name": "bot-memory",
+      "command": [
+        "sh",
+        "Tools/test-bot-memory.sh"
+      ],
+      "status": "passed",
+      "log": "bot-memory.log",
+      "exit_code_file": "bot-memory.exitcode",
+      "started_utc": "2026-10-04T13:05:35.420+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-10-04T13:05:35.781+00:00",
+      "duration_seconds": 0.36
+    },
+    {
+      "name": "progress",
+      "command": [
+        "sh",
+        "Tools/test-progress.sh"
+      ],
+      "status": "passed",
+      "log": "progress.log",
+      "exit_code_file": "progress.exitcode",
+      "started_utc": "2026-10-04T13:05:35.781+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-10-04T13:05:36.128+00:00",
+      "duration_seconds": 0.346
+    },
+    {
+      "name": "settlement",
+      "command": [
+        "sh",
+        "Tools/test-settlement.sh"
+      ],
+      "status": "passed",
+      "log": "settlement.log",
+      "exit_code_file": "settlement.exitcode",
+      "started_utc": "2026-10-04T13:05:36.129+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-10-04T13:05:36.491+00:00",
+      "duration_seconds": 0.361
+    },
+    {
+      "name": "m6-video",
+      "command": [
+        "sh",
+        "Tools/test-m6-video.sh"
+      ],
+      "status": "passed",
+      "log": "m6-video.log",
+      "exit_code_file": "m6-video.exitcode",
+      "started_utc": "2026-10-04T13:05:36.492+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-10-04T13:05:39.895+00:00",
+      "duration_seconds": 3.403
+    },
+    {
+      "name": "auth-protocol",
+      "command": [
+        "sh",
+        "Tools/test-auth-protocol.sh"
+      ],
+      "status": "passed",
+      "log": "auth-protocol.log",
+      "exit_code_file": "auth-protocol.exitcode",
+      "started_utc": "2026-10-04T13:05:39.896+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-10-04T13:05:40.241+00:00",
+      "duration_seconds": 0.345
+    },
+    {
+      "name": "android-manifest",
+      "command": [
+        "sh",
+        "Tools/test-android-manifest.sh"
+      ],
+      "status": "passed",
+      "log": "android-manifest.log",
+      "exit_code_file": "android-manifest.exitcode",
+      "started_utc": "2026-10-04T13:05:40.242+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-10-04T13:05:40.549+00:00",
+      "duration_seconds": 0.307
+    },
+    {
+      "name": "unity-compile",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "Tools/check-unity-compile.py"
+      ],
+      "status": "passed",
+      "log": "unity-compile.log",
+      "exit_code_file": "unity-compile.exitcode",
+      "started_utc": "2026-10-04T13:05:40.550+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-10-04T13:05:41.222+00:00",
+      "duration_seconds": 0.671
+    }
+  ],
+  "passed": 12,
+  "failed": 0,
+  "suite_exit_code": 0,
+  "finished_utc": "2026-10-04T13:05:41.223+00:00"
+}

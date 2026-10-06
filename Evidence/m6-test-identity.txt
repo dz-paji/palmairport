@@ -1,0 +1,10 @@
+PASS  名字校验 trim 后 1-12
+PASS  profile 持久化 roundtrip
+PASS  事件去重与 JSONL 落盘往返
+PASS  年龄结果按 UID 与认证类型绑定
+PASS  无效 DOB 不写入年龄状态
+PASS  13 岁生日当天准入
+PASS  用户切换、refresh 与注销年龄状态
+PASS  FakeAuth 登录/续期/登出流程
+PASS  FakeAuth 故障注入：取消/网络/未配置
+Identity tests: 9 passed, 0 failed, 109 assertions.

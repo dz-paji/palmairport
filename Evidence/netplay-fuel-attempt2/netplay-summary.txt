@@ -1,0 +1,19 @@
+M3.3 fuel-only Unity UDP integration (session 5 subset): FAIL
+Sessions 1-4 and 6: SKIPPED in this run; no full regression claim.
+Session 1 host exit code: not-started
+Session 1 client exit code: not-started
+Session 2 host exit code: not-started
+Session 2 client exit code: not-started
+Session 3 (meal) host exit code: not-started
+Session 3 (meal) client exit code: not-started
+Session 4 (baggage) host exit code: not-started
+Session 4 (baggage) client exit code: not-started
+Session 5 (fuel) host exit code: 1
+Session 5 (fuel) client exit code: 1
+Session 6 (boarding) host exit code: not-started
+Session 6 (boarding) client exit code: not-started
+Failure: host5 exit=1; client5 exit=1.; Fuel host capture is missing or empty: m3-fuel-deliver-host.png; Fuel client capture is missing or empty: m3-fuel-deliver-client.png
+Host logs: Evidence/net-host-session1.log Evidence/net-host-session2.log Evidence/net-host-session3.log Evidence/net-host-session4.log Evidence/net-host-session5.log Evidence/net-host-session6.log
+Client logs: Evidence/net-client-session1.log Evidence/net-client-session2.log Evidence/net-client-session3.log Evidence/net-client-session4.log Evidence/net-client-session5.log Evidence/net-client-session6.log
+Fuel captures: Evidence/m3-fuel-captures.txt
+Boarding captures: Evidence/m3-boarding-captures.txt

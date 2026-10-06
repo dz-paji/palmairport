@@ -1,0 +1,33 @@
+Session 5
+PASS FakeAuthService injected and sign-in started; auth configuration and credentials are excluded.
+PASS Fake sign-in completed and TryVerifyAge authorized multiplayer before Room.Host/Join.
+PASS Session 5 client called the real Room.Join for 127.0.0.1.
+PASS Client mirror shows flight UBA826 at stand 0 and the single nozzle at the fuel station.
+Probe: one client Pressed=true input sent at the fuel nozzle rack.
+PASS Client single tap picked up the station nozzle through Remote UDP.
+PASS Client mirror received the host ownership probe and its single station spill.
+PASS Client on foot tapped the parked fuel truck and inserted the nozzle.
+PASS Client walked back to the station and tapped the valve open; truck filling now proceeds without held input.
+Evidence/m3-fuel-fill-client.png  1920x1080
+PASS Client captured the same automatic station fill from its read-only mirror.
+Evidence/m3-fuel-spill-client.png  1920x1080
+PASS Client mirror captured the full-tank spill after the mirrored 2 s overfill grace.
+Probe: client began holding the cleanup input on foot inside the oil spill zone.
+PASS Client held the real cleanup action on foot until the spill disappeared from the mirror.
+PASS Client mirror shows the nozzle home and a driveable truck without any walk-back stow step.
+PASS Client single tap at the docked truck took the truck's own hose (flight needs fuel, truck has fuel).
+PASS Client walked to stand 0 and connected the truck hose with one tap through UDP.
+Evidence/m3-fuel-transfer-client.png  1920x1080
+PASS Client captured automatic aircraft fueling with neutral input, then tapped the aircraft to disconnect.
+PASS Client mirror retained progress=0.32 and tank=0.68 after the disconnect tap; hose auto-reeled.
+Evidence/m3-fuel-deliver-client.png  1920x1080
+PASS Client captured the completed fuel delivery from its task mirror.
+PASS Client mirror shows the stand overfill spill after the 2 s grace; tapping the aircraft while standing on it.
+PASS Client mirror: the aircraft tap disconnected (outranking cleanup) and the overfill stopped.
+PASS Client held cleanup on foot until the stand overfill spill disappeared from the mirror.
+PASS Session 5 client returned to CabinLobby after the real host close control.
+Runtime errors: 0
+Final: PASS
+Details: Session 5 (M3.3r) client used single-tap Remote UDP input for every nozzle, valve, hose, movement, disconnect/resume and spill cleanup action; fuel flowed with neutral input and the client mirror matched host fuel state.
+Diagnostics: scenario=client-fuel,stage=15,scene=CabinLobby,room=Idle,snapshots=0,game=none,actors=none,signals=/private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.e07uK9/control,fuel=none
+

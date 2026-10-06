@@ -1,0 +1,33 @@
+Command: sh Tools/test-net.sh
+Started UTC: 2026-10-04T13:05:34.261+00:00
+
+PASS  MiniJson 中文嵌套往返
+PASS  UdpSession 定向收发与端点过滤
+PASS  ReliableControl 重试/ack/超时/连发
+PASS  beacon 开播/入表/过期
+PASS  握手→accept→roster
+PASS  三拒绝：full / ingame / auth
+PASS  in 消息按 seq 去旧
+PASS  慢 host Pump 合并 Pressed/Cycle 边沿
+PASS  dup accept / dup start 幂等
+PASS  Loss=0.5 下 join 经重试仍成功
+PASS  快照编解码往返（含中文标签）
+PASS  Ver=3 协议号与旧版拒绝
+PASS  Ver=2 Shift/Flights 镜像块往返
+PASS  插值缓冲中点采样
+PASS  Loss=0.5+Reorder 下采样不倒退
+PASS  Cut 后 5s：host 席 Bot / client hostlost
+PASS  M4 finite metadata + recovery/replay codec
+PASS  M4 reliable shift start/retry and late-round input/snapshot fence
+PASS  M4 voluntary host Leave preserves checkpoint and stable seat
+PASS  M4 abrupt host loss promotes latest consumed checkpoint
+PASS  M4 client Leave/timeout preserves host and credit exclusion
+PASS  M4 explicit CloseRoom stays terminal
+PASS  M4 replay repair transport/ready dedup and old-round fence
+PASS  M4 buffer round/authority resets reject late old packets
+PASS  M4 replay-ready selective loss beyond30s heals and stops on ack
+PASS  AgeCheck 生日当天与闰年边界
+Net tests: 26 passed, 0 failed, 510 assertions.
+
+Exit code: 0
+Finished UTC: 2026-10-04T13:05:34.661+00:00

@@ -1,0 +1,12 @@
+PASS FakeAuthService injected and sign-in started; auth configuration and credentials are excluded.
+PASS Fake sign-in completed and TryVerifyAge authorized multiplayer before Room.Host/Join.
+Evidence/m4-hostloss-takeover-client.png  1920x1080
+PASS Actual network loss/leave promoted seat1 with original score, time, cargo owner, partial fuel, nozzle, meal and passenger checkpoint.
+PASS Surviving player's regular input controls retained local seat1 after promotion.
+PASS Migrated match automatic replay reached final hold; frames=589; status=回放已恢复 · 11 段因房主断线缺失
+Evidence/m4-hostloss-results-client.png  1920x1080
+PASS Results HUD visibly discloses unrecoverable replay segments.
+Runtime errors: 0
+Final: PASS
+Details: Surviving client restored live authoritative checkpoint, retained control and finished original match after host departure.
+Diagnostics: scenario=client-m4-hostloss,stage=7,scene=PalmBay,room=Playing,snapshots=0,game=started=True,sandbox=False,remote=False,actors=p0=(-6.71, 0.00, 5.00),p1=(-5.31, 0.00, 0.44),cart0=0,signals=/private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.02cvl5gv/control,round=1,localSeat=1,elapsed=300,score=576,finished=True,replay=589/1,replayStatus=回放已恢复 · 11 段因房主断线缺失

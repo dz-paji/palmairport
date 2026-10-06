@@ -1,0 +1,64 @@
+M3.3 fuel bot playtest: FAIL
+System.Exception: real dock input stows the partly used hose
+  at M3FuelPlaytest.Require (System.Boolean condition, System.String assertion) [0x00020] in /Users/qinziqian/Documents/overcooked-like/game/Assets/Editor/M3FuelPlaytest.cs:179 
+  at M3FuelPlaytest+<CheckFuelInteractionInputs>d__52.MoveNext () [0x00545] in /Users/qinziqian/Documents/overcooked-like/game/Assets/Editor/M3FuelPlaytest.cs:528 
+  at M3FuelPlaytest+<Exercise>d__51.MoveNext () [0x00ac4] in /Users/qinziqian/Documents/overcooked-like/game/Assets/Editor/M3FuelPlaytest.cs:449 
+  at M3FuelPlaytest.Poll () [0x000ff] in /Users/qinziqian/Documents/overcooked-like/game/Assets/Editor/M3FuelPlaytest.cs:139 
+Unity runtime errors (Error/Assert/Exception): 0
+Assertions and observations:
+PASS real PalmBay scene crew and shared carts are present
+PASS first real flight taxied into a ready stand
+PASS target fuel progress starts untouched
+FIXTURE flight=UBA826 stand=0 elapsed=7.50; Meals/Baggage progress set to 1 before bot begins; deadline=247.50; no fuel state/progress/position edited.
+BOT seat=1 enabled through AirportGame.BotInput; fixed Step dt=0.05
+STATE step=23 time=8.65 nozzle=AtStation->Held seat=1 botDriving=False
+STATE step=33 time=9.15 nozzle=Held->OnTruck seat=-1 botDriving=False
+STATE step=40 time=9.50 valve=False->True botDriving=False
+STATE step=161 time=15.55 valve=True->False botDriving=False
+STATE step=172 time=16.10 nozzle=OnTruck->StowedOnTruck seat=-1 botDriving=False
+STATE step=274 time=21.20 nozzle=StowedOnTruck->Held seat=1 botDriving=False
+STATE step=281 time=21.55 nozzle=Held->OnAircraft seat=-1 botDriving=False
+STATE step=344 time=24.70 nozzle=OnAircraft->Held seat=1 botDriving=False
+STATE step=351 time=25.05 nozzle=Held->StowedOnTruck seat=-1 botDriving=False
+PASS bot autonomously finished and stowed its hose within 60 simulation seconds
+PASS bot completion precedes flight deadline and automatic cleanup
+PASS bot picked up the single nozzle on foot
+PASS bot attached the nozzle to the fuel truck
+PASS bot opened the station valve, filled the truck, and closed it
+PASS truck tank actually reached full capacity
+PASS bot stowed the disconnected hose before driving
+PASS bot moved the fuel truck through AirportGame.Move
+PASS bot drove to the selected stand and connected the aircraft hose on foot
+PASS observed lifecycle order was take, connect, open, fill, close, stow, drive, attach, transfer
+PASS bot transferred fuel and completed the flight fuel task
+PASS one full truck load was conserved as completed flight fuel with no residue
+PASS truck fuel plus flight progress stayed 1:1 during aircraft transfer (max error=0.0000)
+PASS final state has no open station valve and no hose connected to an aircraft
+PASS final nozzle state is safely disconnected (StowedOnTruck)
+PASS fuel truck can be driven after fueling is complete
+PASS one fuel completion awarded exactly one 50-point task score
+PASS fuel completion was counted exactly once
+PASS one fuel completion event was delivered exactly once
+PASS fuel workflow leaves no active overflow and creates at most one full-tank spill episode
+BOT_SPILL_RESULT residualSpills=0 activeOverflow=False; a spill can occur when the full tank is observed one Step before the bot closes the valve.
+PASS snapshot event history contains one fuel delivered event for the target flight
+BOT_RESULT steps=371 elapsed=26.05 tank=0.0000 progress=1.0000 scoreDelta=50 deliveriesDelta=1
+PASS bot released the fuel truck after its completed task
+PASS post-flow spill fixture starts with no active overflow and at most one recorded bot-flow spill
+SPILL_FIXTURE clears 0 recorded bot-flow spill(s) after recording them, then compares controlled same-point movement.
+PASS spill-check fixture actor boarded fuel cart through AirportGame interaction
+PASS spill-check actor left the truck before walking comparison
+PASS synthetic oil spill fixture covers its origin
+PASS spill-check actor boarded fuel cart from outside cleanup reach for the spill measurement
+PASS unspilled fuel-cart movement baseline is measurable (0.180m)
+PASS actual Move slowed the driven cart on spill from the same point (baseline=0.180m, spill=0.058m)
+PASS spill-check actor left the truck before walking comparison
+PASS actual Move leaves walking speed unchanged on spill from the same point (baseline=0.225m, spill=0.225m)
+SPILL_FIXTURE synthetic origin=(-5.74, 0.00, -5.02); each baseline and spill sample used the same start coordinate/direction; only the post-flow Move comparison used fixture positions/oil; no fuel task state was changed.
+INPUT_FIXTURE independent reset; Core APIs prepare a full truck and connected aircraft; actor/cart positions set at dock; autonomous bot result above is unchanged.
+PASS independent input fixture has a ready aircraft
+PASS multi-frame long hold pumps after the 0.2 second tap window
+PASS long-hold neutral release pauses fuel and preserves the connected hose
+PASS 150 ms short press tolerates multiple Held frames without pumping or detaching early
+PASS short press neutral release collects the aircraft hose
+PASS remount regression starts with real partial tank from the preceding fuel transfer

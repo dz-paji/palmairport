@@ -1,0 +1,19 @@
+PASS FakeAuthService injected and sign-in started; auth configuration and credentials are excluded.
+PASS Fake sign-in completed and TryVerifyAge authorized multiplayer before Room.Host/Join.
+PASS Session 5 host bound a real UDP socket for the fuel scenario.
+PASS Practice scheduler supplied flight UBA826 at stand 0; fixtures placed both crew near the station and the fuel truck on its service road.
+Probe: host seat 0 pressed at the fuel rack while client seat 1 held the single nozzle.
+PASS Client retained the sole nozzle after the host rack Pressed input; the input routed to the valve without transferring ownership.
+PASS Client cleaned the contest spill on foot; the host and client still shared the same single held nozzle.
+PASS Client walked to the parked fuel truck and attached the nozzle while on foot.
+Evidence/m3-fuel-fill-host.png  1920x1080
+PASS Host captured automatic truck filling with the valve open and client input neutral.
+Evidence/m3-fuel-spill-host.png  1920x1080
+PASS Host captured full-tank overflow with the station valve still open.
+Runtime errors: 0
+Final: FAIL
+Details: System.Exception: Full tank with the valve left open did not create exactly one spill zone.
+  at NetPlaytest.AdvanceHostFuel (System.Double now, System.Single dt) [0x00f76] in /private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.gDHJZL/host/Assets/Editor/NetPlaytest.Fuel.cs:420 
+  at NetPlaytest.AdvanceScenario (System.Double now, System.Single dt) [0x000d7] in /private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.gDHJZL/host/Assets/Editor/NetPlaytest.cs:325 
+  at NetPlaytest.Poll () [0x00425] in /private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.gDHJZL/host/Assets/Editor/NetPlaytest.cs:219 
+Diagnostics: scenario=host-fuel,stage=6,scene=PalmBay,room=Playing,snapshots=320,game=started=True,sandbox=True,remote=False,actors=p0=(-7.99, 0.00, -4.72),p1=(-5.23, 0.00, -5.02),cart0=none,signals=/private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.gDHJZL/control,nozzle=OnTruck,nozzleSeat=-1,valve=False,tank=1.000,spills=0,fuelProgress=0.000,truck=(-4.48, 0.00, -5.02),truckOwner=none,driveWaypoint=0

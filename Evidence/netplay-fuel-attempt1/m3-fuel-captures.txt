@@ -1,0 +1,8 @@
+MISSING or empty host capture m3-fuel-fill-host.png
+MISSING or empty host capture m3-fuel-spill-host.png
+MISSING or empty host capture m3-fuel-transfer-host.png
+MISSING or empty host capture m3-fuel-deliver-host.png
+MISSING or empty client capture m3-fuel-fill-client.png
+MISSING or empty client capture m3-fuel-spill-client.png
+MISSING or empty client capture m3-fuel-transfer-client.png
+MISSING or empty client capture m3-fuel-deliver-client.png

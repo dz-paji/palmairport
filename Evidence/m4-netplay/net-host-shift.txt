@@ -1,0 +1,11 @@
+PASS FakeAuthService injected and sign-in started; auth configuration and credentials are excluded.
+PASS Fake sign-in completed and TryVerifyAge authorized multiplayer before Room.Host/Join.
+FIXTURE: one flight completed through domain progress APIs to test nonzero result/stat preservation; remaining schedule, all 300 seconds, network results and retry run normally. This is not a human gameplay completion claim.
+PASS Client mirrored finite mode, round, score and populated checkpoint before continuing.
+Evidence/m4-shift-results-host.png  1920x1080
+PASS 300-second result frozen, input ignored, actual history replay reaches final hold. frames=600
+PASS Host retry propagated once, reset results/history and kept both seats in the same next round.
+Runtime errors: 0
+Final: PASS
+Details: Finite shift, synchronized score/stars/results/history, final freeze and one authoritative retry passed.
+Diagnostics: scenario=host-m4-shift,stage=8,scene=PalmBay,room=Closed,snapshots=19282,game=started=True,sandbox=False,remote=False,actors=p0=(-7.00, 0.00, 0.44),p1=(-5.60, 0.00, 0.44),cart0=none,signals=/private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.3_fzw2el/control,round=2,localSeat=0,elapsed=0.1336067,score=0,finished=False,replay=1/1,replayStatus=共同回放已同步

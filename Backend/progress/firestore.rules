@@ -1,0 +1,39 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Only the Firebase-authenticated owner can read or create their receipts.
+    // Append-only deterministic receipts: no client-controlled aggregate increment.
+    match /accountProgress/{uid}/settlements/{receiptId} {
+      function owner() {
+        return request.auth != null && request.auth.uid == uid;
+      }
+      function boundedInt(value, lower, upper) {
+        return value is int && value >= lower && value <= upper;
+      }
+      function validReceipt() {
+        let d = request.resource.data;
+        return d.keys().hasAll(['schemaVersion', 'uid', 'receiptId', 'matchId', 'roundId',
+          'levelId', 'stars', 'score', 'completedFlights', 'completedTasks', 'elapsedSeconds'])
+          && d.keys().hasOnly(['schemaVersion', 'uid', 'receiptId', 'matchId', 'roundId',
+          'levelId', 'stars', 'score', 'completedFlights', 'completedTasks', 'elapsedSeconds'])
+          && d.schemaVersion == 1 && d.schemaVersion is int
+          && d.uid == uid && d.uid is string
+          && d.receiptId == receiptId && receiptId.matches('^[0-9a-f]{64}$')
+          && d.matchId is string && d.matchId.size() > 0 && d.matchId.size() <= 200
+          && boundedInt(d.roundId, 0, 1000000000)
+          && d.levelId is string && d.levelId.matches('^[A-Za-z0-9_-]{1,64}$')
+          && boundedInt(d.stars, 0, 3)
+          && boundedInt(d.score, 0, 100000000)
+          && boundedInt(d.completedFlights, 0, 10000)
+          && boundedInt(d.completedTasks, 0, 100000)
+          && boundedInt(d.elapsedSeconds, 1, 86400);
+      }
+      allow get, list: if owner();
+      allow create: if owner() && validReceipt();
+      allow update, delete: if false;
+    }
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

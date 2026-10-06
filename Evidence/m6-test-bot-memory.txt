@@ -1,0 +1,7 @@
+PASS  Human-only contributions and duplicate settlement survive reload
+PASS  Bot leaves common human task when alternatives exist
+PASS  Invalid results do not partially mutate memory
+PASS  Strict persisted JSON rejects corruption
+PASS  Injected persistence saves once and retries write failure
+PASS  Bounded recent ledger preserves cumulative counts and round identities
+Bot memory tests: 6 passed, 0 failed, 297 assertions.

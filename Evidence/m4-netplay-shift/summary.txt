@@ -1,0 +1,8 @@
+M4 real UDP integration: FAIL
+Scenarios: shift
+Isolated Unity processes / FakeAuth / explicit test fixtures.
+shift host: exit=1 report=FAIL
+Capture: m4-shift-results-host.png 1920x1080
+shift client: exit=1 report=FAIL
+Capture: m4-shift-results-client.png 1920x1080
+Failure: Unity pair failed: shift

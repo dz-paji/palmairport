@@ -1,0 +1,119 @@
+Session 1
+PASS FakeAuthService injected and sign-in started; auth configuration and credentials are excluded.
+PASS Fake sign-in completed and TryVerifyAge authorized multiplayer before Room.Host/Join.
+PASS Real Room.Host bound the host UDP session before client startup.
+PASS Host launched the sandbox through CabinLobby and began sending UDP snapshots.
+PASS Client move intent reached the host over UDP; displacement=5.34m.
+PASS Host moved its crew through AirportGame.Step; displacement=4.06m.
+PASS Simultaneous UDP/local grab contention resolved once to host seat 0; no second owner was created.
+PASS One client Pressed edge grabbed cart 0 and stayed consumed across repeated host Steps.
+PASS Client release edge reached the host and left the cart unowned.
+PASS Silent client UDP socket loss was detected; RoomManager and host crew switched seat 1 to BOT.
+Runtime errors: 0
+Final: PASS
+Details: Session 1 host verified real UDP movement, snapshots, cart edges, and abrupt client disconnect takeover.
+Diagnostics: scenario=host-movement,stage=11,scene=PalmBay,room=Idle,snapshots=138,game=started=True,sandbox=True,remote=False,actors=p0=(1.00, 0.00, 0.00),p1=(0.94, 0.00, 0.00),cart0=1,signals=/private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.CKsvBS/control
+
+Session 2
+PASS FakeAuthService injected and sign-in started; auth configuration and credentials are excluded.
+PASS Fake sign-in completed and TryVerifyAge authorized multiplayer before Room.Host/Join.
+PASS Fresh session 2 opened a real Room.Host socket in a new Unity process.
+PASS Host sent the real Room.CloseRoom control packet in session 2.
+Runtime errors: 0
+Final: PASS
+Details: Session 2 host departure control returned the remote client to CabinLobby.
+Diagnostics: scenario=host-departure,stage=3,scene=PalmBay,room=Closed,snapshots=2,game=started=True,sandbox=True,remote=False,actors=p0=(-7.00, 0.00, 0.44),p1=(-5.60, 0.00, 0.44),cart0=none,signals=/private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.CKsvBS/control
+
+Session 3
+PASS FakeAuthService injected and sign-in started; auth configuration and credentials are excluded.
+PASS Fake sign-in completed and TryVerifyAge authorized multiplayer before Room.Host/Join.
+PASS Meal session host bound the real UDP session socket.
+PASS Practice scheduler produced servicing flight UBA826 at stand 0; fixtures placed the client seat by the meal station.
+PASS Client order intent reached the host over UDP; ShiftSim accepted OrderMeal from seat 1.
+Evidence/m3-meal-ready-host.png  1920x1080
+PASS Host captured the meal-ready moment (meal card, flight board, practice timer).
+PASS Client grab + take-meal executed on host; cargo bound to UBA826.
+Evidence/m3-meal-deliver-host.png  1920x1080
+PASS Host captured the in-progress delivery read-out at work=0.30.
+PASS Client held-deliver over UDP completed UBA826 meals exactly once; cart cleared for reuse; host score=50.
+PASS Meal session host sent the real close control after dual-end verification.
+Runtime errors: 0
+Final: PASS
+Details: Session 3 host verified the client meal flow (order, output block, take, deliver, cart reuse) with dual-end same-moment captures.
+Diagnostics: scenario=host-meal,stage=10,scene=PalmBay,room=Closed,snapshots=242,game=started=True,sandbox=True,remote=False,actors=p0=(-7.00, 0.00, 0.44),p1=(-0.80, 0.00, 5.38),cart0=1,signals=/private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.CKsvBS/control
+
+Session 4
+PASS FakeAuthService injected and sign-in started; auth configuration and credentials are excluded.
+PASS Fake sign-in completed and TryVerifyAge authorized multiplayer before Room.Host/Join.
+PASS Session 4 host bound a real UDP socket for the baggage scenario.
+PASS Practice scheduler supplied flight A=UBA826 at stand 0 and flight B=QMR152 at stand 1; fixtures placed the client beside the baggage cart.
+PASS Client Pressed input grabbed the baggage cart through host Interact after UDP delivery.
+PASS Client Pressed input unloaded UBA826 arrival bags at its stand through UDP.
+PASS Client returned the arrival baggage through the station Pressed edge; flight A now permits outgoing bags.
+PASS Client Pressed input loaded outgoing baggage for flight A=UBA826.
+PASS Client released Held after a partial A delivery; host EndFrame reset DeliverWork to 0 and preserved cargo.
+Evidence/m3-baggage-wrong-host.png  1920x1080
+PASS Host captured wrong-delivery failure QMR152:1 with consumed cargo and visible source/receiver attribution.
+PASS Source flight A was unaffected and its outgoing baggage could be loaded again while flight B stayed Failed.
+Evidence/m3-baggage-deliver-host.png  1920x1080
+PASS Host captured normal baggage delivery: flight A reached 1 once, the cart cleared, and flight B remained Failed.
+PASS Session 4 host sent the real close control after both failure and delivery captures were confirmed.
+Runtime errors: 0
+Final: PASS
+Details: Session 4 verified arrival-bag return, outgoing load, canceled delivery reset, permanent wrong-receiver failure, source reload, and correct delivery over real client UDP input.
+Diagnostics: scenario=host-baggage,stage=13,scene=PalmBay,room=Closed,snapshots=769,game=started=True,sandbox=True,remote=False,actors=p0=(-7.00, 0.00, 0.44),p1=(-0.80, 0.00, 5.38),cart0=none,signals=/private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.CKsvBS/control
+
+Session 5
+PASS FakeAuthService injected and sign-in started; auth configuration and credentials are excluded.
+PASS Fake sign-in completed and TryVerifyAge authorized multiplayer before Room.Host/Join.
+PASS Session 5 host bound a real UDP socket for the fuel scenario.
+PASS Practice scheduler supplied flight UBA826 at stand 0; fixtures placed both crew near the station and the fuel truck on its service road.
+Probe: host seat 0 pressed at the fuel rack while client seat 1 held the single nozzle.
+PASS Client retained the sole nozzle after the host rack Pressed input; the input routed to the valve without transferring ownership.
+PASS Client cleaned the contest spill on foot; the host and client still shared the same single held nozzle.
+PASS Client tapped the parked fuel truck and inserted the station nozzle while on foot.
+Evidence/m3-fuel-fill-host.png  1920x1080
+PASS Host captured automatic truck filling with the valve open and client input neutral.
+PASS Full truck with the valve open stayed spill-free during the overfill grace (0.02s < 2.0s).
+Evidence/m3-fuel-spill-host.png  1920x1080
+PASS Host captured full-tank overflow after the 2 s grace with the station valve still open.
+PASS Client closed the valve with one tap (nozzle auto-returned) and cleared the full-tank spill on foot; full truck fuel remained available with no penalty.
+PASS No walk-back stow step: valve closed, nozzle home, truck hose reeled, truck driveable.
+PASS Host single tap took the truck after the client finished station work; planning the real drive to stand 0.
+PASS Host drove the fuel truck from the station to stand 0 through AirportGame.Move; traveled 11.0m.
+PASS Host Move input was blocked while the truck hose was connected; CanDriveCart remained false.
+Evidence/m3-fuel-transfer-host.png  1920x1080
+PASS Host captured the automatic aircraft fuel transfer with no held client input.
+PASS Client tapped the aircraft again at 0.33; the hose auto-reeled and both truck fuel and flight progress remained conserved and resumable.
+Evidence/m3-fuel-deliver-host.png  1920x1080
+PASS Host captured completed fuel delivery; the aircraft reached 100% and the truck tank was consumed.
+PASS Full aircraft with the hose still connected spilled at its stand only after the 2 s grace; no score or task penalty.
+PASS Client's single aircraft tap disconnected first even while standing on the oil; overfill stopped and the truck became driveable.
+PASS Client held cleanup on foot and removed the stand overfill spill.
+PASS Session 5 host sent the real close control after fuel and spill checks.
+Runtime errors: 0
+Final: PASS
+Details: Session 5 (M3.3r) verified single-tap nozzle pickup/insert, automatic truck filling, valve-close auto-return, single-nozzle exclusion, station overfill grace, host driving handoff, truck-hose take/attach with automatic transfer, connected-hose drive lock, disconnect/resume, delivery, stand overfill grace and spill cleanup over real AirportGame inputs.
+Diagnostics: scenario=host-fuel,stage=15,scene=PalmBay,room=Closed,snapshots=590,game=started=True,sandbox=True,remote=False,actors=p0=(-0.80, 0.00, 5.38),p1=(-1.33, 0.00, 4.87),cart0=none,signals=/private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.CKsvBS/control,nozzle=AtStation,nozzleSeat=-1,hose=OnTruck,hoseSeat=-1,hoseFlight=,overfill=0.00/0.00,valve=False,tank=0,spills=0,fuelProgress=1,truck=(-0.80, 0.00, 5.38),truckOwner=0,driveWaypoint=4
+
+Session 6
+PASS FakeAuthService injected and sign-in started; auth configuration and credentials are excluded.
+PASS Fake sign-in completed and TryVerifyAge authorized multiplayer before Room.Host/Join.
+PASS Session 6 host bound a real UDP socket; fixtures will set spatial positions and meal/fuel prerequisites only.
+Fixture: scheduler supplied UBA826; client stands at gate, host meal cart parked north of its pavement crossing. Prerequisites remain incomplete.
+PASS Client gate intent arrived over UDP and was refused with meal/fuel attribution. Fixture now completes those two tasks; boarding remains untouched.
+Probe: host mounted cart now drives south toward a released passenger crossing the service spine.
+Evidence/m3-boarding-blocked-host.png  1920x1080
+PASS Host Move refused vehicle movement at a released passenger; same-state snapshot frozen at (-4.80, 0.00, 2.30).
+PASS Client UDP close stopped new release with 5 waiting and 3 walkers already underway.
+Evidence/m3-boarding-closed-host.png  1920x1080
+PASS All launched passengers reached the aircraft while closed; partial progress=0.375, same waiting IDs retained.
+PASS Client UDP reopen resumed the remaining queue from preserved progress.
+PASS Gameplay bot routing chooses the available baggage vehicle after boarding completes; completed gates do not starve remaining baggage work.
+Evidence/m3-boarding-complete-host.png  1920x1080
+PASS Host boarding completed exactly once at 1.0 with no passengers or open gate left.
+Runtime errors: 0
+Final: PASS
+Details: Session 6 proved real client UDP gate prerequisite refusal/open/close/reopen, host vehicle passenger blocking, closed-gate continuation and preserved progress, with exact frozen snapshot pairs. Fixtures only placed actors and completed meal/fuel prerequisites.
+Diagnostics: scenario=host-boarding,stage=13,scene=PalmBay,room=Closed,snapshots=448,game=started=True,sandbox=True,remote=False,actors=p0=(-4.80, 0.00, 2.30),p1=(-7.64, 0.00, 1.74),cart0=0,signals=/private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.CKsvBS/control,boardingFlight=UBA826,gate=False,waiting=0,walking=0,boardingProgress=1.000,blocked=False
+

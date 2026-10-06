@@ -1,0 +1,6 @@
+UI standalone smoke acceptance: BLOCKED / NOT PASSED
+First dedicated app launched via cua.getApp. BeforeSceneLoad isolation rejected the actual bundle-ID persistence layout. Log: m7-ui-player-path-attempt1.log. No game/account data loaded by that failed attempt.
+The harness now accepts either the exact GUID company/product path or exact GUID bundle-ID path beneath Application Support, still requiring empty data/prefs.
+Rebuilt dedicated app identity: 0cc4b624f6ba41ebbabc7c698a02fecc. Subsequent standard UI launch tool calls timed out (stable path then unique app path); no new player log or managed report was produced.
+Evidence/m7-ui-player is empty. No full standalone acceptance claimed. Normal product separately displayed guest lobby and unavailable OAuth via standard UI (m7-standard-ui-review.txt).
+Future UI smoke builds use GUID-specific app paths to avoid reuse of a previously registered path. Run BuildMacUiSmoke, then use app path in Builds/m7-ui-smoke-build.json.

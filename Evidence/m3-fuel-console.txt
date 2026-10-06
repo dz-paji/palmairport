@@ -1,0 +1,127 @@
+# M3.3 燃油 Core console 验收
+
+日期：2026-10-03（收管、车载枪归还及回放修复后复验）
+执行方式：本地 mcs + mono 脚本；未启动 Unity、未运行 netplay。
+五组总计：75 groups passed，0 failed，1593 assertions。
+静态 Unity C# 编译检查：`python3 Tools/check-unity-compile.py` → `PASS: all runtime and editor C# sources compile against installed Unity assemblies.`
+
+本轮新增7条Core断言：车载枪远离油站不能归还、拒绝后保持收纳态且无归还事件、回站允许归还并回到枪架、重新拿取和收纳。Game同时修正bot真实短按释放/收纳、0.2秒Step短按窗、阀门区Pressed关阀优先、历史Flight值拷贝及回放视觉位置；这些实际行为仍须主代理串行运行M3FuelPlaytest.Run复验，console和编译不代表Unity PASS。
+
+双人耗时模型是 console 虚拟行动调度，不是 Unity bot 或真实运行性能实测。两组执行同一 CA120 燃油任务、同一主操作员路线和步行/驾驶速度，固定步长 0.05s；假设步行 4.5m/s、驾驶 3.6m/s、每席点击间隔 0.35s，距离为起点到油站 9m、站点与油车 3.6m、油车到机位 28.8m，搭档从同一指定起点到机位 18m。双人席位在站内注油和驾驶期间独立步行，并通过相同 ShiftSim 意图完成接力。结果 `solo=23.90s`、`duo=23.55s`、模型差 `0.35s`；收益来自驾驶者释放与搭档取管可在同一固定帧接续。路径、点击节奏和速度均为显式模型假设；此差值不表示 Unity bot 的实测表现。
+
+## test-simulation.sh
+
+退出码：0
+
+```text
+PASS  staggered arrivals and stand assignment
+PASS  three stands queue and reuse
+PASS  service prerequisites
+PASS  invalid input is rejected
+PASS  large and small ticks agree at deadlines
+PASS  deadline is processed at the exact boundary
+PASS  ending the shift freezes all state
+PASS  partial contribution is retained and score is idempotent
+PASS  all tasks complete and the flight departs
+PASS  stars use the 1, 2, and 4 flight thresholds
+PASS  endless shift with empty flight table never settles
+Simulation tests: 11 passed, 0 failed, 209 assertions.
+```
+
+## test-single-cycle.sh
+
+退出码：0
+
+```text
+PASS  starts with one arriving flight
+PASS  arrival waits and then assigns stand zero
+PASS  service requires all four tasks and arrival bags
+PASS  incomplete service cannot depart
+PASS  completion animates and creates a fresh flight
+PASS  second flight resets task state
+PASS  servicing does not time out
+PASS  large ticks stop at human servicing
+PASS  invalid ticks are ignored
+PASS  reset returns to the first flight
+SingleFlightCycle tests: 10 passed, 0 failed, 127 assertions.
+```
+
+## test-net.sh
+
+退出码：0
+
+```text
+PASS  MiniJson 中文嵌套往返
+PASS  UdpSession 定向收发与端点过滤
+PASS  ReliableControl 重试/ack/超时/连发
+PASS  beacon 开播/入表/过期
+PASS  握手→accept→roster
+PASS  三拒绝：full / ingame / auth
+PASS  in 消息按 seq 去旧
+PASS  慢 host Pump 合并 Pressed/Cycle 边沿
+PASS  dup accept / dup start 幂等
+PASS  Loss=0.5 下 join 经重试仍成功
+PASS  快照编解码往返（含中文标签）
+PASS  Ver=2 协议号与旧版拒绝
+PASS  Ver=2 Shift/Flights 镜像块往返
+PASS  插值缓冲中点采样
+PASS  Loss=0.5+Reorder 下采样不倒退
+PASS  Cut 后 5s：host 席 Bot / client hostlost
+PASS  AgeCheck 生日当天与闰年边界
+Net tests: 17 passed, 0 failed, 338 assertions.
+```
+
+## test-identity.sh
+
+退出码：0
+
+```text
+PASS  名字校验 trim 后 1-12
+PASS  profile 持久化 roundtrip
+PASS  事件去重与 JSONL 落盘往返
+PASS  年龄结果按 UID 与认证类型绑定
+PASS  无效 DOB 不写入年龄状态
+PASS  13 岁生日当天准入
+PASS  用户切换、refresh 与注销年龄状态
+PASS  FakeAuth 登录/续期/登出流程
+PASS  FakeAuth 故障注入：取消/网络/未配置
+Identity tests: 9 passed, 0 failed, 109 assertions.
+```
+
+## test-shift.sh
+
+退出码：0
+
+```text
+PASS  餐食全流程：下单→读条→备好→阻塞→装车→交付
+PASS  餐食出货口阻塞：Ready 未取走时下单被拒
+PASS  旧取消语义：交付读条中断即清零
+PASS  重复交付防护：同航班同任务只记一次并回收货物
+PASS  装载防护与空车复用：已完成航班拒装、可改装另一航班
+PASS  同帧双席交付同一车：唯一读条占用
+PASS  LAN 练习航班生成器：时刻表循环、唯一航班号、修剪有界、Endless 不结算
+PASS  行李全流程：取到达→归还→装出发→交付
+PASS  行李到达件误交机位仅提示
+PASS  错送完成使误接收航班行李永久失败，原属航班可重装
+PASS  错送不能吞掉已完成行李任务的货物
+PASS  已完成进度再被标记失败仍不能离港
+PASS  练习航班修剪失败键且事件历史有界
+PASS  到达行李逾期归还：航班截止仍回收车辆
+PASS  行李未归还不许装出发行李
+PASS  燃油新流程：拿枪→插车→开阀→等满→关阀→收枪→归还
+PASS  燃油机位侧：接管→按住加注→中断保留→完成→收管
+PASS  燃油截止边界：截止瞬间后禁止继续转移
+PASS  漫油：阀门开且油枪未插车/油箱满仍开阀溢出、关阀停止、徒步清理
+PASS  燃油取消保留：关阀/松开后再续加，储量与航班进度不断点
+PASS  燃油双人不冲突：一座一枪、同帧加注读条唯一占用
+FUEL_TIMING_MODEL solo=23.90s duo=23.55s soloMinusDuo=0.35s benefit=yes (assumptions: dt=0.05, walk=4.5m/s, drive=3.6m/s, tap=0.35s, start→station=9m, station↔truck=3.6m, truckRoute=28.8m, partnerStart→dock=18m)
+PASS  燃油双人并行 vs 单人耗时对照（记入证据）
+PASS  登机前置拦截与放行→旅客逐个登机→航班离港
+PASS  登机停止提示：进度已满时旅客返回
+PASS  错过航班：旅客消散且货物回收不永久占车
+PASS  机位未停稳拦截作业放行
+PASS  快照镜像：Capture/ApplyMirror 状态等价
+PASS  无效参数一律拒绝且不产生事件
+ShiftSim tests: 28 passed, 0 failed, 810 assertions.
+```
+

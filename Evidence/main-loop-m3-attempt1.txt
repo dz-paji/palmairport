@@ -1,0 +1,6 @@
+System.Exception: No clearance-safe route from (-7.61, 0.00, 5.01) to (-1.20, 0.00, -5.02) with obstacles 2
+  at MainLoopPlaytest+<DriveTo>d__19.MoveNext () [0x00262] in /Users/qinziqian/Documents/overcooked-like/game/Assets/Editor/MainLoopPlaytest.cs:187 
+  at MainLoopPlaytest+<DriveToDock>d__20.MoveNext () [0x0005e] in /Users/qinziqian/Documents/overcooked-like/game/Assets/Editor/MainLoopPlaytest.cs:190 
+  at MainLoopPlaytest+<Exercise>d__17.MoveNext () [0x00690] in /Users/qinziqian/Documents/overcooked-like/game/Assets/Editor/MainLoopPlaytest.cs:132 
+  at MainLoopPlaytest.Poll () [0x000db] in /Users/qinziqian/Documents/overcooked-like/game/Assets/Editor/MainLoopPlaytest.cs:47 
+Unity runtime errors: False

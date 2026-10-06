@@ -1,0 +1,7 @@
+Command: sh Tools/test-auth-protocol.sh
+Started UTC: 2026-10-04T13:05:39.896+00:00
+
+Auth protocol tests: 48 assertions passed.
+
+Exit code: 0
+Finished UTC: 2026-10-04T13:05:40.241+00:00

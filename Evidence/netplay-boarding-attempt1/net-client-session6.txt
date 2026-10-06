@@ -1,0 +1,10 @@
+PASS FakeAuthService injected and sign-in started; auth configuration and credentials are excluded.
+PASS Fake sign-in completed and TryVerifyAge authorized multiplayer before Room.Host/Join.
+PASS Session 6 client joined through a real UDP socket.
+Runtime errors: 0
+Final: FAIL
+Details: System.NullReferenceException: Object reference not set to an instance of an object
+  at NetPlaytest.AdvanceClientBoarding (System.Double now, System.Single dt) [0x000d7] in /private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.Zv4c0E/client/Assets/Editor/NetPlaytest.Boarding.cs:219 
+  at NetPlaytest.AdvanceScenario (System.Double now, System.Single dt) [0x00122] in /private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.Zv4c0E/client/Assets/Editor/NetPlaytest.cs:331 
+  at NetPlaytest.Poll () [0x00425] in /private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.Zv4c0E/client/Assets/Editor/NetPlaytest.cs:219 
+Diagnostics: scenario=client-boarding,stage=1,scene=PalmBay,room=Playing,snapshots=0,game=started=True,sandbox=False,remote=True,actors=p0=(-7.00, 0.00, 0.44),p1=(-5.60, 0.00, 0.44),cart0=none,signals=/private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.Zv4c0E/control,boardingFlight=UBA826,gate=False,waiting=0,walking=0,boardingProgress=0.000,blocked=False

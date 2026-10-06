@@ -1,0 +1,47 @@
+Command: sh Tools/test-shift.sh
+Started UTC: 2026-10-04T13:31:16.589+00:00
+
+PASS  餐食全流程：下单→读条→备好→阻塞→装车→交付
+PASS  餐食出货口阻塞：Ready 未取走时下单被拒
+PASS  旧取消语义：交付读条中断即清零
+PASS  重复交付防护：同航班同任务只记一次并回收货物
+PASS  装载防护与空车复用：已完成航班拒装、可改装另一航班
+PASS  同帧双席交付同一车：唯一读条占用
+PASS  LAN 练习航班生成器：时刻表循环、唯一航班号、修剪有界、Endless 不结算
+PASS  行李全流程：取到达→归还→装出发→交付
+PASS  行李到达件误交机位仅提示
+PASS  错送完成使误接收航班行李永久失败，原属航班可重装
+PASS  错送不能吞掉已完成行李任务的货物
+PASS  已完成进度再被标记失败仍不能离港
+PASS  练习航班修剪失败键且事件历史有界
+PASS  到达行李逾期归还：航班截止仍回收车辆
+PASS  行李未归还不许装出发行李
+PASS  燃油新流程：拿枪→插车→开阀→等满→关阀→收枪→归还
+PASS  燃油机位侧：接管→按住加注→中断保留→完成→收管
+PASS  燃油浮点边界：不规则帧与中断续加精确完成且只计一次
+PASS  燃油截止边界：截止瞬间后禁止继续转移
+PASS  漫油：阀门开且油枪未插车/油箱满仍开阀溢出、关阀停止、徒步清理
+PASS  燃油取消保留：关阀/松开后再续加，储量与航班进度不断点
+PASS  燃油双人不冲突：一座一枪、同帧加注读条唯一占用
+FUEL_TIMING_MODEL solo=23.90s duo=23.55s soloMinusDuo=0.35s benefit=yes (assumptions: dt=0.05, walk=4.5m/s, drive=3.6m/s, tap=0.35s, start→station=9m, station↔truck=3.6m, truckRoute=28.8m, partnerStart→dock=18m)
+PASS  燃油双人并行 vs 单人耗时对照（记入证据）
+PASS  登机前置拦截与放行→旅客逐个登机→航班离港
+PASS  登机完成与失败门禁：拒绝重复生成旅客
+PASS  登机关门：仅停止新放行，已出发继续并累计
+PASS  登机重开：保留固定旅客序号与进度，跨席无重复领取
+PASS  登机取消：只关本席登机口，货物与燃油进度保留
+PASS  旅客计时：跨路线段与错峰延迟按 dt 累计
+PASS  登机航班事件：大步与小步在截止前完成且离港计分一致
+PASS  登机快照：关门队伍与行进旅客稳定镜像，错过后回收
+PASS  错过航班：旅客消散且货物回收不永久占车
+PASS  机位未停稳拦截作业放行
+PASS  快照镜像：Capture/ApplyMirror 状态等价
+PASS  无效参数一律拒绝且不产生事件
+PASS  M4 完成与300秒归零同刻裁定，跨边界dt仅计剩余区间
+PASS  M4 结束后的任务输入与计时冻结
+PASS  M4 检查点恢复计时、计分、机位、车辆、油渍与登机口归属
+PASS  M4 关闭后旅客完成归因与机器人不记真人完成
+ShiftSim tests: 39 passed, 0 failed, 5321 assertions.
+
+Exit code: 0
+Finished UTC: 2026-10-04T13:31:16.909+00:00

@@ -1,0 +1,3 @@
+PASS Python syntax/import and loopback endpoint guards.
+NOT RUN Firestore emulator rules acceptance: Firebase CLI/emulator unavailable.
+Production database and rules deployment remain unverified.

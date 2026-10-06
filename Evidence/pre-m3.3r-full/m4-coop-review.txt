@@ -1,0 +1,22 @@
+M4 offline cooperation review: PASS
+Details: PASS
+Unity runtime errors: False
+FIXTURE: isolated temporary JSON store; original device file is backed up and restored. Seeded historical HUMAN counts Meals8/Baggage0/Fuel4/Boarding2, two departed flights. This is not player-earned history.
+PASS actual AirportGame.BotInput selected and claimed baggage from historical preference; meals/fuel were unfinished and available.
+FIXTURE: domain APIs completed one HUMAN baggage task and one BOT meal task to test attribution; this does not claim human play completed a full flight.
+BOT visual root diagnostic: position=(33.00, 0.00, 0.44) active=True isCurrent=True
+FIXTURE: camera crop + partner at +40 world-x, normalized safe insets4% horizontal/3% vertical, verified separately at16:9 and19.5:9; not real-device notch certification.
+PASS visible toolbar and unobstructed deadline board 1920x1080
+Current BOT visual viewport=(1.73, 0.50, 30.00) world=(33.00, 0.00, 0.44)
+PASS safe-area indicator 1920x1080 position=(771.20, 24.45) label=→ 玩家 2 · BOT
+Evidence/m4-coop-offscreen-16x9.png 1920x1080
+PASS visible toolbar and unobstructed deadline board 2340x1080
+Current BOT visual viewport=(1.51, 0.50, 30.00) world=(33.00, 0.00, 0.44)
+PASS safe-area indicator 2340x1080 position=(863.03, 27.36) label=→ 玩家 2 · BOT
+Evidence/m4-coop-offscreen-19_5x9.png 2340x1080
+PASS returning onscreen hides the offscreen indicator.
+PASS visible toolbar and unobstructed deadline board 1920x1080
+Evidence/m4-coop-results.png 1920x1080
+PASS bounded fixed-step local300-second match, frozen score/time, actual automatic replay/finalhold, human-only settlement once and JSON reload. score=150 stars=0 frames=1183
+PASS retry completed a distinct finite300-second round and credited exactly once.
+Real per-device memory bytes preserved: True

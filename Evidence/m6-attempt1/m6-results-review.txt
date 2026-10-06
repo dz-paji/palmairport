@@ -1,0 +1,9 @@
+M6 Unity acceptance: FAIL
+System.Reflection.AmbiguousMatchException: Ambiguous match found.
+  at System.RuntimeType.GetMethodImplCommon (System.String name, System.Int32 genericParameterCount, System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, System.Reflection.CallingConventions callConv, System.Type[] types, System.Reflection.ParameterModifier[] modifiers) [0x00050] in <3f7729e529224de59f8ee18b4833e8e5>:0 
+  at System.RuntimeType.GetMethodImpl (System.String name, System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, System.Reflection.CallingConventions callConv, System.Type[] types, System.Reflection.ParameterModifier[] modifiers) [0x00000] in <3f7729e529224de59f8ee18b4833e8e5>:0 
+  at System.Type.GetMethod (System.String name, System.Reflection.BindingFlags bindingAttr) [0x0000e] in <3f7729e529224de59f8ee18b4833e8e5>:0 
+  at M6ResultsCapture+<Exercise>d__15.MoveNext () [0x004c7] in /Users/qinziqian/Documents/overcooked-like/game/Assets/Editor/M6ResultsCapture.cs:119 
+  at M6ResultsCapture.Poll () [0x00107] in /Users/qinziqian/Documents/overcooked-like/game/Assets/Editor/M6ResultsCapture.cs:59 
+Runtime errors: False
+FIXTURE: actual local 300-second simulation with injected HUMAN movement; isolated in-memory cooperation store, FakeAuth, no backend calls or system share posting.

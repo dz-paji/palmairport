@@ -1,0 +1,11 @@
+Session 6
+PASS FakeAuthService injected and sign-in started; auth configuration and credentials are excluded.
+PASS Fake sign-in completed and TryVerifyAge authorized multiplayer before Room.Host/Join.
+PASS Session 6 host bound a real UDP socket; fixtures will set spatial positions and meal/fuel prerequisites only.
+Fixture: scheduler supplied UBA826; client stands at gate, host meal cart parked north of its pavement crossing. Prerequisites remain incomplete.
+Runtime errors: 0
+Final: FAIL
+Details: System.TimeoutException: NetPlaytest stage 3 exceeded 60 seconds. scenario=host-boarding,stage=3,scene=PalmBay,room=Playing,snapshots=1011,game=started=True,sandbox=True,remote=False,actors=p0=(-4.80, 0.00, 2.72),p1=(-4.48, 0.00, -0.40),cart0=0,signals=/private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.Zv4c0E/control,boardingFlight=UBA826,gate=False,waiting=0,walking=0,boardingProgress=0.000,blocked=False
+  at NetPlaytest.Poll () [0x00255] in /private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.Zv4c0E/host/Assets/Editor/NetPlaytest.cs:184 
+Diagnostics: scenario=host-boarding,stage=3,scene=PalmBay,room=Playing,snapshots=1011,game=started=True,sandbox=True,remote=False,actors=p0=(-4.80, 0.00, 2.72),p1=(-4.48, 0.00, -0.40),cart0=0,signals=/private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.Zv4c0E/control,boardingFlight=UBA826,gate=False,waiting=0,walking=0,boardingProgress=0.000,blocked=False
+

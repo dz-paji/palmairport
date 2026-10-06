@@ -1,0 +1,15 @@
+FAIL  local OAuth callback response precedes success: Access denied
+System.Net.Sockets.SocketException (0x80004005): Access denied
+  at System.Net.Sockets.Socket.Bind (System.Net.EndPoint localEP) [0x00043] in <85cb45408ff9428183e6e1d3388b1d7f>:0 
+  at System.Net.Sockets.TcpListener.Start (System.Int32 backlog) [0x00044] in <85cb45408ff9428183e6e1d3388b1d7f>:0 
+  at IslandAirport.LoopbackOAuthServer.Start () [0x00039] in <9c4d368418ee4824b0b0885cfdde104e>:0 
+  at LoopbackOAuthServerTests.TestAcceptedCallback () [0x00048] in <9c4d368418ee4824b0b0885cfdde104e>:0 
+  at LoopbackOAuthServerTests.Run (System.String name, System.Action test) [0x00000] in <9c4d368418ee4824b0b0885cfdde104e>:0 
+FAIL  local OAuth callback rejects an invalid state: Access denied
+System.Net.Sockets.SocketException (0x80004005): Access denied
+  at System.Net.Sockets.Socket.Bind (System.Net.EndPoint localEP) [0x00043] in <85cb45408ff9428183e6e1d3388b1d7f>:0 
+  at System.Net.Sockets.TcpListener.Start (System.Int32 backlog) [0x00044] in <85cb45408ff9428183e6e1d3388b1d7f>:0 
+  at IslandAirport.LoopbackOAuthServer.Start () [0x00039] in <9c4d368418ee4824b0b0885cfdde104e>:0 
+  at LoopbackOAuthServerTests.TestRejectedState () [0x0004c] in <9c4d368418ee4824b0b0885cfdde104e>:0 
+  at LoopbackOAuthServerTests.Run (System.String name, System.Action test) [0x00000] in <9c4d368418ee4824b0b0885cfdde104e>:0 
+Loopback OAuth tests: 0 passed, 2 failed, 0 assertions.

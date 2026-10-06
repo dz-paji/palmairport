@@ -1,0 +1,14 @@
+PASS FakeAuthService injected and sign-in started; auth configuration and credentials are excluded.
+PASS Fake sign-in completed and TryVerifyAge authorized multiplayer before Room.Host/Join.
+FIXTURE: one flight completed through domain progress APIs to test nonzero result/stat preservation; remaining schedule, all 300 seconds, network results and retry run normally. This is not a human gameplay completion claim.
+PASS Client mirrored finite mode, round, score and populated checkpoint before continuing.
+Evidence/m4-shift-results-host.png  1920x1080
+PASS 300-second result frozen, input ignored, actual history replay reaches final hold. frames=600
+Runtime errors: 0
+Final: FAIL
+Details: System.Exception: Repeated retry must create exactly one fresh authoritative round.
+  at NetPlaytest.AdvanceM4Host (System.Double now, System.Single dt) [0x00737] in /private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.7urtxwqn/host/Assets/Editor/NetPlaytest.M4.cs:208 
+  at NetPlaytest.AdvanceM4 (System.Double now, System.Single dt) [0x00032] in /private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.7urtxwqn/host/Assets/Editor/NetPlaytest.M4.cs:35 
+  at NetPlaytest.AdvanceScenario (System.Double now, System.Single dt) [0x00013] in /private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.7urtxwqn/host/Assets/Editor/NetPlaytest.cs:309 
+  at NetPlaytest.Poll () [0x00483] in /private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.7urtxwqn/host/Assets/Editor/NetPlaytest.cs:219 
+Diagnostics: scenario=host-m4-shift,stage=7,scene=PalmBay,room=Playing,snapshots=19334,game=started=True,sandbox=False,remote=False,actors=p0=(-7.00, 0.00, 0.44),p1=(-2.26, 0.00, 5.01),cart0=1,signals=/private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.7urtxwqn/control

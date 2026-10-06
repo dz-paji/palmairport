@@ -1,0 +1,31 @@
+PASS FakeAuthService injected and sign-in started; auth configuration and credentials are excluded.
+PASS Fake sign-in completed and TryVerifyAge authorized multiplayer before Room.Host/Join.
+PASS Session 5 host bound a real UDP socket for the fuel scenario.
+PASS Practice scheduler supplied flight UBA826 at stand 0; fixtures placed both crew near the station and the fuel truck on its service road.
+Probe: host seat 0 pressed at the fuel rack while client seat 1 held the single nozzle.
+PASS Client retained the sole nozzle after the host rack Pressed input; the input routed to the valve without transferring ownership.
+PASS Client cleaned the contest spill on foot; the host and client still shared the same single held nozzle.
+PASS Client tapped the parked fuel truck and inserted the station nozzle while on foot.
+Evidence/m3-fuel-fill-host.png  1920x1080
+PASS Host captured automatic truck filling with the valve open and client input neutral.
+PASS Full truck with the valve open stayed spill-free during the overfill grace (0.02s < 2.0s).
+Evidence/m3-fuel-spill-host.png  1920x1080
+PASS Host captured full-tank overflow after the 2 s grace with the station valve still open.
+PASS Client closed the valve with one tap (nozzle auto-returned) and cleared the full-tank spill on foot; full truck fuel remained available with no penalty.
+PASS No walk-back stow step: valve closed, nozzle home, truck hose reeled, truck driveable.
+PASS Host single tap took the truck after the client finished station work; planning the real drive to stand 0.
+PASS Host drove the fuel truck from the station to stand 0 through AirportGame.Move; traveled 11.0m.
+PASS Host Move input was blocked while the truck hose was connected; CanDriveCart remained false.
+Evidence/m3-fuel-transfer-host.png  1920x1080
+PASS Host captured the automatic aircraft fuel transfer with no held client input.
+PASS Client tapped the aircraft again at 0.33; the hose auto-reeled and both truck fuel and flight progress remained conserved and resumable.
+Evidence/m3-fuel-deliver-host.png  1920x1080
+PASS Host captured completed fuel delivery; the aircraft reached 100% and the truck tank was consumed.
+PASS Full aircraft with the hose still connected spilled at its stand only after the 2 s grace; no score or task penalty.
+PASS Client's single aircraft tap disconnected first even while standing on the oil; overfill stopped and the truck became driveable.
+PASS Client held cleanup on foot and removed the stand overfill spill.
+PASS Session 5 host sent the real close control after fuel and spill checks.
+Runtime errors: 0
+Final: PASS
+Details: Session 5 (M3.3r) verified single-tap nozzle pickup/insert, automatic truck filling, valve-close auto-return, single-nozzle exclusion, station overfill grace, host driving handoff, truck-hose take/attach with automatic transfer, connected-hose drive lock, disconnect/resume, delivery, stand overfill grace and spill cleanup over real AirportGame inputs.
+Diagnostics: scenario=host-fuel,stage=15,scene=PalmBay,room=Closed,snapshots=590,game=started=True,sandbox=True,remote=False,actors=p0=(-0.80, 0.00, 5.38),p1=(-1.33, 0.00, 4.87),cart0=none,signals=/private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.CKsvBS/control,nozzle=AtStation,nozzleSeat=-1,hose=OnTruck,hoseSeat=-1,hoseFlight=,overfill=0.00/0.00,valve=False,tank=0,spills=0,fuelProgress=1,truck=(-0.80, 0.00, 5.38),truckOwner=0,driveWaypoint=4

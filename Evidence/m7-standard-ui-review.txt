@@ -1,0 +1,6 @@
+2026-10-04 macOS standard app launch through Computer Use (cua.getApp).
+Observed: PALM BAY window, guest badge (not Fake), CabinLobby rendered, explicit Google-unconfigured dialog rendered.
+No Error/Exception matches in captured Player.log.
+UI automation did not reliably complete pointer-based bot selection or return-button activation; no complete manual gameplay acceptance claimed.
+Isolated direct/batch smoke previously aborted at native macOS RegisterApplication before managed report; separate evidence retained.
+Screenshots observed through Computer Use in task conversation, not saved as PNG artifacts.

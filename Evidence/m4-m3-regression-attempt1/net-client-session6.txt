@@ -1,0 +1,18 @@
+PASS FakeAuthService injected and sign-in started; auth configuration and credentials are excluded.
+PASS Fake sign-in completed and TryVerifyAge authorized multiplayer before Room.Host/Join.
+PASS Session 6 client joined through a real UDP socket.
+PASS Client mirrored selection and fallback are read-only; selected route and waiting queue render before any gate action.
+Probe: client Pressed input opens selected flight gate over Remote UDP.
+Evidence/m3-boarding-blocked-client.png  1920x1080
+PASS Client mirrored exactly the frozen host blocked cart, released/waiting passengers, open gate, and task progress.
+Probe: client Pressed input closes the same flight gate over Remote UDP.
+Evidence/m3-boarding-closed-client.png  1920x1080
+PASS Client mirrored the frozen closed gate after launched passengers boarded; same stable waiting IDs and partial task progress.
+Probe: client Pressed input reopens the gate to resume the remaining queue over UDP.
+Runtime errors: 0
+Final: FAIL
+Details: System.NullReferenceException: Object reference not set to an instance of an object
+  at NetPlaytest.AdvanceClientBoarding (System.Double now, System.Single dt) [0x00566] in /private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.ijPF86/client/Assets/Editor/NetPlaytest.Boarding.cs:297 
+  at NetPlaytest.AdvanceScenario (System.Double now, System.Single dt) [0x0013d] in /private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.ijPF86/client/Assets/Editor/NetPlaytest.cs:333 
+  at NetPlaytest.Poll () [0x00483] in /private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.ijPF86/client/Assets/Editor/NetPlaytest.cs:219 
+Diagnostics: scenario=client-boarding,stage=7,scene=CabinLobby,room=Idle,snapshots=0,game=none,actors=none,signals=/private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.ijPF86/control,boarding=none

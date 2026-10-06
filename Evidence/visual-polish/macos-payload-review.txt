@@ -1,0 +1,1 @@
+PASS: macOS 1.0.8 contains the new aircraft, vehicle and environment factories; no smoke autorun resource.

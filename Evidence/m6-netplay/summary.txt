@@ -1,0 +1,18 @@
+M4 real UDP integration: PASS
+Scenarios: shift, clientdrop, hostleave, hostloss
+Isolated Unity processes / FakeAuth / explicit test fixtures.
+shift host: exit=0 report=PASS
+Capture: m4-shift-results-host.png 1920x1080
+shift client: exit=0 report=PASS
+Capture: m4-shift-results-client.png 1920x1080
+clientdrop host: exit=0 report=PASS
+Capture: m4-clientdrop-results-host.png 1920x1080
+clientdrop client: exit=0 report=PASS
+hostleave host: exit=0 report=PASS
+hostleave client: exit=0 report=PASS
+Capture: m4-hostleave-results-client.png 1920x1080
+Capture: m4-hostleave-takeover-client.png 1920x1080
+hostloss host: exit=0 report=PASS
+hostloss client: exit=0 report=PASS
+Capture: m4-hostloss-takeover-client.png 1920x1080
+Capture: m4-hostloss-results-client.png 1920x1080

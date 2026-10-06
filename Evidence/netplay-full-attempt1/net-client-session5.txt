@@ -1,0 +1,19 @@
+PASS FakeAuthService injected and sign-in started; auth configuration and credentials are excluded.
+PASS Fake sign-in completed and TryVerifyAge authorized multiplayer before Room.Host/Join.
+PASS Session 5 client called the real Room.Join for 127.0.0.1.
+PASS Client mirror shows flight UBA826 at stand 0 and the single nozzle at the fuel station.
+Probe: one client Pressed=true input sent at the fuel nozzle rack.
+PASS Client Pressed input picked up the station nozzle through Remote UDP.
+PASS Client mirror received the host ownership probe and its single station spill.
+PASS Client on foot pressed at the parked fuel truck and connected the nozzle.
+PASS Client walked back to the station and opened the valve; truck filling now proceeds without held input.
+Evidence/m3-fuel-fill-client.png  1920x1080
+PASS Client captured the same automatic station fill from its read-only mirror.
+Evidence/m3-fuel-spill-client.png  1920x1080
+PASS Client mirror captured the full-tank spill at the same station state.
+Probe: client began holding the cleanup input on foot inside the oil spill zone.
+Runtime errors: 0
+Final: FAIL
+Details: System.TimeoutException: NetPlaytest stage 6 exceeded 25 seconds. scenario=client-fuel,stage=6,scene=CabinLobby,room=Idle,snapshots=0,game=none,actors=none,signals=/private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.gDHJZL/control,fuel=none
+  at NetPlaytest.Poll () [0x00255] in /private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.gDHJZL/client/Assets/Editor/NetPlaytest.cs:184 
+Diagnostics: scenario=client-fuel,stage=6,scene=CabinLobby,room=Idle,snapshots=0,game=none,actors=none,signals=/private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.gDHJZL/control,fuel=none

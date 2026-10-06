@@ -1,0 +1,16 @@
+PASS FakeAuthService injected and sign-in started; auth configuration and credentials are excluded.
+PASS Fake sign-in completed and TryVerifyAge authorized multiplayer before Room.Host/Join.
+PASS Meal session host bound the real UDP session socket.
+PASS Practice scheduler produced servicing flight UBA826 at stand 0; fixtures placed the client seat by the meal station.
+PASS Client order intent reached the host over UDP; ShiftSim accepted OrderMeal from seat 1.
+Evidence/m3-meal-ready-host.png  1920x1080
+PASS Host captured the meal-ready moment (meal card, flight board, practice timer).
+PASS Client grab + take-meal executed on host; cargo bound to UBA826.
+Evidence/m3-meal-deliver-host.png  1920x1080
+PASS Host captured the in-progress delivery read-out at work=0.30.
+PASS Client held-deliver over UDP completed UBA826 meals exactly once; cart cleared for reuse; host score=50.
+PASS Meal session host sent the real close control after dual-end verification.
+Runtime errors: 0
+Final: PASS
+Details: Session 3 host verified the client meal flow (order, output block, take, deliver, cart reuse) with dual-end same-moment captures.
+Diagnostics: scenario=host-meal,stage=10,scene=PalmBay,room=Closed,snapshots=242,game=started=True,sandbox=True,remote=False,actors=p0=(-7.00, 0.00, 0.44),p1=(-0.80, 0.00, 5.38),cart0=1,signals=/private/var/folders/19/jlz3f3_12q1d22xb7lhnbk700000gp/T/palmbay-netplay.CKsvBS/control

@@ -1,0 +1,10 @@
+M7 identity review: FAIL
+System.Exception: Mid-shift revocation must return to a clean lobby
+  at M7IdentityReview+<Exercise>d__14.MoveNext () [0x005e8] in /Users/qinziqian/Documents/overcooked-like/game/Assets/Editor/M7IdentityReview.cs:172 
+  at M7IdentityReview.Poll () [0x00194] in /Users/qinziqian/Documents/overcooked-like/game/Assets/Editor/M7IdentityReview.cs:102 
+Runtime errors: False
+Successful silent token refresh retains room panel and ready state: PASS
+Revocation closes lobby room; existing valid identity is preserved on unrelated failure: PASS
+Stale UI/direct start callback cannot start a revoked account: PASS
+Client refresh retains waiting room; revoked client leaves and can regroup: PASS
+Explicit logout leaves room; guest + bot remains available: PASS
