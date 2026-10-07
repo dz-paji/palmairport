@@ -164,7 +164,7 @@ public static class M7IdentityReview
         Login(app, auth); app.CreateRoom(); FillPartner(); app.BeginShift();
         IEnumerator wait = WaitForScene(AppState.ScenePalmBay);
         while (wait.MoveNext()) yield return wait.Current;
-        var game = UnityEngine.Object.FindObjectOfType<AirportGame>();
+        var game = UnityEngine.Object.FindAnyObjectByType<AirportGame>();
         Require(game != null && game.Started && game.NetworkShift, "Network shift scene must start");
         game.ExternalControl = true;
         // Seed a real authority checkpoint, then exercise RoomManager's production promotion
@@ -230,7 +230,7 @@ public static class M7IdentityReview
                 ready &= LobbyApp.Instance != null && GetField<RectTransform>(LobbyApp.Instance.GetComponent<LobbyCanvas>(), "networkRoomRoot") != null;
             else
             {
-                var game = UnityEngine.Object.FindObjectOfType<AirportGame>();
+                var game = UnityEngine.Object.FindAnyObjectByType<AirportGame>();
                 ready &= game != null && game.Started;
             }
             if (ready) yield break;

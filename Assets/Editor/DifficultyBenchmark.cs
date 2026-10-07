@@ -71,7 +71,7 @@ public static class DifficultyBenchmark
         {
             if (steps == null)
             {
-                game = UnityEngine.Object.FindObjectOfType<AirportGame>();
+                game = UnityEngine.Object.FindAnyObjectByType<AirportGame>();
                 if (game == null) return;
                 game.ExternalControl = true;
                 state = AppState.Ensure(); state.ExternalControl = true;

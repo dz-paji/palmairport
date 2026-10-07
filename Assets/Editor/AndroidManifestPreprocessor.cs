@@ -123,7 +123,7 @@ namespace IslandAirport.Editor
                 return;
             }
 
-            string buildPackageName = PlayerSettings.GetApplicationIdentifier(BuildTargetGroup.Android);
+            string buildPackageName = PlayerSettings.GetApplicationIdentifier(NamedBuildTarget.Android);
             if (!string.Equals(configuration.PackageName, ExpectedPackageName, StringComparison.Ordinal) ||
                 !string.Equals(configuration.PackageName, buildPackageName, StringComparison.Ordinal))
             {

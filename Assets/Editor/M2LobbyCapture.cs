@@ -181,8 +181,8 @@ public static class M2LobbyCapture
     {
         IEnumerator delay = WaitReal(1.0f);
         while (delay.MoveNext()) yield return delay.Current;
-        LobbyApp app = UnityEngine.Object.FindObjectOfType<LobbyApp>();
-        LobbyCanvas view = UnityEngine.Object.FindObjectOfType<LobbyCanvas>();
+        LobbyApp app = UnityEngine.Object.FindAnyObjectByType<LobbyApp>();
+        LobbyCanvas view = UnityEngine.Object.FindAnyObjectByType<LobbyCanvas>();
         if (!app || !view || !app.ViewCamera) throw new Exception("CabinLobby app, view, or camera did not start");
         AppState state = AppState.Ensure();
         savedName = state.Profile.Name;
@@ -196,8 +196,8 @@ public static class M2LobbyCapture
 
         IEnumerator identity = ExerciseIdentity(app, view, state);
         while (identity.MoveNext()) yield return identity.Current;
-        app = UnityEngine.Object.FindObjectOfType<LobbyApp>();
-        view = UnityEngine.Object.FindObjectOfType<LobbyCanvas>();
+        app = UnityEngine.Object.FindAnyObjectByType<LobbyApp>();
+        view = UnityEngine.Object.FindAnyObjectByType<LobbyCanvas>();
         if (!app || !view) throw new Exception("Lobby identity flow did not return to the main view");
 
         app.SaveDisplayName("LobbySmoke");
@@ -207,7 +207,7 @@ public static class M2LobbyCapture
 
         IEnumerator wait = WaitForScene(AppState.ScenePalmBay);
         while (wait.MoveNext()) yield return wait.Current;
-        AirportGame game = UnityEngine.Object.FindObjectOfType<AirportGame>();
+        AirportGame game = UnityEngine.Object.FindAnyObjectByType<AirportGame>();
         if (!game || !game.Started || game.Sim == null || game.Sandbox || game.Remote || !game.Solo || !game.Crew[1].Bot)
             throw new Exception("Local solo shift did not consume the lobby launch mode");
         if (game.Crew[0].Name != "LobbySmoke" || game.Crew[0].Color != CabinWorld.PlayerColor(2))
@@ -221,15 +221,15 @@ public static class M2LobbyCapture
             throw new Exception("Wardrobe profile did not survive the scene round-trip");
         delay = WaitReal(.2f);
         while (delay.MoveNext()) yield return delay.Current;
-        app = UnityEngine.Object.FindObjectOfType<LobbyApp>();
-        view = UnityEngine.Object.FindObjectOfType<LobbyCanvas>();
+        app = UnityEngine.Object.FindAnyObjectByType<LobbyApp>();
+        view = UnityEngine.Object.FindAnyObjectByType<LobbyCanvas>();
         if (!app || !view) throw new Exception("CabinLobby did not rebuild after solo round-trip");
         app.SelectLocalCoop();
         app.BeginLocalShift();
 
         wait = WaitForScene(AppState.ScenePalmBay);
         while (wait.MoveNext()) yield return wait.Current;
-        game = UnityEngine.Object.FindObjectOfType<AirportGame>();
+        game = UnityEngine.Object.FindAnyObjectByType<AirportGame>();
         if (!game || !game.Started || game.Sim == null || game.Sandbox || game.Remote || game.Solo || game.Crew[1].Bot)
             throw new Exception("Local coop shift did not consume the lobby launch mode");
         if (game.Crew[0].Name != "LobbySmoke" || game.Crew[0].Color != CabinWorld.PlayerColor(2))
@@ -246,7 +246,7 @@ public static class M2LobbyCapture
         SceneManager.LoadScene(AppState.ScenePalmBay);
         wait = WaitForScene(AppState.ScenePalmBay);
         while (wait.MoveNext()) yield return wait.Current;
-        game = UnityEngine.Object.FindObjectOfType<AirportGame>();
+        game = UnityEngine.Object.FindAnyObjectByType<AirportGame>();
         // M3.1 任务练习模式：sandbox 不再是空航班表，航班由循环时刻表生成器驱动（M3 计划 §M3 LAN 对局形态）。
         if (!game || !game.Started || !game.Sandbox || game.Remote || game.Sim == null || !game.Sim.Endless)
             throw new Exception("Host sandbox did not start in endless practice mode");
@@ -276,7 +276,7 @@ public static class M2LobbyCapture
         SceneManager.LoadScene(AppState.ScenePalmBay);
         wait = WaitForScene(AppState.ScenePalmBay);
         while (wait.MoveNext()) yield return wait.Current;
-        game = UnityEngine.Object.FindObjectOfType<AirportGame>();
+        game = UnityEngine.Object.FindAnyObjectByType<AirportGame>();
         if (!game || !game.Started || !game.Remote || game.Sandbox || game.Shift == null || game.Sim == null ||
             game.Sim.Flights.Count != 0 || !game.Sim.Endless || game.Snaps == null)
             throw new Exception("Remote placeholder did not start with a read-only mirror simulation and snapshot buffer");
@@ -520,7 +520,7 @@ public static class M2LobbyCapture
         {
             if (SceneManager.GetActiveScene().name == sceneName)
             {
-                if (sceneName != AppState.ScenePalmBay || UnityEngine.Object.FindObjectOfType<AirportGame>()?.Started == true)
+                if (sceneName != AppState.ScenePalmBay || UnityEngine.Object.FindAnyObjectByType<AirportGame>()?.Started == true)
                     yield break;
             }
             yield return null;

@@ -7,6 +7,7 @@ using IslandAirport;
 public static class MainLoopBuilder
 {
     public const string ScenePath="Assets/Scenes/MainLoop.unity";
+    const string GeneratedFolder="Assets/Generated/MainLoop";
     [MenuItem("Palm Bay/Rebuild MainLoop scene (debug)")]
     public static void CreateScene()
     {
@@ -37,20 +38,24 @@ public static class MainLoopBuilder
         AirportWorld.SetupLighting();
         // Save actual mesh/material assets. A scene referencing transient factory objects
         // becomes empty or pink after reopening; compilation cannot detect that failure.
-        string folder="Assets/Generated/MainLoop";Directory.CreateDirectory(folder);AssetDatabase.Refresh();int index=0;
+        // Always replace the generated asset set. Keeping assets produced by a
+        // previous engine version can leave valid-looking references backed by
+        // stale meshes or shaders, and repeated rebuilds otherwise grow forever.
+        if(Directory.Exists(GeneratedFolder))AssetDatabase.DeleteAsset(GeneratedFolder);
+        Directory.CreateDirectory(GeneratedFolder);AssetDatabase.Refresh();int index=0;
         foreach(var root in scene.GetRootGameObjects())
         {
             foreach(var mesh in root.GetComponentsInChildren<MeshFilter>(true))
-                if(mesh.sharedMesh && !AssetDatabase.Contains(mesh.sharedMesh))AssetDatabase.CreateAsset(mesh.sharedMesh,AssetDatabase.GenerateUniqueAssetPath(folder+"/Mesh_"+(index++)+".asset"));
+                if(mesh.sharedMesh && !AssetDatabase.Contains(mesh.sharedMesh))AssetDatabase.CreateAsset(mesh.sharedMesh,AssetDatabase.GenerateUniqueAssetPath(GeneratedFolder+"/Mesh_"+(index++)+".asset"));
             foreach(var renderer in root.GetComponentsInChildren<Renderer>(true))
                 foreach(var material in renderer.sharedMaterials)
-                    if(material && !AssetDatabase.Contains(material))AssetDatabase.CreateAsset(material,AssetDatabase.GenerateUniqueAssetPath(folder+"/Material_"+(index++)+".mat"));
+                    if(material && !AssetDatabase.Contains(material))AssetDatabase.CreateAsset(material,AssetDatabase.GenerateUniqueAssetPath(GeneratedFolder+"/Material_"+(index++)+".mat"));
         }
         AssetDatabase.SaveAssets();EditorSceneManager.SaveScene(scene,ScenePath);
         // 唯一产品入口是 PalmBay；MainLoop 仅作为单任务调试场景保留在构建列表中。
         EditorBuildSettings.scenes=new[]{new EditorBuildSettingsScene("Assets/Scenes/PalmBay.unity",true),new EditorBuildSettingsScene(ScenePath,true)};
         PlayerSettings.defaultScreenWidth=1600;PlayerSettings.defaultScreenHeight=1000;PlayerSettings.defaultIsNativeResolution=false;PlayerSettings.fullScreenMode=FullScreenMode.Windowed;PlayerSettings.runInBackground=true;PlayerSettings.resizableWindow=true;PlayerSettings.colorSpace=ColorSpace.Linear;
-        Debug.Log("MAIN_LOOP_SCENE_READY meshes="+Object.FindObjectsOfType<MeshFilter>().Length);
+        Debug.Log("MAIN_LOOP_SCENE_READY meshes="+Object.FindObjectsByType<MeshFilter>().Length);
     }
     [MenuItem("Palm Bay/Rebuild and capture MainLoop scene (debug)")]
     public static void CreateAndCapture()
@@ -90,7 +95,7 @@ public static class MainLoopBuilder
         var marker=world?world.GetComponent<SceneLayoutMarker>():null;
         if(!marker||marker.Version!=Level1Map.LayoutVersion)throw new System.Exception("MainLoop environment layout marker is stale");
         if(meshes<20)throw new System.Exception("MainLoop environment geometry missing; meshes="+meshes);
-        var game=Object.FindObjectOfType<MainLoopGame>();
+        var game=Object.FindAnyObjectByType<MainLoopGame>();
         if(!game||!game.Plane||!game.View||game.Players==null||game.Players.Length!=2||game.Vehicles==null||game.Vehicles.Length!=3||game.CargoViews==null||game.CargoViews.Length!=3)
             throw new System.Exception("MainLoop gameplay references are incomplete after reload");
         if(capture)Capture(game.View,"Evidence/main-loop-scene.png",1600,1000);

@@ -53,7 +53,7 @@ public static class M4CoopCapture
         {
             if (steps == null)
             {
-                game = UnityEngine.Object.FindObjectOfType<AirportGame>();
+                game = UnityEngine.Object.FindAnyObjectByType<AirportGame>();
                 if (game == null) return;
                 game.ExternalControl = true;
                 state = AppState.Ensure(); state.ExternalControl = true;
@@ -117,7 +117,7 @@ public static class M4CoopCapture
         // Let the actual Canvas Start run before taking over all simulation steps.
         double waitUntil = EditorApplication.timeSinceStartup + .7;
         while (EditorApplication.timeSinceStartup < waitUntil) yield return null;
-        hud = UnityEngine.Object.FindObjectOfType<AirportHudCanvas>();
+        hud = UnityEngine.Object.FindAnyObjectByType<AirportHudCanvas>();
         Require(hud != null && storeField != null, "HUD/storage not available");
         originalPath = Path.Combine(Application.persistentDataPath, "palmbay-cooperation.json");
         originalFile = File.Exists(originalPath) ? File.ReadAllBytes(originalPath) : null;
@@ -172,7 +172,7 @@ public static class M4CoopCapture
         game.View.transform.position = game.Crew[0].Position - game.View.transform.forward * 30f;
         bot.Position = game.Crew[0].Position + Vector3.right * 40f;
         bot.Visual.position = bot.Position;
-        foreach (Transform actor in UnityEngine.Object.FindObjectsOfType<Transform>())
+        foreach (Transform actor in UnityEngine.Object.FindObjectsByType<Transform>())
             if (actor.parent == null && actor.name == bot.Name)
                 report.AppendLine("BOT visual root diagnostic: position=" + actor.position + " active=" + actor.gameObject.activeSelf + " isCurrent=" + (actor == bot.Visual));
         hud.ReviewSafeAreaNormalized = new Rect(.04f, .03f, .92f, .94f);

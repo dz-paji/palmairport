@@ -122,7 +122,7 @@ public static class LevelLayoutValidation
     public static void CaptureTopDown()
     {
         EditorSceneManager.OpenScene(MainLoopBuilder.ScenePath);
-        var game=UnityEngine.Object.FindObjectOfType<MainLoopGame>();
+        var game=UnityEngine.Object.FindAnyObjectByType<MainLoopGame>();
         Level1Map.ConfigureCamera(game.View,true);
         Capture(game.View,"Evidence/level-layout-top-down.png");
     }

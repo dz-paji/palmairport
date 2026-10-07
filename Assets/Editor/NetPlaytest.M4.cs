@@ -98,7 +98,7 @@ public static partial class NetPlaytest
         if (stage == 1)
         {
             if (!state.Room.Seats[1].Occupied) return;
-            UnityEngine.Object.FindObjectOfType<LobbyApp>().BeginShift();
+            UnityEngine.Object.FindAnyObjectByType<LobbyApp>().BeginShift();
             SetStage(2, now); return;
         }
         if (stage == 2)
@@ -321,7 +321,7 @@ public static partial class NetPlaytest
             Shot("Evidence/m4-" + m4Case + "-results-client.png", 1920, 1080);
             if (game.ReplayStatus.Contains("缺失"))
             {
-                AirportHudCanvas hud = UnityEngine.Object.FindObjectOfType<AirportHudCanvas>();
+                AirportHudCanvas hud = UnityEngine.Object.FindAnyObjectByType<AirportHudCanvas>();
                 Require(hud != null && hud.VisibleResultsHint == game.ReplayStatus,
                     "Missing replay segments must be disclosed visibly on the results HUD.");
                 report.AppendLine("PASS Results HUD visibly discloses unrecoverable replay segments.");

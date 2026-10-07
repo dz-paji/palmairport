@@ -44,7 +44,7 @@ public static class ModelPolishCapture
         var passengers = new GameObject("Passengers").transform;
         for (int i = 0; i < 4; i++)
             AirportWorld.CreatePassenger("Passenger " + i, AirportStyle.Hex(i % 2 == 0 ? "EAB5BE" : "9EADCD"), new Vector3(i * 1.0f - 1.5f, 0, 0), i);
-        foreach (Transform p in UnityEngine.Object.FindObjectsOfType<Transform>()) if (p.name.StartsWith("Passenger ") && p.parent == null) p.SetParent(passengers);
+        foreach (Transform p in UnityEngine.Object.FindObjectsByType<Transform>()) if (p.name.StartsWith("Passenger ") && p.parent == null) p.SetParent(passengers);
         Capture(cam, passengers, "model-passengers", report);
         UnityEngine.Object.DestroyImmediate(passengers.gameObject);
         File.WriteAllText(Path.Combine(Output, "model-review.txt"), report.ToString() + "PASS: factory creation, nonempty geometry, finite bounds, no colliders.\nNot a device performance test.\n");

@@ -141,7 +141,7 @@ namespace IslandAirport
         public static AppState Ensure()
         {
             if (Instance != null) return Instance;
-            Instance = FindObjectOfType<AppState>();
+            Instance = FindAnyObjectByType<AppState>();
             if (Instance != null) return Instance;
             var go = new GameObject("AppState");
             return go.AddComponent<AppState>(); // Awake 登记 Instance + DontDestroyOnLoad
