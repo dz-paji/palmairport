@@ -79,7 +79,6 @@ namespace IslandAirport
         readonly List<PlaneMotion> motions = new List<PlaneMotion>();
         /// <summary>机位是否已停稳可作业（滑入完成）。供 HUD 与编辑器工具读取。</summary>
         public bool StandReady(int stand) { return Shift != null && Shift.StandReady(stand); }
-        static readonly string[] PlaneColors = { "4996C8", "EF9864", "7FB069" };
         readonly List<ReplayFrame> replay = new List<ReplayFrame>();
         readonly SortedDictionary<int,ReplayFrame> networkReplayFrames = new SortedDictionary<int,ReplayFrame>();
         float recordAt, replayTime; int replayIndex, replayLastEventSeq; bool wasFinished;
@@ -1398,7 +1397,7 @@ namespace IslandAirport
                 {
                     // Landing aircraft taxi in from the runway before the
                     // stand opens for ground work.
-                    planes[s]=AirportWorld.CreatePlane(f.Id,AirportWorld.Hex(PlaneColors[s]),Level1Map.TaxiInPath(s)[0]);
+                    planes[s]=AirportWorld.CreatePlane(f.Id,Level1Map.TaxiInPath(s)[0]);
                     if((Remote || restoringPlanes) && Shift.StandReady(s))
                     {
                         planes[s].position=Level1Map.PlanePark(s);
@@ -1678,7 +1677,11 @@ namespace IslandAirport
                 if(!same)
                 {
                     if(planes[i]) { planes[i].gameObject.SetActive(false); Destroy(planes[i].gameObject); } shown[i]=f.Flights[i];
-                    if(shown[i]!=null)planes[i]=AirportWorld.CreatePlane(shown[i].Id,AirportWorld.Hex(PlaneColors[i]),Level1Map.PlanePark(i));
+                    if(shown[i]!=null)
+                    {
+                        planes[i]=AirportWorld.CreatePlane(shown[i].Id,Level1Map.PlanePark(i));
+                        planes[i].rotation=AircraftMotion.NoseRotation(AircraftMotion.FinalDirection(Level1Map.TaxiInPath(i)));
+                    }
                 }
             }
             for(int i=0;i<3;i++){Carts[i].Visual.position=f.Positions[i+2];Carts[i].Visual.rotation=f.Rotations[i+2];Carts[i].Cargo.gameObject.SetActive(f.Loaded[i]);}

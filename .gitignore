@@ -1,0 +1,17 @@
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Bb]uilds/
+.vs/
+.idea/
+*.csproj
+*.sln
+.DS_Store
+/Assets/Resources/palmbay-auth.json
+/Assets/Resources/palmbay-auth.json.meta
+/Assets/google-services.json
+/Assets/google-services.json.meta
+.codely-cli/
+.codely.packages/
