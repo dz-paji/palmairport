@@ -127,7 +127,7 @@ public static partial class NetPlaytest
         if (stage == 1)
         {
             if (!state.Room.Seats[1].Occupied) return;
-            LobbyApp lobby = UnityEngine.Object.FindObjectOfType<LobbyApp>();
+            LobbyApp lobby = UnityEngine.Object.FindAnyObjectByType<LobbyApp>();
             Require(lobby != null, "Fuel CabinLobby LobbyApp was not available to start the room.");
             lobby.BeginPracticeShift();
             Require(state.Launch.Mode == AppState.GameMode.HostSandbox, "Fuel lobby did not launch HostSandbox.");
@@ -1014,7 +1014,7 @@ public static partial class NetPlaytest
         {
             if (!HasSignal("s5-host-close-sent")) return;
             if (SceneManager.GetActiveScene().name != AppState.SceneCabinLobby) return;
-            Require(UnityEngine.Object.FindObjectOfType<LobbyApp>() != null,
+            Require(UnityEngine.Object.FindAnyObjectByType<LobbyApp>() != null,
                 "Fuel client returned to CabinLobby without rebuilding LobbyApp.");
             report.AppendLine("PASS Session 5 client returned to CabinLobby after the real host close control.");
             Signal("s5-client-returned");

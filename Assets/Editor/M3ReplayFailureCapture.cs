@@ -56,7 +56,7 @@ public static class M3ReplayFailureCapture
         {
             if (steps == null)
             {
-                game = UnityEngine.Object.FindObjectOfType<AirportGame>();
+                game = UnityEngine.Object.FindAnyObjectByType<AirportGame>();
                 if (game == null) return;
                 memoryScope = new CooperationMemoryFixtureScope(AppState.Ensure());
                 started = EditorApplication.timeSinceStartup;
@@ -125,7 +125,7 @@ public static class M3ReplayFailureCapture
     static IEnumerator Exercise()
     {
         yield return WaitReal(1f);
-        hud = UnityEngine.Object.FindObjectOfType<AirportHudCanvas>();
+        hud = UnityEngine.Object.FindAnyObjectByType<AirportHudCanvas>();
         if (hud == null) throw new Exception("AirportHudCanvas was not created");
 
         game.ExternalControl = true;

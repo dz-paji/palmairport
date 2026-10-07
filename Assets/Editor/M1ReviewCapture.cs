@@ -63,7 +63,7 @@ public static class M1ReviewCapture
         {
             if (steps == null)
             {
-                game = UnityEngine.Object.FindObjectOfType<AirportGame>();
+                game = UnityEngine.Object.FindAnyObjectByType<AirportGame>();
                 if (game == null) return;
                 memoryScope = new CooperationMemoryFixtureScope(AppState.Ensure());
                 started = EditorApplication.timeSinceStartup; failed = false;
@@ -132,7 +132,7 @@ public static class M1ReviewCapture
     static IEnumerator Exercise()
     {
         yield return WaitReal(1.0f);
-        hud = UnityEngine.Object.FindObjectOfType<AirportHudCanvas>();
+        hud = UnityEngine.Object.FindAnyObjectByType<AirportHudCanvas>();
 
         // 接管玩法循环：之后一切推进都靠固定步长 Step，确定性构图。
         game.ExternalControl = true;

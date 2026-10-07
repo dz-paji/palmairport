@@ -122,7 +122,7 @@ namespace IslandAirport
 
         static void RemoveLegacyServiceMarkers(UnityEngine.SceneManagement.Scene scene)
         {
-            Transform[] transforms = FindObjectsOfType<Transform>(true);
+            Transform[] transforms = FindObjectsByType<Transform>(FindObjectsInactive.Include);
             for (int i = 0; i < transforms.Length; i++)
             {
                 Transform item = transforms[i];

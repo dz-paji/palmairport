@@ -37,7 +37,7 @@ public static class MainLoopPlaytest
         {
             if(steps==null)
             {
-                game=UnityEngine.Object.FindObjectOfType<MainLoopGame>();if(game==null||!game.Ready)return;
+                game=UnityEngine.Object.FindAnyObjectByType<MainLoopGame>();if(game==null||!game.Ready)return;
                 game.ExternalControl=true;started=EditorApplication.timeSinceStartup;failed=false;
                 Application.logMessageReceived+=OnLog;
                 steps=Exercise();
@@ -90,7 +90,7 @@ public static class MainLoopPlaytest
     static IEnumerator Exercise()
     {
         Require(game.Plane.GetComponentsInChildren<Renderer>().Length>10,"Plane renderers missing");
-        Require(UnityEngine.Object.FindObjectsOfType<MeshFilter>().Length>100,"Scene model geometry missing");
+        Require(UnityEngine.Object.FindObjectsByType<MeshFilter>().Length>100,"Scene model geometry missing");
         foreach(var player in game.Players)Require(player.GetComponentsInChildren<Renderer>().Length>10,"Crew renderers missing");
         yield return null;
         var op=Wait(SingleFlightCycle.ArrivalDuration+.2f);while(op.MoveNext())yield return op.Current;
@@ -151,7 +151,7 @@ public static class MainLoopPlaytest
             op=Tap();while(op.MoveNext())yield return op.Current;
             Require(game.BoardingOpen,"Boarding failed after prerequisites complete");
             op=Wait(2);while(op.MoveNext())yield return op.Current;
-            Require(UnityEngine.Object.FindObjectsOfType<Transform>().Length>100,"Runtime objects disappeared");
+            Require(UnityEngine.Object.FindObjectsByType<Transform>().Length>100,"Runtime objects disappeared");
             if(cycle==0){ScreenCapture.CaptureScreenshot("Evidence/main-loop-boarding.png");yield return null;yield return null;}
             op=WaitForNextFlight(cycle+1);while(op.MoveNext())yield return op.Current;
             Require(game.Cycle.CompletedFlights==cycle+1,"Completed flight was not counted");

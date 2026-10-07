@@ -42,7 +42,7 @@ namespace IslandAirport
         public static Light SetupLighting()
         {
             Light sun = null;
-            foreach (var light in Object.FindObjectsOfType<Light>())
+            foreach (var light in Object.FindObjectsByType<Light>())
             {
                 if (light.type == LightType.Directional) { sun = light; break; }
             }

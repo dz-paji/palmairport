@@ -57,9 +57,9 @@ public static class LobbyBuilder
                 }
         }
         if (missing > 0) throw new Exception("Missing scripts in CabinLobby: " + missing);
-        var app = UnityEngine.Object.FindObjectOfType<LobbyApp>();
-        var canvas = UnityEngine.Object.FindObjectOfType<LobbyCanvas>();
-        var camera = UnityEngine.Object.FindObjectOfType<Camera>();
+        var app = UnityEngine.Object.FindAnyObjectByType<LobbyApp>();
+        var canvas = UnityEngine.Object.FindAnyObjectByType<LobbyCanvas>();
+        var camera = UnityEngine.Object.FindAnyObjectByType<Camera>();
         if (!app || !canvas || !camera) throw new Exception("CabinLobby app, canvas, or camera reference is missing");
         if (meshes < 50 || materials < 50) throw new Exception("CabinLobby cabin geometry is incomplete; meshes=" + meshes + " materials=" + materials);
         Debug.Log("CABIN_LOBBY_SCENE_VALIDATED roots=" + scene.rootCount + " meshes=" + meshes + " materials=" + materials);

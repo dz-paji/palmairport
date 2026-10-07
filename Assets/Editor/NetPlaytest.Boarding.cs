@@ -35,7 +35,7 @@ public static partial class NetPlaytest
         if (stage == 1)
         {
             if (!state.Room.Seats[1].Occupied) return;
-            LobbyApp lobby = UnityEngine.Object.FindObjectOfType<LobbyApp>();
+            LobbyApp lobby = UnityEngine.Object.FindAnyObjectByType<LobbyApp>();
             Require(lobby != null, "Boarding LobbyApp unavailable.");
             lobby.BeginPracticeShift();
             SetStage(2, now);
@@ -307,7 +307,7 @@ public static partial class NetPlaytest
         if (stage == 8)
         {
             if (!HasSignal("s6-host-close-sent") || SceneManager.GetActiveScene().name != AppState.SceneCabinLobby) return;
-            Require(UnityEngine.Object.FindObjectOfType<LobbyApp>() != null, "Boarding client returned without LobbyApp.");
+            Require(UnityEngine.Object.FindAnyObjectByType<LobbyApp>() != null, "Boarding client returned without LobbyApp.");
             Signal("s6-client-returned");
             Complete(false, "Session 6 client sent every gate action through Remote UDP and matched host passenger/task/blocked vehicle snapshots at blocked, closed, and complete capture points; returned to lobby after host close.");
         }

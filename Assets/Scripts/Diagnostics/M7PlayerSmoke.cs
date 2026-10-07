@@ -127,7 +127,7 @@ namespace IslandAirport
         void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
             state = AppState.Ensure(); state.ExternalControl = true;
-            game = FindObjectOfType<AirportGame>();
+            game = FindAnyObjectByType<AirportGame>();
             if (game != null) game.ExternalControl = true;
         }
         void OnLog(string message, string trace, LogType kind)

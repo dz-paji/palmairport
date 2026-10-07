@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using UnityEditor;
+using UnityEditor.Build;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 using IslandAirport;
@@ -61,7 +62,7 @@ public static class DemoBuilder
         int missing=0;
         foreach(var root in scene.GetRootGameObjects())missing+=GameObjectUtility.GetMonoBehavioursWithMissingScriptCount(root);
         if(missing>0)throw new Exception("Missing scripts in PalmBay: "+missing);
-        var game=UnityEngine.Object.FindObjectOfType<AirportGame>();
+        var game=UnityEngine.Object.FindAnyObjectByType<AirportGame>();
         if(!game)throw new Exception("PalmBay scene is missing AirportGame");
         Debug.Log("PALM_BAY_SCENE_VALIDATED roots="+scene.rootCount);
     }
@@ -92,7 +93,7 @@ public static class DemoBuilder
     }
 
     /// <summary>
-    /// M1 真机验收包：锁横屏、包名 com.palmbay.islandairport、MinSdk 24、IL2CPP+ARM64。
+    /// M1 真机验收包：锁横屏、包名 com.palmbay.islandairport、MinSdk 26、IL2CPP+ARM64。
     /// 未安装 Android Build Support 时给出明确中文报错。
     /// </summary>
     [MenuItem("Palm Bay/Build Android demo")]
@@ -100,7 +101,7 @@ public static class DemoBuilder
     {
         RequireProductBuild();
         if(!BuildPipeline.IsBuildTargetSupported(BuildTargetGroup.Android,BuildTarget.Android))
-            throw new Exception("未安装 Android Build Support 模块；请先在 Tuanjie Hub 为该编辑器安装 Android 模块。");
+            throw new Exception("未安装 Android Build Support 模块；请先在 Unity Hub 为该编辑器安装 Android 模块。");
         // 当前激活平台不是 Android 时，架构等 PlayerSettings 可能不被构建前置校验读取；
         // 先切平台再做设置，并落盘后再构建。
         if(EditorUserBuildSettings.activeBuildTarget!=BuildTarget.Android)
@@ -112,9 +113,9 @@ public static class DemoBuilder
         PlayerSettings.productName="PALM BAY";
         PlayerSettings.bundleVersion=DeliveryVersion;
         PlayerSettings.Android.bundleVersionCode=9;
-        PlayerSettings.SetApplicationIdentifier(BuildTargetGroup.Android,"com.palmbay.islandairport");
-        PlayerSettings.SetScriptingBackend(BuildTargetGroup.Android,ScriptingImplementation.IL2CPP);
-        PlayerSettings.Android.minSdkVersion=AndroidSdkVersions.AndroidApiLevel24;
+        PlayerSettings.SetApplicationIdentifier(NamedBuildTarget.Android,"com.palmbay.islandairport");
+        PlayerSettings.SetScriptingBackend(NamedBuildTarget.Android,ScriptingImplementation.IL2CPP);
+        PlayerSettings.Android.minSdkVersion=AndroidSdkVersions.AndroidApiLevel26;
         PlayerSettings.Android.targetArchitectures=AndroidArchitecture.ARM64;
         PlayerSettings.Android.forceInternetPermission=true;
         PlayerSettings.defaultInterfaceOrientation=UIOrientation.LandscapeLeft;

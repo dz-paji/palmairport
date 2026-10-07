@@ -129,7 +129,7 @@ public static class M3FuelPlaytest
         {
             if (steps == null)
             {
-                game = UnityEngine.Object.FindObjectOfType<AirportGame>();
+                game = UnityEngine.Object.FindAnyObjectByType<AirportGame>();
                 if (game == null || !game.Started || game.Crew.Count < 2 || game.Carts.Count < 3)
                 {
                     if (EditorApplication.timeSinceStartup - requestedAt > 30.0)

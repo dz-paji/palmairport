@@ -199,7 +199,7 @@ public static partial class NetPlaytest
                 report.AppendLine("PASS FakeAuthService injected and sign-in started; auth configuration and credentials are excluded.");
             }
 
-            game = UnityEngine.Object.FindObjectOfType<AirportGame>();
+            game = UnityEngine.Object.FindAnyObjectByType<AirportGame>();
             bool driveGame = game != null && game.Started && (game.Sandbox || game.Remote || scenario.IndexOf("-m4-", StringComparison.Ordinal) >= 0);
             if (driveGame)
                 game.ExternalControl = true;
@@ -354,7 +354,7 @@ public static partial class NetPlaytest
             if (!state.Room.Seats[1].Occupied) return;
             Require(state.Room.Phase == RoomPhase.InRoom || state.Room.Phase == RoomPhase.Listening,
                 "Host accepted a peer in an unexpected phase: " + state.Room.Phase);
-            LobbyApp lobby = UnityEngine.Object.FindObjectOfType<LobbyApp>();
+            LobbyApp lobby = UnityEngine.Object.FindAnyObjectByType<LobbyApp>();
             Require(lobby != null, "CabinLobby LobbyApp was not available to start the room.");
             lobby.BeginPracticeShift();
             Require(state.Launch.Mode == AppState.GameMode.HostSandbox, "LobbyApp did not launch HostSandbox.");
@@ -702,7 +702,7 @@ public static partial class NetPlaytest
         if (stage == 1)
         {
             if (!state.Room.Seats[1].Occupied) return;
-            LobbyApp lobby = UnityEngine.Object.FindObjectOfType<LobbyApp>();
+            LobbyApp lobby = UnityEngine.Object.FindAnyObjectByType<LobbyApp>();
             Require(lobby != null, "Second CabinLobby LobbyApp was not available.");
             lobby.BeginPracticeShift();
             Require(state.Launch.Mode == AppState.GameMode.HostSandbox, "Second host did not launch HostSandbox.");
@@ -758,7 +758,7 @@ public static partial class NetPlaytest
         {
             if (!HasSignal("s2-host-close-sent")) return;
             if (SceneManager.GetActiveScene().name != AppState.SceneCabinLobby) return;
-            Require(UnityEngine.Object.FindObjectOfType<LobbyApp>() != null, "Client returned to CabinLobby without rebuilding LobbyApp.");
+            Require(UnityEngine.Object.FindAnyObjectByType<LobbyApp>() != null, "Client returned to CabinLobby without rebuilding LobbyApp.");
             Require(state.IsFakeAuth && state.Auth is FakeAuthService, "Returning to CabinLobby lost its injected FakeAuthService.");
             report.AppendLine("PASS Room.CloseRoom reached the client over UDP and NetSession returned it to CabinLobby.");
             Signal("s2-client-returned");
@@ -805,7 +805,7 @@ public static partial class NetPlaytest
         if (stage == 1)
         {
             if (!state.Room.Seats[1].Occupied) return;
-            LobbyApp lobby = UnityEngine.Object.FindObjectOfType<LobbyApp>();
+            LobbyApp lobby = UnityEngine.Object.FindAnyObjectByType<LobbyApp>();
             Require(lobby != null, "Meal CabinLobby LobbyApp was not available to start the room.");
             lobby.BeginPracticeShift();
             Require(state.Launch.Mode == AppState.GameMode.HostSandbox, "Meal lobby did not launch HostSandbox.");
@@ -1060,7 +1060,7 @@ public static partial class NetPlaytest
         {
             if (!HasSignal("s3-host-close-sent")) return;
             if (SceneManager.GetActiveScene().name != AppState.SceneCabinLobby) return;
-            Require(UnityEngine.Object.FindObjectOfType<LobbyApp>() != null, "Meal client returned to CabinLobby without rebuilding LobbyApp.");
+            Require(UnityEngine.Object.FindAnyObjectByType<LobbyApp>() != null, "Meal client returned to CabinLobby without rebuilding LobbyApp.");
             report.AppendLine("PASS Meal session client returned to CabinLobby after the host close control.");
             Signal("s3-client-returned");
             Complete(false, "Session 3 client ran the full meal flow over UDP with mirror-consistent task feedback.");
@@ -1107,7 +1107,7 @@ public static partial class NetPlaytest
         if (stage == 1)
         {
             if (!state.Room.Seats[1].Occupied) return;
-            LobbyApp lobby = UnityEngine.Object.FindObjectOfType<LobbyApp>();
+            LobbyApp lobby = UnityEngine.Object.FindAnyObjectByType<LobbyApp>();
             Require(lobby != null, "Baggage CabinLobby LobbyApp was not available to start the room.");
             lobby.BeginPracticeShift();
             Require(state.Launch.Mode == AppState.GameMode.HostSandbox, "Baggage lobby did not launch HostSandbox.");
@@ -1519,7 +1519,7 @@ public static partial class NetPlaytest
         {
             if (!HasSignal("s4-host-close-sent")) return;
             if (SceneManager.GetActiveScene().name != AppState.SceneCabinLobby) return;
-            Require(UnityEngine.Object.FindObjectOfType<LobbyApp>() != null,
+            Require(UnityEngine.Object.FindAnyObjectByType<LobbyApp>() != null,
                 "Baggage client returned to CabinLobby without rebuilding LobbyApp.");
             report.AppendLine("PASS Session 4 client returned to CabinLobby after the host close control.");
             Signal("s4-client-returned");
@@ -1601,7 +1601,7 @@ public static partial class NetPlaytest
     static void Shot(string path, int width, int height)
     {
         if (game == null || !game.View) throw new Exception("NetPlay capture has no game camera.");
-        AirportHudCanvas hud = UnityEngine.Object.FindObjectOfType<AirportHudCanvas>();
+        AirportHudCanvas hud = UnityEngine.Object.FindAnyObjectByType<AirportHudCanvas>();
         // 播放器循环可能停摆，HUD 的 LateUpdate 不保证执行，Render 前手动刷新（M1 惯例）。
         if (hud != null) hud.RefreshNow();
         Canvas.ForceUpdateCanvases();

@@ -4,7 +4,7 @@
 
 ## 打开试玩
 
-1. 在 Unity Hub 中添加本目录 `game`。目标版本 **Unity 2022.3 LTS，3D Built-in Render Pipeline**；代码也使用本机团结 2022.3.61t14 的程序集完成编译检查。
+1. 在 Unity Hub 中添加本目录。目标版本 **Unity 6.5（6000.5.10f1），3D Built-in Render Pipeline**；工程已完成从团结 2022.3 的资源 GUID、包清单与项目设置迁移。
 2. 打开 `Assets/Scenes/CabinLobby.unity`，点击 **Play**。大厅可选择本地 solo / 同机双人并开始完整班岗，也可创建或加入同一局域网内的房间。
 3. 直接打开 `Assets/Scenes/PalmBay.unity` 仍可 Play 完整班岗，未带大厅启动配置时默认 solo。Game 视图推荐 **1600 × 1000** 或 16:10；点一下 Game 视图让键盘输入获得焦点。
 
@@ -79,7 +79,7 @@ MainLoop 是独立的旧调试场景；其 PASS 只验证该场景自己的移�
 
 ## 构建与检查
 
-编辑器内选择 **Palm Bay → Build macOS demo**，输出 `Builds/Palm Bay.app` 并以 CabinLobby 为首场景；**Palm Bay → Build Android demo** 输出 `Builds/PalmBay.apk`（包名 `com.palmbay.islandairport`、横屏、MinSdk 24、IL2CPP+ARM64）。2026-10-04 M6 已完成 Android 与 macOS 重建，日志见 `Evidence/m6-android-build.log`、`Evidence/m6-macos-build.log`；当前 APK 元数据见 `Evidence/m6-apk-metadata.txt`。构建通过不代表独立包运行验收：APK 尚未在 Android 真机安装运行，Google OAuth 回跳和真机编码/分享未验收。其他平台用 Unity Build Settings 切换平台后构建。
+编辑器内选择 **Palm Bay → Build macOS demo**，输出 `Builds/Palm Bay.app` 并以 CabinLobby 为首场景；**Palm Bay → Build Android demo** 输出 `Builds/PalmBay.apk`（包名 `com.palmbay.islandairport`、横屏、MinSdk 26、IL2CPP+ARM64）。2026-10-04 M6 已完成 Android 与 macOS 重建，日志见 `Evidence/m6-android-build.log`、`Evidence/m6-macos-build.log`；当前 APK 元数据见 `Evidence/m6-apk-metadata.txt`。构建通过不代表独立包运行验收：APK 尚未在 Android 真机安装运行，Google OAuth 回跳和真机编码/分享未验收。其他平台用 Unity Build Settings 切换平台后构建。
 
 ```sh
 # 在 game 目录下运行；产物自动写入临时目录并清理

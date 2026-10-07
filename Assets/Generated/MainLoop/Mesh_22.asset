@@ -1,5 +1,5 @@
 %YAML 1.1
-%TAG !u! tag:yousandi.cn,2023:
+%TAG !u! tag:unity3d.com,2011:
 --- !u!43 &4300000
 Mesh:
   m_ObjectHideFlags: 0
@@ -11,14 +11,14 @@ Mesh:
   m_SubMeshes:
   - serializedVersion: 2
     firstByte: 0
-    indexCount: 12
+    indexCount: 30
     topology: 0
     baseVertex: 0
     firstVertex: 0
-    vertexCount: 5
+    vertexCount: 30
     localAABB:
-      m_Center: {x: 0, y: 0.0525, z: 0.675}
-      m_Extent: {x: 0.25, y: 0.067499995, z: 0.675}
+      m_Center: {x: 2.54, y: 0.082, z: 5.4399996}
+      m_Extent: {x: 4.1349998, y: 0, z: 1.715}
   m_Shapes:
     vertices: []
     shapes: []
@@ -35,10 +35,10 @@ Mesh:
   m_KeepVertices: 1
   m_KeepIndices: 1
   m_IndexFormat: 0
-  m_IndexBuffer: 000001000400010002000400020003000400030000000400
+  m_IndexBuffer: 00000100020003000400050006000700080009000a000b000c000d000e000f0010001100120013001400150016001700180019001a001b001c001d00
   m_VertexData:
     serializedVersion: 3
-    m_VertexCount: 5
+    m_VertexCount: 30
     m_Channels:
     - stream: 0
       offset: 0
@@ -96,8 +96,8 @@ Mesh:
       offset: 0
       format: 0
       dimension: 0
-    m_DataSize: 120
-    _typelessdata: 00000000000000000000000000000000b2ed7f3f359cc13c000080be8fc2f53c54e3253f2c0a303ec0327b3f3da1b2bd000000008fc2f53dcdccac3f4bcbafb1b68f7b3f8edb3dbe0000803e8fc2f53c54e3253f2d0a30bec0327b3f3da1b2bd000000008fc275bc986e223f88e23cb19efe7e3f5954b5bd
+    m_DataSize: 720
+    _typelessdata: c274933d9eefa73d65666e40000000000000803f00000000c274933d9eefa73dc2f5e440000000000000803f000000005e39b43d9eefa73dc2f5e440000000000000803f00000000c274933d9eefa73d65666e40000000000000803f000000005e39b43d9eefa73dc2f5e440000000000000803f000000005e39b43d9eefa73d65666e40000000000000803f00000000b29def3f9eefa73d65666e40000000000000803f00000000b29def3f9eefa73dc2f5e440000000000000803f00000000fca9f13f9eefa73dc2f5e440000000000000803f00000000b29def3f9eefa73d65666e40000000000000803f00000000fca9f13f9eefa73dc2f5e440000000000000803f00000000fca9f13f9eefa73d65666e40000000000000803f000000000c026b409eefa73d65666e40000000000000803f000000000c026b409eefa73dc2f5e440000000000000803f0000000030086c409eefa73dc2f5e440000000000000803f000000000c026b409eefa73d65666e40000000000000803f0000000030086c409eefa73dc2f5e440000000000000803f0000000030086c409eefa73d65666e40000000000000803f000000009f1aaf409eefa73d65666e40000000000000803f000000009f1aaf409eefa73dc2f5e440000000000000803f00000000b19daf409eefa73dc2f5e440000000000000803f000000009f1aaf409eefa73d65666e40000000000000803f00000000b19daf409eefa73dc2f5e440000000000000803f00000000b19daf409eefa73d65666e40000000000000803f00000000f428ccbf9eefa73df1d2ad40000000000000803f00000000f428ccbf9eefa73d0356ae40000000000000803f000000009999d5409eefa73d0356ae40000000000000803f00000000f428ccbf9eefa73df1d2ad40000000000000803f000000009999d5409eefa73d0356ae40000000000000803f000000009999d5409eefa73df1d2ad40000000000000803f00000000
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -151,19 +151,30 @@ Mesh:
       m_BitSize: 0
     m_UVInfo: 0
   m_LocalAABB:
-    m_Center: {x: 0, y: 0.0525, z: 0.675}
-    m_Extent: {x: 0.25, y: 0.067499995, z: 0.675}
+    m_Center: {x: 2.54, y: 0.082, z: 5.4399996}
+    m_Extent: {x: 4.1349998, y: 0, z: 1.715}
   m_MeshUsageFlags: 0
   m_CookingOptions: 30
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
-  m_MeshMetrics[0]: 1
-  m_MeshMetrics[1]: 1
+  'm_MeshMetrics[0]': 1
+  'm_MeshMetrics[1]': 1
   m_MeshOptimizationFlags: 1
   m_StreamData:
     serializedVersion: 2
     offset: 0
     size: 0
     path: 
-  m_GenerateGeometryBuffer: 1
-  m_HasVirtualGeometryMesh: 1
+  m_MeshLodInfo:
+    serializedVersion: 2
+    m_LodSelectionCurve:
+      serializedVersion: 1
+      m_LodSlope: 0
+      m_LodBias: 0
+    m_NumLevels: 1
+    m_SubMeshes:
+    - serializedVersion: 2
+      m_Levels:
+      - serializedVersion: 1
+        m_IndexStart: 0
+        m_IndexCount: 0

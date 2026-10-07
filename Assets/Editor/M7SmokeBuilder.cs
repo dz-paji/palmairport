@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using UnityEditor;
+using UnityEditor.Build;
 using UnityEditor.Build.Reporting;
 using UnityEngine;
 
@@ -29,7 +30,7 @@ public static class M7SmokeBuilder
         if (File.Exists(resource) || File.Exists(resource + ".meta"))
             throw new Exception("A UI smoke resource already exists; remove or review the stale fixture before building.");
         string company = PlayerSettings.companyName, product = PlayerSettings.productName;
-        string bundle = PlayerSettings.GetApplicationIdentifier(BuildTargetGroup.Standalone);
+        string bundle = PlayerSettings.GetApplicationIdentifier(NamedBuildTarget.Standalone);
         var scenes = EditorBuildSettings.scenes;
         bool generatedResource = false, generatedResourcesFolder = false;
         try
@@ -42,7 +43,7 @@ public static class M7SmokeBuilder
             if (!File.Exists(DemoBuilder.PalmBayScenePath) || !File.Exists(LobbyBuilder.ScenePath) || !File.Exists(MainLoopBuilder.ScenePath))
                 throw new Exception("Create the existing PalmBay, CabinLobby and MainLoop scenes before building M7 smoke.");
             PlayerSettings.companyName = identity.company; PlayerSettings.productName = identity.product;
-            PlayerSettings.SetApplicationIdentifier(BuildTargetGroup.Standalone, identity.bundle);
+            PlayerSettings.SetApplicationIdentifier(NamedBuildTarget.Standalone, identity.bundle);
             DemoBuilder.ConfigureBuildSettings();
             Directory.CreateDirectory("Builds");
             string manifest = uiLaunch ? "Builds/m7-ui-smoke-build.json" : "Builds/m7-smoke-build.json";
@@ -86,7 +87,7 @@ public static class M7SmokeBuilder
             finally
             {
                 PlayerSettings.companyName = company; PlayerSettings.productName = product;
-                PlayerSettings.SetApplicationIdentifier(BuildTargetGroup.Standalone, bundle);
+                PlayerSettings.SetApplicationIdentifier(NamedBuildTarget.Standalone, bundle);
                 EditorBuildSettings.scenes = scenes;
                 AssetDatabase.SaveAssets();
             }

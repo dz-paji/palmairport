@@ -46,7 +46,7 @@ public static class M6ResultsCapture
         {
             if (steps == null)
             {
-                game = UnityEngine.Object.FindObjectOfType<AirportGame>(); if (game == null) return;
+                game = UnityEngine.Object.FindAnyObjectByType<AirportGame>(); if (game == null) return;
                 game.ExternalControl = true;
                 state = AppState.Ensure(); state.ExternalControl = true;
                 Require(state.IsFakeAuth, "Acceptance must use FakeAuth, never a real account");

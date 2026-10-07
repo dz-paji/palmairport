@@ -55,7 +55,7 @@ M3 四类任务、M4 有限 LAN 班岗与断线续玩、共同回放和合作记
 
 ## Building and Running
 
-技术选型：Unity 2022.3 LTS，C#，Built-in 3D 渲染。产品入口为 `Assets/Scenes/CabinLobby.unity`；直接运行 `Assets/Scenes/PalmBay.unity` 会以 solo 启动完整班岗。
+技术选型：Unity 6.5（6000.5.10f1），C#，Built-in 3D 渲染。产品入口为 `Assets/Scenes/CabinLobby.unity`；直接运行 `Assets/Scenes/PalmBay.unity` 会以 solo 启动完整班岗。
 
 运行与构建：见 `README.md`。菜单 `Palm Bay / Build macOS demo` 输出本机包，`Palm Bay / Build Android demo` 输出 APK（需 Android Build Support）。
 
@@ -76,7 +76,7 @@ M3 四类任务、M4 有限 LAN 班岗与断线续玩、共同回放和合作记
 
 | 决策 | 状态 |
 |---|---|
-| 游戏引擎/技术栈 | Unity 2022.3 LTS / C# / Built-in（用户指定 Unity） |
+| 游戏引擎/技术栈 | Unity 6.5（6000.5.10f1）/ C# / Built-in |
 | 滩头区域（巴西 vs SEA） | 调研倾向 LatAm/巴西，未最终写死 |
 | 关系载体（房间制 vs 匹配+公会制） | 倾向搭子档案系统 |
 | 变现模型（打赏/身份体系 vs 订阅/通行证） | 待定 |
