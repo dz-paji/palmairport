@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "407883744385",
+    "project_id": "palmairport",
+    "storage_bucket": "palmairport.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:407883744385:android:a724b994707119131bf980",
+        "android_client_info": {
+          "package_name": "com.palmbay.islandairport"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "407883744385-46cmncrffc2lsoh5lu14pvm1av0octq3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTe1r-eOgqeC40XdY50vlRLmxHSeKhP1U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "407883744385-46cmncrffc2lsoh5lu14pvm1av0octq3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
