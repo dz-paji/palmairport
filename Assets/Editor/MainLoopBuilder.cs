@@ -8,6 +8,7 @@ public static class MainLoopBuilder
 {
     public const string ScenePath="Assets/Scenes/MainLoop.unity";
     const string GeneratedFolder="Assets/Generated/MainLoop";
+    const string FlightPrefabPath="Assets/Art/ChubbyAircraft/NavyCoral_B737_800/NavyCoral_B737_800.prefab";
     [MenuItem("Palm Bay/Rebuild MainLoop scene (debug)")]
     public static void CreateScene()
     {
@@ -15,7 +16,12 @@ public static class MainLoopBuilder
         SceneLayoutSync.MarkBakedWorld(AirportWorld.Build());
         var game=new GameObject("Main game loop").AddComponent<MainLoopGame>();
         game.gameObject.AddComponent<SceneLayoutSync>();
-        game.Plane=AirportWorld.CreatePlane("Flight",AirportWorld.Hex("4996C8"),Level1Map.PlanePark(0));
+        var flightPrefab=AssetDatabase.LoadAssetAtPath<GameObject>(FlightPrefabPath);
+        if(!flightPrefab)throw new System.Exception("Missing MainLoop flight prefab: "+FlightPrefabPath);
+        var flight=(GameObject)PrefabUtility.InstantiatePrefab(flightPrefab,scene);
+        flight.name="Flight";
+        game.Plane=flight.transform;
+        game.Plane.position=Level1Map.PlanePark(0);
         game.Plane.rotation=AircraftMotion.NoseRotation(AircraftMotion.FinalDirection(Level1Map.TaxiInPath(0)));
         game.Players=new Transform[2];game.Vehicles=new Transform[3];game.CargoViews=new Transform[3];
         for(int p=0;p<2;p++)

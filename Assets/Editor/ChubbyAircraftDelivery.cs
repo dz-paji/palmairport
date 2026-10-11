@@ -179,6 +179,60 @@ public static class ChubbyAircraftDelivery
         }
     }
 
+    [MenuItem("Palm Bay/Export windshield pilot - NavyCoral B737")]
+    public static void RunWindshieldPilot()
+    {
+        ExpectedMeshHashes.Clear();
+        Shader standard=Shader.Find("Standard");
+        if(!standard)throw new Exception("Built-in Standard shader is unavailable.");
+        Directory.CreateDirectory(Evidence);
+        const int palette=0,configuration=0;
+        string variant=VariantName(palette,configuration),folder=Art+"/"+variant;
+        Directory.CreateDirectory(folder+"/Meshes");Directory.CreateDirectory(folder+"/Materials");
+        AssetDatabase.Refresh();
+        Scene previous=SceneManager.GetActiveScene();
+        // A batch-mode Unity launch starts in an unsaved untitled scene, which Unity
+        // refuses to keep while creating an additive scene. Replace it in batch mode;
+        // interactive menu runs still use an additive review scene and restore the user.
+        NewSceneMode reviewMode=Application.isBatchMode?NewSceneMode.Single:NewSceneMode.Additive;
+        Scene review=EditorSceneManager.NewScene(NewSceneSetup.EmptyScene,reviewMode);
+        SceneManager.SetActiveScene(review);
+        Material floorMaterial=null;
+        var report=new StringBuilder("Windshield pilot: "+variant+"\n");
+        try
+        {
+            Camera camera=new GameObject("Aircraft Review Camera").AddComponent<Camera>();
+            camera.cullingMask=1<<ReviewLayer;camera.clearFlags=CameraClearFlags.SolidColor;
+            camera.backgroundColor=new Color(.82f,.87f,.87f);camera.orthographic=true;
+            camera.allowHDR=false;camera.allowMSAA=true;camera.nearClipPlane=.05f;camera.farClipPlane=500;
+            Transform source=AirportWorld.CreatePlaneVariant("",palette,configuration,Vector3.zero);
+            foreach(TextMesh label in source.GetComponentsInChildren<TextMesh>(true))UnityEngine.Object.DestroyImmediate(label.gameObject);
+            ValidateSourceConfiguration(source,configuration,report);
+            Bounds sourceBounds=Validate(source.gameObject,false,report,"Factory");
+            GameObject model=CombineAndPersist(source,standard,folder,variant,report);
+            UnityEngine.Object.DestroyImmediate(source.gameObject);
+            Bounds bounds=Validate(model,true,report,"Combined");
+            if((bounds.center-sourceBounds.center).sqrMagnitude>.000001f||(bounds.size-sourceBounds.size).sqrMagnitude>.000001f)
+                throw new Exception("Combining changed the aircraft bounds: "+variant);
+            SaveAndValidatePrefab(model,folder+"/"+variant+".prefab",report);
+            SaveAndValidatePrefab(model,PrefabPath,report);
+            SetLayer(model.transform);PrepareReview(bounds,standard,out floorMaterial);
+            Capture(camera,bounds,new Vector3(10,3.2f,2.3f),"windshield-pilot-three-quarter.png");
+            Capture(camera,bounds,Vector3.right,"windshield-pilot-front.png");
+            File.WriteAllText(Evidence+"/windshield-pilot-report.txt",report.ToString());
+            Debug.Log("CHUBBY_WINDSHIELD_PILOT_PASSED variant="+variant);
+        }
+        finally
+        {
+            if(floorMaterial)UnityEngine.Object.DestroyImmediate(floorMaterial);
+            if(!Application.isBatchMode)
+            {
+                if(previous.IsValid()&&previous.isLoaded)SceneManager.SetActiveScene(previous);
+                if(review.IsValid()&&review.isLoaded)EditorSceneManager.CloseScene(review,true);
+            }
+        }
+    }
+
     static string VariantName(int palette, int configuration)
     {
         return PaletteNames[palette] + "_" + ConfigurationNames[configuration];

@@ -79,6 +79,37 @@ namespace IslandAirport
                 AircraftTriangle(v,t,a,b,a+1,n);AircraftTriangle(v,t,a+1,b,b+1,n);
             }
         }
+        static void AirframeSurfaceQuad(List<Vector3> v,List<int> t,AirframeSpec s,float x0,float x1,
+            float top0,float bottom0,float top1,float bottom1,float offset,int side,int nx=12,int na=8)
+        {
+            int start=v.Count;
+            for(int ix=0;ix<=nx;ix++)
+            {
+                float u=ix/(float)nx,x=Mathf.Lerp(x0,x1,u);
+                float top=Mathf.Lerp(top0,top1,u),bottom=Mathf.Lerp(bottom0,bottom1,u);
+                for(int ia=0;ia<=na;ia++)v.Add(AirframePoint(s,x,Mathf.Lerp(top,bottom,ia/(float)na)*side,offset));
+            }
+            for(int ix=0;ix<nx;ix++)for(int ia=0;ia<na;ia++)
+            {
+                int a=start+ix*(na+1)+ia,b=a+na+1;
+                Vector3 n=v[a]-new Vector3(v[a].x,AirframeCenterY(s,v[a].x),0);
+                AircraftTriangle(v,t,a,b,a+1,n);AircraftTriangle(v,t,a+1,b,b+1,n);
+            }
+        }
+        static void AirframeNoseWindowQuad(List<Vector3> v,List<int> t,AirframeSpec s,int side,
+            Vector2 innerTop,Vector2 innerBottom,Vector2 outerTop,Vector2 outerBottom,float offset)
+        {
+            int start=v.Count;
+            foreach(Vector2 p in new[]{innerTop,innerBottom,outerBottom,outerTop})
+            {
+                float radialSquared=p.x*p.x+p.y*p.y;
+                float u=Mathf.Sqrt(Mathf.Max(0,1-radialSquared));
+                float x=s.NoseStart+s.NoseLength*u;
+                v.Add(new Vector3(x+offset,AirframeCenterY(s,x)+p.x*s.Ry,p.y*s.Rz*side));
+            }
+            AircraftTriangle(v,t,start,start+1,start+2,Vector3.right);
+            AircraftTriangle(v,t,start,start+2,start+3,Vector3.right);
+        }
         static void AirframeSurfaceOval(List<Vector3> v,List<int> t,AirframeSpec s,float x,float angle,float width,float height,float offset,int side)
         {
             const int segments=20,rings=3;int start=v.Count;
@@ -156,22 +187,23 @@ namespace IslandAirport
                         });
                     }
                 }
-                // Distinct cockpit placement: A380 sits low between the decks, Comet has a panoramic rounded visor.
-                float wind0=s.NoseStart+s.NoseLength*.25f,wind1=s.Half-s.NoseLength*.16f;
-                float high=s.Type==1?1.03f:s.Type==2?.78f:.64f,low=s.Type==1?1.60f:1.47f;
+                // Use the same forward-facing four-pane flight-deck language throughout the
+                // stylized fleet; normalized coordinates preserve each airframe's proportions.
                 for(int rim=0;rim<2;rim++)
                 {
                     bool frame=rim==0;
                     AirframeMesh(plane,(frame?"Cockpit rim":"Cockpit glazing")+suffix,"v2-cockpit-"+s.Id+"-"+side+"-"+rim,
                         frame?paint.Trim:glass,frame?AirportStyle.Finish.Plastic:AirportStyle.Finish.Glass,(v,t)=>
                     {
-                        if(frame)AirframeSurfaceRect(v,t,s,wind0-.025f,wind1+.025f,high-.035f,low+.035f,.024f,side,20,12);
-                        else
-                        {
-                            float split=high+(low-high)*.48f;
-                            AirframeSurfaceRect(v,t,s,wind0,wind1,high,split-.035f,.034f,side,18,7);
-                            AirframeSurfaceRect(v,t,s,wind0,wind1,split+.035f,low,.034f,side,18,7);
-                        }
+                        // A flat pane chords across the convex nose, so keep it far enough
+                        // forward that the fuselage cannot poke through its centre.
+                        float e=frame?.028f:0,offset=frame?.070f:.085f;
+                        AirframeNoseWindowQuad(v,t,s,side,
+                            new Vector2(.60f+e,.035f-e),new Vector2(.13f-e,.045f-e),
+                            new Vector2(.52f+e,.335f+e),new Vector2(.07f-e,.365f+e),offset);
+                        AirframeNoseWindowQuad(v,t,s,side,
+                            new Vector2(.50f+e,.375f-e),new Vector2(.08f-e,.405f-e),
+                            new Vector2(.39f+e,.565f+e),new Vector2(.05f-e,.555f+e),offset);
                     });
                 }
                 int doors=s.Type==1?3:2;

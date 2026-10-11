@@ -1,0 +1,7 @@
+Windshield pilot: NavyCoral_B737_800
+Source configuration PASS: 2 engine assemblies (left/right=1/1, wing-nested=0); no Logo/Badge objects or TextMesh labels.
+Factory: renderers=62, vertices=18025, triangles=26948, bounds=(5.942, 2.644, 5.282), minimum Y=0.0000
+Material batching: 62 source mesh objects -> 17 renderers/materials.
+Combined: renderers=17, vertices=17987, triangles=26948, bounds=(5.942, 2.644, 5.282), minimum Y=0.0000
+Reloaded NavyCoral_B737_800.prefab: renderers=17, vertices=17987, triangles=26948, bounds=(5.942, 2.644, 5.282), minimum Y=0.0000
+Reloaded ChubbyAircraft.prefab: renderers=17, vertices=17987, triangles=26948, bounds=(5.942, 2.644, 5.282), minimum Y=0.0000

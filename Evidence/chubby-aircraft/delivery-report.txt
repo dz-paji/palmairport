@@ -3,95 +3,95 @@ Variant selection PASS: stable, in [0,11], TEST0..TEST127 cover all 12.
 
 NavyCoral_B737_800 (palette=0, configuration=0, engines=2)
 Source configuration PASS: 2 engine assemblies (left/right=1/1, wing-nested=0); no Logo/Badge objects or TextMesh labels.
-Factory: renderers=62, vertices=19147, triangles=28900, bounds=(5.867, 2.644, 5.282), minimum Y=0.0000
+Factory: renderers=62, vertices=18025, triangles=26948, bounds=(5.942, 2.644, 5.282), minimum Y=0.0000
 Material batching: 62 source mesh objects -> 17 renderers/materials.
-Combined: renderers=17, vertices=19109, triangles=28900, bounds=(5.867, 2.644, 5.282), minimum Y=0.0000
-Reloaded NavyCoral_B737_800.prefab: renderers=17, vertices=19109, triangles=28900, bounds=(5.867, 2.644, 5.282), minimum Y=0.0000
-Reloaded ChubbyAircraft.prefab: renderers=17, vertices=19109, triangles=28900, bounds=(5.867, 2.644, 5.282), minimum Y=0.0000
+Combined: renderers=17, vertices=17987, triangles=26948, bounds=(5.942, 2.644, 5.282), minimum Y=0.0000
+Reloaded NavyCoral_B737_800.prefab: renderers=17, vertices=17987, triangles=26948, bounds=(5.942, 2.644, 5.282), minimum Y=0.0000
+Reloaded ChubbyAircraft.prefab: renderers=17, vertices=17987, triangles=26948, bounds=(5.942, 2.644, 5.282), minimum Y=0.0000
 
 NavyCoral_A380_800 (palette=0, configuration=1, engines=4)
 Source configuration PASS: 4 engine assemblies (left/right=2/2, wing-nested=0); no Logo/Badge objects or TextMesh labels.
-Factory: renderers=122, vertices=35741, triangles=48212, bounds=(8.667, 3.644, 8.881), minimum Y=0.0000
+Factory: renderers=122, vertices=34619, triangles=46260, bounds=(8.739, 3.644, 8.881), minimum Y=0.0000
 Material batching: 122 source mesh objects -> 17 renderers/materials.
-Combined: renderers=17, vertices=35633, triangles=48212, bounds=(8.667, 3.644, 8.881), minimum Y=0.0000
-Reloaded NavyCoral_A380_800.prefab: renderers=17, vertices=35633, triangles=48212, bounds=(8.667, 3.644, 8.881), minimum Y=0.0000
+Combined: renderers=17, vertices=34511, triangles=46260, bounds=(8.739, 3.644, 8.881), minimum Y=0.0000
+Reloaded NavyCoral_A380_800.prefab: renderers=17, vertices=34511, triangles=46260, bounds=(8.739, 3.644, 8.881), minimum Y=0.0000
 
 NavyCoral_Comet4 (palette=0, configuration=2, engines=4)
 Source configuration PASS: 4 engine assemblies (left/right=2/2, wing-nested=4); no Logo/Badge objects or TextMesh labels.
-Factory: renderers=80, vertices=22431, triangles=33060, bounds=(5.217, 2.294, 5.187), minimum Y=0.0000
+Factory: renderers=80, vertices=21309, triangles=31108, bounds=(5.294, 2.294, 5.187), minimum Y=0.0000
 Material batching: 80 source mesh objects -> 17 renderers/materials.
-Combined: renderers=17, vertices=22367, triangles=33060, bounds=(5.217, 2.294, 5.187), minimum Y=0.0000
-Reloaded NavyCoral_Comet4.prefab: renderers=17, vertices=22367, triangles=33060, bounds=(5.217, 2.294, 5.187), minimum Y=0.0000
+Combined: renderers=17, vertices=21245, triangles=31108, bounds=(5.294, 2.294, 5.187), minimum Y=0.0000
+Reloaded NavyCoral_Comet4.prefab: renderers=17, vertices=21245, triangles=31108, bounds=(5.294, 2.294, 5.187), minimum Y=0.0000
 
 PorcelainRed_B737_800 (palette=1, configuration=0, engines=2)
 Source configuration PASS: 2 engine assemblies (left/right=1/1, wing-nested=0); no Logo/Badge objects or TextMesh labels.
-Factory: renderers=60, vertices=19141, triangles=28898, bounds=(5.867, 2.644, 5.282), minimum Y=0.0000
+Factory: renderers=60, vertices=18019, triangles=26946, bounds=(5.942, 2.644, 5.282), minimum Y=0.0000
 Material batching: 60 source mesh objects -> 17 renderers/materials.
-Combined: renderers=17, vertices=19103, triangles=28898, bounds=(5.867, 2.644, 5.282), minimum Y=0.0000
-Reloaded PorcelainRed_B737_800.prefab: renderers=17, vertices=19103, triangles=28898, bounds=(5.867, 2.644, 5.282), minimum Y=0.0000
+Combined: renderers=17, vertices=17981, triangles=26946, bounds=(5.942, 2.644, 5.282), minimum Y=0.0000
+Reloaded PorcelainRed_B737_800.prefab: renderers=17, vertices=17981, triangles=26946, bounds=(5.942, 2.644, 5.282), minimum Y=0.0000
 
 PorcelainRed_A380_800 (palette=1, configuration=1, engines=4)
 Source configuration PASS: 4 engine assemblies (left/right=2/2, wing-nested=0); no Logo/Badge objects or TextMesh labels.
-Factory: renderers=120, vertices=35735, triangles=48210, bounds=(8.667, 3.644, 8.881), minimum Y=0.0000
+Factory: renderers=120, vertices=34613, triangles=46258, bounds=(8.739, 3.644, 8.881), minimum Y=0.0000
 Material batching: 120 source mesh objects -> 17 renderers/materials.
-Combined: renderers=17, vertices=35627, triangles=48210, bounds=(8.667, 3.644, 8.881), minimum Y=0.0000
-Reloaded PorcelainRed_A380_800.prefab: renderers=17, vertices=35627, triangles=48210, bounds=(8.667, 3.644, 8.881), minimum Y=0.0000
+Combined: renderers=17, vertices=34505, triangles=46258, bounds=(8.739, 3.644, 8.881), minimum Y=0.0000
+Reloaded PorcelainRed_A380_800.prefab: renderers=17, vertices=34505, triangles=46258, bounds=(8.739, 3.644, 8.881), minimum Y=0.0000
 
 PorcelainRed_Comet4 (palette=1, configuration=2, engines=4)
 Source configuration PASS: 4 engine assemblies (left/right=2/2, wing-nested=4); no Logo/Badge objects or TextMesh labels.
-Factory: renderers=78, vertices=22425, triangles=33058, bounds=(5.217, 2.294, 5.187), minimum Y=0.0000
+Factory: renderers=78, vertices=21303, triangles=31106, bounds=(5.294, 2.294, 5.187), minimum Y=0.0000
 Material batching: 78 source mesh objects -> 17 renderers/materials.
-Combined: renderers=17, vertices=22361, triangles=33058, bounds=(5.217, 2.294, 5.187), minimum Y=0.0000
-Reloaded PorcelainRed_Comet4.prefab: renderers=17, vertices=22361, triangles=33058, bounds=(5.217, 2.294, 5.187), minimum Y=0.0000
+Combined: renderers=17, vertices=21239, triangles=31106, bounds=(5.294, 2.294, 5.187), minimum Y=0.0000
+Reloaded PorcelainRed_Comet4.prefab: renderers=17, vertices=21239, triangles=31106, bounds=(5.294, 2.294, 5.187), minimum Y=0.0000
 
 JadeIvory_B737_800 (palette=2, configuration=0, engines=2)
 Source configuration PASS: 2 engine assemblies (left/right=1/1, wing-nested=0); no Logo/Badge objects or TextMesh labels.
-Factory: renderers=59, vertices=20587, triangles=31412, bounds=(5.867, 2.644, 5.282), minimum Y=0.0000
+Factory: renderers=59, vertices=19465, triangles=29460, bounds=(5.942, 2.644, 5.282), minimum Y=0.0000
 Material batching: 59 source mesh objects -> 18 renderers/materials.
-Combined: renderers=18, vertices=20549, triangles=31412, bounds=(5.867, 2.644, 5.282), minimum Y=0.0000
-Reloaded JadeIvory_B737_800.prefab: renderers=18, vertices=20549, triangles=31412, bounds=(5.867, 2.644, 5.282), minimum Y=0.0000
+Combined: renderers=18, vertices=19427, triangles=29460, bounds=(5.942, 2.644, 5.282), minimum Y=0.0000
+Reloaded JadeIvory_B737_800.prefab: renderers=18, vertices=19427, triangles=29460, bounds=(5.942, 2.644, 5.282), minimum Y=0.0000
 
 JadeIvory_A380_800 (palette=2, configuration=1, engines=4)
 Source configuration PASS: 4 engine assemblies (left/right=2/2, wing-nested=0); no Logo/Badge objects or TextMesh labels.
-Factory: renderers=119, vertices=37181, triangles=50724, bounds=(8.667, 3.644, 8.881), minimum Y=0.0000
+Factory: renderers=119, vertices=36059, triangles=48772, bounds=(8.739, 3.644, 8.881), minimum Y=0.0000
 Material batching: 119 source mesh objects -> 18 renderers/materials.
-Combined: renderers=18, vertices=37073, triangles=50724, bounds=(8.667, 3.644, 8.881), minimum Y=0.0000
-Reloaded JadeIvory_A380_800.prefab: renderers=18, vertices=37073, triangles=50724, bounds=(8.667, 3.644, 8.881), minimum Y=0.0000
+Combined: renderers=18, vertices=35951, triangles=48772, bounds=(8.739, 3.644, 8.881), minimum Y=0.0000
+Reloaded JadeIvory_A380_800.prefab: renderers=18, vertices=35951, triangles=48772, bounds=(8.739, 3.644, 8.881), minimum Y=0.0000
 
 JadeIvory_Comet4 (palette=2, configuration=2, engines=4)
 Source configuration PASS: 4 engine assemblies (left/right=2/2, wing-nested=4); no Logo/Badge objects or TextMesh labels.
-Factory: renderers=77, vertices=23871, triangles=35572, bounds=(5.217, 2.294, 5.187), minimum Y=0.0000
+Factory: renderers=77, vertices=22749, triangles=33620, bounds=(5.294, 2.294, 5.187), minimum Y=0.0000
 Material batching: 77 source mesh objects -> 18 renderers/materials.
-Combined: renderers=18, vertices=23807, triangles=35572, bounds=(5.217, 2.294, 5.187), minimum Y=0.0000
-Reloaded JadeIvory_Comet4.prefab: renderers=18, vertices=23807, triangles=35572, bounds=(5.217, 2.294, 5.187), minimum Y=0.0000
+Combined: renderers=18, vertices=22685, triangles=33620, bounds=(5.294, 2.294, 5.187), minimum Y=0.0000
+Reloaded JadeIvory_Comet4.prefab: renderers=18, vertices=22685, triangles=33620, bounds=(5.294, 2.294, 5.187), minimum Y=0.0000
 
 BurgundySilver_B737_800 (palette=3, configuration=0, engines=2)
 Source configuration PASS: 2 engine assemblies (left/right=1/1, wing-nested=0); no Logo/Badge objects or TextMesh labels.
-Factory: renderers=60, vertices=19141, triangles=28898, bounds=(5.867, 2.644, 5.282), minimum Y=0.0000
+Factory: renderers=60, vertices=18019, triangles=26946, bounds=(5.942, 2.644, 5.282), minimum Y=0.0000
 Material batching: 60 source mesh objects -> 17 renderers/materials.
-Combined: renderers=17, vertices=19103, triangles=28898, bounds=(5.867, 2.644, 5.282), minimum Y=0.0000
-Reloaded BurgundySilver_B737_800.prefab: renderers=17, vertices=19103, triangles=28898, bounds=(5.867, 2.644, 5.282), minimum Y=0.0000
+Combined: renderers=17, vertices=17981, triangles=26946, bounds=(5.942, 2.644, 5.282), minimum Y=0.0000
+Reloaded BurgundySilver_B737_800.prefab: renderers=17, vertices=17981, triangles=26946, bounds=(5.942, 2.644, 5.282), minimum Y=0.0000
 
 BurgundySilver_A380_800 (palette=3, configuration=1, engines=4)
 Source configuration PASS: 4 engine assemblies (left/right=2/2, wing-nested=0); no Logo/Badge objects or TextMesh labels.
-Factory: renderers=120, vertices=35735, triangles=48210, bounds=(8.667, 3.644, 8.881), minimum Y=0.0000
+Factory: renderers=120, vertices=34613, triangles=46258, bounds=(8.739, 3.644, 8.881), minimum Y=0.0000
 Material batching: 120 source mesh objects -> 17 renderers/materials.
-Combined: renderers=17, vertices=35627, triangles=48210, bounds=(8.667, 3.644, 8.881), minimum Y=0.0000
-Reloaded BurgundySilver_A380_800.prefab: renderers=17, vertices=35627, triangles=48210, bounds=(8.667, 3.644, 8.881), minimum Y=0.0000
+Combined: renderers=17, vertices=34505, triangles=46258, bounds=(8.739, 3.644, 8.881), minimum Y=0.0000
+Reloaded BurgundySilver_A380_800.prefab: renderers=17, vertices=34505, triangles=46258, bounds=(8.739, 3.644, 8.881), minimum Y=0.0000
 
 BurgundySilver_Comet4 (palette=3, configuration=2, engines=4)
 Source configuration PASS: 4 engine assemblies (left/right=2/2, wing-nested=4); no Logo/Badge objects or TextMesh labels.
-Factory: renderers=78, vertices=22425, triangles=33058, bounds=(5.217, 2.294, 5.187), minimum Y=0.0000
+Factory: renderers=78, vertices=21303, triangles=31106, bounds=(5.294, 2.294, 5.187), minimum Y=0.0000
 Material batching: 78 source mesh objects -> 17 renderers/materials.
-Combined: renderers=17, vertices=22361, triangles=33058, bounds=(5.217, 2.294, 5.187), minimum Y=0.0000
-Reloaded BurgundySilver_Comet4.prefab: renderers=17, vertices=22361, triangles=33058, bounds=(5.217, 2.294, 5.187), minimum Y=0.0000
-Identity PASS NavyCoral: B737 L/H/span=(5.867, 2.644, 5.282); A380=(8.667, 3.644, 8.881); Comet=(5.217, 2.294, 5.187). Length order Comet < B737 < A380.
-Identity PASS PorcelainRed: B737 L/H/span=(5.867, 2.644, 5.282); A380=(8.667, 3.644, 8.881); Comet=(5.217, 2.294, 5.187). Length order Comet < B737 < A380.
-Identity PASS JadeIvory: B737 L/H/span=(5.867, 2.644, 5.282); A380=(8.667, 3.644, 8.881); Comet=(5.217, 2.294, 5.187). Length order Comet < B737 < A380.
-Identity PASS BurgundySilver: B737 L/H/span=(5.867, 2.644, 5.282); A380=(8.667, 3.644, 8.881); Comet=(5.217, 2.294, 5.187). Length order Comet < B737 < A380.
-Common comparison frame L/H/span=(8.667, 3.644, 8.881); identical angle, orthographic camera size and meters/pixel in all 12 comparison tiles. Lineup palette=NavyCoral.
+Combined: renderers=17, vertices=21239, triangles=31106, bounds=(5.294, 2.294, 5.187), minimum Y=0.0000
+Reloaded BurgundySilver_Comet4.prefab: renderers=17, vertices=21239, triangles=31106, bounds=(5.294, 2.294, 5.187), minimum Y=0.0000
+Identity PASS NavyCoral: B737 L/H/span=(5.942, 2.644, 5.282); A380=(8.739, 3.644, 8.881); Comet=(5.294, 2.294, 5.187). Length order Comet < B737 < A380.
+Identity PASS PorcelainRed: B737 L/H/span=(5.942, 2.644, 5.282); A380=(8.739, 3.644, 8.881); Comet=(5.294, 2.294, 5.187). Length order Comet < B737 < A380.
+Identity PASS JadeIvory: B737 L/H/span=(5.942, 2.644, 5.282); A380=(8.739, 3.644, 8.881); Comet=(5.294, 2.294, 5.187). Length order Comet < B737 < A380.
+Identity PASS BurgundySilver: B737 L/H/span=(5.942, 2.644, 5.282); A380=(8.739, 3.644, 8.881); Comet=(5.294, 2.294, 5.187). Length order Comet < B737 < A380.
+Common comparison frame L/H/span=(8.739, 3.644, 8.881); identical angle, orthographic camera size and meters/pixel in all 12 comparison tiles. Lineup palette=NavyCoral.
 PASS: finite meshes, nonempty triangles, no colliders/scripts, grounded bounds, persistent assets, exact SHA-256 vertex/normal/index roundtrip, prefab reload, isolated dependencies.
-Unity: 6000.6.4f1
+Unity: 6000.5.10f1
 Prefabs: 12 palette/configuration subdirectories; default alias: Assets/Art/ChubbyAircraft/ChubbyAircraft.prefab
 Package: Builds/ChubbyAircraft.unitypackage (only Assets/Art/ChubbyAircraft)
 OBJ: Builds/ChubbyAircraft/<variant>.obj + .mtl; meters, +X nose, +Y up, mirrored Z for right-handed OBJ.
